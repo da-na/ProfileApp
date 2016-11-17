@@ -253,6 +253,13 @@
                             <constraint firstAttribute="leadingMargin" secondItem="do1-69-RP3" secondAttribute="leading" id="qfa-8D-VFU"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="age" destination="4Fy-eL-GGX" id="hqd-M5-kWI"/>
+                        <outlet property="gender" destination="Ac6-hb-Jaf" id="rGV-95-ooY"/>
+                        <outlet property="hobbies" destination="fkB-bh-NpY" id="I6t-xj-UOs"/>
+                        <outlet property="name" destination="Iil-X4-tU3" id="KIg-Mn-otl"/>
+                        <outlet property="profileImage" destination="tQJ-ux-W6K" id="ahf-UY-S7G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k5j-9R-hB0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
