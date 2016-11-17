@@ -18,6 +18,7 @@ class Profile {
     var profileImage: UIImage?
     var hobbies: [String]
 
+    // MARK: Initializers
     init(name: String, gender: String, age: Int, backgroundColor: UIColor?, profileImage: UIImage?, hobbies: [String]) {
         self.uid = UUID().uuidString.hashValue
         self.name = name
@@ -42,6 +43,7 @@ class Profile {
         hobbies = snapshotValue["hobbies"] as! [String]
     }
 
+    // MARK: 
     func toAnyObject() -> Any {
         let imageData: Data? = UIImagePNGRepresentation(profileImage!)
         let encodedImage: String = imageData!.base64EncodedString()
