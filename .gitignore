@@ -2,3 +2,8 @@
 ######################
 
 Pods/*
+
+# Don't commit local user settings! #
+#####################################
+
+ProfilesApp.xcworkspace/xcuserdata/
