@@ -13,6 +13,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var backgroundScroll: UIScrollView!
     @IBOutlet weak var containerStackView: UIStackView!
     @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var profileImageWidth: NSLayoutConstraint!
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var age: UITextField!
     @IBOutlet weak var gender: UITextField!
@@ -23,6 +24,8 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector:  #selector(keyboardWillShow), name: .UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector:  #selector(keyboardWillHide), name: .UIKeyboardWillHide, object: nil)
+
+        profileImageWidth.constant = view.frame.width
     }
     override func viewDidDisappear(_ animated: Bool) {
         NotificationCenter.default.removeObserver(self)
