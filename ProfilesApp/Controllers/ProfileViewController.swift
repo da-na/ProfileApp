@@ -18,6 +18,20 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var age: UITextField!
     @IBOutlet weak var gender: UITextField!
     @IBOutlet weak var hobbies: UITextField!
+    @IBOutlet weak var dismissButton: UIButton! {
+        didSet {
+            dismissButton.layer.cornerRadius = 5
+            dismissButton.layer.borderWidth = 1
+            dismissButton.layer.borderColor = UIColor.lightGray.cgColor
+        }
+    }
+    @IBOutlet weak var addProfileButton: UIButton! {
+        didSet {
+            addProfileButton.layer.cornerRadius = 5
+            addProfileButton.layer.borderWidth = 1
+            addProfileButton.layer.borderColor = UIColor.lightGray.cgColor
+        }
+    }
 
     // MARK: VCLifecycle
     override func viewDidLoad() {
@@ -29,6 +43,15 @@ class ProfileViewController: UIViewController {
     }
     override func viewDidDisappear(_ animated: Bool) {
         NotificationCenter.default.removeObserver(self)
+    }
+    // MARK: Button handling methods
+    @IBAction func dismissProfile() {
+        // TODO: Implement!
+        print("dismissProfile")
+    }
+    @IBAction func addProfile() {
+        // TODO: Implement!
+        print("addProfile")
     }
 
     // MARK: Keyboard handling methods

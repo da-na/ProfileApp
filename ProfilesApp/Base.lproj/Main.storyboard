@@ -157,7 +157,7 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="do1-69-RP3" userLabel="Outermost Stack View">
-                                        <rect key="frame" x="0.0" y="0.0" width="286" height="438"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="286" height="508"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="tQJ-ux-W6K">
                                                 <rect key="frame" x="0.0" y="0.0" width="286" height="286"/>
@@ -251,6 +251,50 @@
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2BQ-fx-kkK">
+                                                <rect key="frame" x="0.0" y="458" width="286" height="50"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="70r-Em-F3v">
+                                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" id="AJX-kD-Pcd"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3m2-bD-2zl">
+                                                        <rect key="frame" x="20" y="0.0" width="113" height="50"/>
+                                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="tintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                        <state key="normal" title="Dismiss">
+                                                            <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="dismissProfile" destination="HhT-QK-6w3" eventType="touchUpInside" id="tKt-dn-OgS"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WjM-hd-smj">
+                                                        <rect key="frame" x="153" y="0.0" width="113" height="50"/>
+                                                        <color key="backgroundColor" red="0.086274509803921567" green="0.40000000000000002" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="tintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                        <state key="normal" title="Add Profile">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="addProfile" destination="HhT-QK-6w3" eventType="touchUpInside" id="e8D-8h-quL"/>
+                                                        </connections>
+                                                    </button>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6HS-5G-20F">
+                                                        <rect key="frame" x="286" y="0.0" width="0.0" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" id="uCZ-g0-OLc"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="WjM-hd-smj" firstAttribute="width" secondItem="3m2-bD-2zl" secondAttribute="width" id="TgF-jf-h5P"/>
+                                                </constraints>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -271,9 +315,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addProfileButton" destination="WjM-hd-smj" id="Bdz-mb-2sk"/>
                         <outlet property="age" destination="4Fy-eL-GGX" id="hqd-M5-kWI"/>
                         <outlet property="backgroundScroll" destination="xGY-dM-djs" id="1Z6-w6-pGl"/>
                         <outlet property="containerStackView" destination="do1-69-RP3" id="gFF-az-4CQ"/>
+                        <outlet property="dismissButton" destination="3m2-bD-2zl" id="BXM-xT-tBy"/>
                         <outlet property="gender" destination="Ac6-hb-Jaf" id="rGV-95-ooY"/>
                         <outlet property="hobbies" destination="fkB-bh-NpY" id="mAI-hN-msp"/>
                         <outlet property="name" destination="Iil-X4-tU3" id="KIg-Mn-otl"/>
