@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ProfileViewController: UIViewController {
 
@@ -32,6 +33,7 @@ class ProfileViewController: UIViewController {
             addProfileButton.layer.borderColor = UIColor.lightGray.cgColor
         }
     }
+    let dbRef = FIRDatabase.database().reference(withPath: "profiles")
 
     // MARK: VCLifecycle
     override func viewDidLoad() {
@@ -50,8 +52,21 @@ class ProfileViewController: UIViewController {
         self.performSegue(withIdentifier: "dismissMe", sender: self)
     }
     @IBAction func addProfile() {
-        // TODO: Implement!
-        print("addProfile")
+        let textFieldsAreNotEmpty = !highlightEmptyTextFields()
+        guard textFieldsAreNotEmpty else { return }
+
+        let name = self.name.text!.capitalized
+        let gender = self.gender.text!
+        let age = Int(self.age.text!)!
+        let backgroundColor = (gender == "Female" ? UIColor.green : UIColor.blue)
+        let hobbies: [String] = self.hobbies.text!.characters.split(separator: ",").map(String.init).map{ $0.trimmingCharacters(in: .whitespaces) }
+
+        let newProfile = Profile(name: name, gender: gender, age: age, backgroundColor: backgroundColor, profileImage: profileImage.image, hobbies: hobbies)
+
+        let newProfileRef = dbRef.child(String(newProfile.uid))
+        newProfileRef.setValue(newProfile.toAnyObject())
+
+        self.performSegue(withIdentifier: "dismissMe", sender: self)
     }
 
     // MARK: Keyboard handling methods
@@ -76,5 +91,28 @@ class ProfileViewController: UIViewController {
         } else {
             backgroundScroll.contentOffset = CGPoint(x: 0, y: -difference)
         }
+    }
+    private func highlightEmptyTextFields() -> Bool {
+        var errors = 0
+
+        func setRedBorder(_ textField: UITextField) {
+            textField.layer.masksToBounds = true
+            textField.layer.cornerRadius = 5
+            textField.layer.borderWidth = 1
+            textField.layer.borderColor = UIColor.red.cgColor
+        }
+        func validate(_ textField: UITextField, _ placeholder: String) {
+            if textField.text == nil || textField.text == "" {
+                textField.placeholder = placeholder
+                setRedBorder(textField)
+                errors += 1
+            }
+        }
+        validate(name, "Please enter your NAME here...")
+        validate(age, "Your AGE goes here...")
+        validate(gender, "Select your GENDER here...")
+        validate(hobbies, "Your HOBBIES here...")
+
+        return errors > 0
     }
 }
