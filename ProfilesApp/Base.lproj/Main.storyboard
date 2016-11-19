@@ -157,9 +157,9 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="do1-69-RP3" userLabel="Outermost Stack View">
-                                        <rect key="frame" x="0.0" y="0.0" width="286" height="508"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="286" height="528"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HRw-U9-Yy2">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HRw-U9-Yy2" userLabel="Profile Image View">
                                                 <rect key="frame" x="0.0" y="0.0" width="286" height="286"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="tQJ-ux-W6K">
@@ -278,7 +278,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2BQ-fx-kkK">
                                                 <rect key="frame" x="0.0" y="458" width="286" height="50"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="70r-Em-F3v">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="70r-Em-F3v" userLabel="Left Spacing View">
                                                         <rect key="frame" x="0.0" y="0.0" width="0.0" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" id="AJX-kD-Pcd"/>
@@ -308,7 +308,7 @@
                                                             <action selector="addProfile" destination="HhT-QK-6w3" eventType="touchUpInside" id="e8D-8h-quL"/>
                                                         </connections>
                                                     </button>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6HS-5G-20F">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6HS-5G-20F" userLabel="Right Spacing View">
                                                         <rect key="frame" x="286" y="0.0" width="0.0" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" id="uCZ-g0-OLc"/>
@@ -319,6 +319,12 @@
                                                     <constraint firstItem="WjM-hd-smj" firstAttribute="width" secondItem="3m2-bD-2zl" secondAttribute="width" id="TgF-jf-h5P"/>
                                                 </constraints>
                                             </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cid-hA-lCY" userLabel="Bottom Spacing View">
+                                                <rect key="frame" x="0.0" y="528" width="286" height="0.0"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" id="Qda-F8-deg"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                     </stackView>
                                 </subviews>

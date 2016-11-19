@@ -90,17 +90,20 @@ class ProfileViewController: UIViewController {
     @objc private func keyboardWillShow(notification: NSNotification){
         let infoKey: AnyObject  = notification.userInfo![UIKeyboardFrameEndUserInfoKey]! as AnyObject
         let keyboardFrame = view.convert(infoKey.cgRectValue!, from: nil)
-
+        let contentFrame = containerStackView.frame.size
+        backgroundScroll.contentSize = CGSize(width: contentFrame.width,
+                                              height: contentFrame.height + keyboardFrame.height)
         offsetBackgroundScrollViewToKeepTextFieldsVisible(keyboardFrame: keyboardFrame)
     }
     @objc private func keyboardWillHide(){
         backgroundScroll.contentOffset = CGPoint(x: 0, y: 0)
+        backgroundScroll.contentSize = containerStackView.frame.size
     }
 
     // MARK: Helper methods
     private func offsetBackgroundScrollViewToKeepTextFieldsVisible(keyboardFrame: CGRect){
         let stackViewFrame = view.convert(containerStackView.bounds, from: containerStackView)
-        let margin: CGFloat = 12.0
+        let margin: CGFloat = 20.0
 
         let difference = (keyboardFrame.origin.y - margin) - (stackViewFrame.origin.y + stackViewFrame.height)
         if  difference >= 0 {
