@@ -44,10 +44,10 @@ class ProfileViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         NotificationCenter.default.removeObserver(self)
     }
+
     // MARK: Button handling methods
     @IBAction func dismissProfile() {
-        // TODO: Implement!
-        print("dismissProfile")
+        self.performSegue(withIdentifier: "dismissMe", sender: self)
     }
     @IBAction func addProfile() {
         // TODO: Implement!

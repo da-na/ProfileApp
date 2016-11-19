@@ -20,6 +20,12 @@ class ListViewController: UITableViewController {
         super.viewDidLoad()
     }
 
+    // MARK: Navigation methods
+    @IBAction func unwindToListView(_ segue: UIStoryboardSegue){
+        // this function does not need a body, but it needs to be here,
+        // so that it's possible to unwind(segue) back here
+    }
+
     // MARK: UITableViewDelegate methods
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return profiles.count
