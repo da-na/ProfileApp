@@ -159,13 +159,37 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="do1-69-RP3" userLabel="Outermost Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="286" height="508"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="tQJ-ux-W6K">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HRw-U9-Yy2">
                                                 <rect key="frame" x="0.0" y="0.0" width="286" height="286"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="tQJ-ux-W6K">
+                                                        <rect key="frame" x="0.0" y="0.0" width="286" height="286"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="286" id="KQu-lu-zJH"/>
+                                                            <constraint firstAttribute="width" secondItem="tQJ-ux-W6K" secondAttribute="height" multiplier="1:1" id="zCk-ei-YhH"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <button opaque="NO" alpha="0.69999999999999996" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2UI-td-hLp">
+                                                        <rect key="frame" x="130" y="236" width="136" height="30"/>
+                                                        <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="  Edit Profile Image  ">
+                                                            <color key="titleColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="editProfileImage:" destination="HhT-QK-6w3" eventType="touchUpInside" id="Ve5-Vj-UjJ"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="tQJ-ux-W6K" secondAttribute="height" multiplier="1:1" id="Cmz-tZ-zgM"/>
-                                                    <constraint firstAttribute="width" constant="286" id="wlu-nm-6AV"/>
+                                                    <constraint firstAttribute="trailing" secondItem="2UI-td-hLp" secondAttribute="trailing" constant="20" symbolic="YES" id="2mk-fe-o48"/>
+                                                    <constraint firstItem="tQJ-ux-W6K" firstAttribute="top" secondItem="HRw-U9-Yy2" secondAttribute="top" id="6LJ-CK-h54"/>
+                                                    <constraint firstAttribute="trailing" secondItem="tQJ-ux-W6K" secondAttribute="trailing" id="JWq-wP-a4U"/>
+                                                    <constraint firstItem="tQJ-ux-W6K" firstAttribute="leading" secondItem="HRw-U9-Yy2" secondAttribute="leading" id="SRE-eM-8Ul"/>
+                                                    <constraint firstAttribute="bottom" secondItem="2UI-td-hLp" secondAttribute="bottom" constant="20" symbolic="YES" id="fiz-AW-D2X"/>
+                                                    <constraint firstAttribute="bottom" secondItem="tQJ-ux-W6K" secondAttribute="bottom" id="zyA-qb-l9N"/>
                                                 </constraints>
-                                            </imageView>
+                                            </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9Os-dz-d6L">
                                                 <rect key="frame" x="0.0" y="306" width="286" height="132"/>
                                                 <subviews>
@@ -320,11 +344,12 @@
                         <outlet property="backgroundScroll" destination="xGY-dM-djs" id="1Z6-w6-pGl"/>
                         <outlet property="containerStackView" destination="do1-69-RP3" id="gFF-az-4CQ"/>
                         <outlet property="dismissButton" destination="3m2-bD-2zl" id="BXM-xT-tBy"/>
+                        <outlet property="editProfileImageButton" destination="2UI-td-hLp" id="awU-JK-SGq"/>
                         <outlet property="gender" destination="Ac6-hb-Jaf" id="rGV-95-ooY"/>
                         <outlet property="hobbies" destination="fkB-bh-NpY" id="mAI-hN-msp"/>
                         <outlet property="name" destination="Iil-X4-tU3" id="KIg-Mn-otl"/>
                         <outlet property="profileImage" destination="tQJ-ux-W6K" id="ahf-UY-S7G"/>
-                        <outlet property="profileImageWidth" destination="wlu-nm-6AV" id="L3E-GU-1Fb"/>
+                        <outlet property="profileImageWidth" destination="KQu-lu-zJH" id="oyf-ry-PER"/>
                         <segue destination="eAB-w8-76I" kind="unwind" identifier="dismissMe" unwindAction="unwindToListView:" id="LxU-60-ywe"/>
                     </connections>
                 </viewController>

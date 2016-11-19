@@ -19,6 +19,13 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var age: UITextField!
     @IBOutlet weak var gender: UITextField!
     @IBOutlet weak var hobbies: UITextField!
+    @IBOutlet weak var editProfileImageButton: UIButton! {
+        didSet {
+            editProfileImageButton.layer.cornerRadius = 5
+            editProfileImageButton.layer.borderWidth = 1
+            editProfileImageButton.layer.borderColor = UIColor.lightGray.cgColor
+        }
+    }
     @IBOutlet weak var dismissButton: UIButton! {
         didSet {
             dismissButton.layer.cornerRadius = 5
@@ -34,6 +41,7 @@ class ProfileViewController: UIViewController {
         }
     }
     let dbRef = FIRDatabase.database().reference(withPath: "profiles")
+    var imagePicker = UIImagePickerController()
 
     // MARK: VCLifecycle
     override func viewDidLoad() {
@@ -42,12 +50,21 @@ class ProfileViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector:  #selector(keyboardWillHide), name: .UIKeyboardWillHide, object: nil)
 
         profileImageWidth.constant = view.frame.width
+        imagePicker.delegate = self
     }
     override func viewDidDisappear(_ animated: Bool) {
         NotificationCenter.default.removeObserver(self)
     }
 
     // MARK: Button handling methods
+    @IBAction func editProfileImage(_ sender: UIButton) {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.savedPhotosAlbum){
+            imagePicker.sourceType = UIImagePickerControllerSourceType.savedPhotosAlbum
+            imagePicker.allowsEditing = true
+
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+    }
     @IBAction func dismissProfile() {
         self.performSegue(withIdentifier: "dismissMe", sender: self)
     }
@@ -114,5 +131,19 @@ class ProfileViewController: UIViewController {
         validate(hobbies, "Your HOBBIES here...")
 
         return errors > 0
+    }
+}
+
+// MARK: UIImagePickerControllerDelegate methods
+extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+            profileImage.contentMode = .scaleAspectFill
+            profileImage.image = image
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
     }
 }
