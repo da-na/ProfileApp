@@ -42,6 +42,7 @@ class ProfileViewController: UIViewController {
     }
     let dbRef = FIRDatabase.database().reference(withPath: "profiles")
     var imagePicker = UIImagePickerController()
+    var genderPicker = UIPickerView()
 
     // MARK: VCLifecycle
     override func viewDidLoad() {
@@ -51,6 +52,8 @@ class ProfileViewController: UIViewController {
 
         profileImageWidth.constant = view.frame.width
         imagePicker.delegate = self
+        genderPicker.delegate = self
+        gender.inputView = genderPicker
     }
     override func viewDidDisappear(_ animated: Bool) {
         NotificationCenter.default.removeObserver(self)
@@ -73,9 +76,9 @@ class ProfileViewController: UIViewController {
         guard textFieldsAreNotEmpty else { return }
 
         let name = self.name.text!.capitalized
-        let gender = self.gender.text!
+        let gender = Gender(rawValue: self.gender.text!)!
         let age = Int(self.age.text!)!
-        let backgroundColor = (gender == "Female" ? UIColor.green : UIColor.blue)
+        let backgroundColor = (gender == .Female ? UIColor.green : UIColor.blue)
         let hobbies: [String] = self.hobbies.text!.characters.split(separator: ",").map(String.init).map{ $0.trimmingCharacters(in: .whitespaces) }
 
         let newProfile = Profile(name: name, gender: gender, age: age, backgroundColor: backgroundColor, profileImage: profileImage.image, hobbies: hobbies)
@@ -90,14 +93,12 @@ class ProfileViewController: UIViewController {
     @objc private func keyboardWillShow(notification: NSNotification){
         let infoKey: AnyObject  = notification.userInfo![UIKeyboardFrameEndUserInfoKey]! as AnyObject
         let keyboardFrame = view.convert(infoKey.cgRectValue!, from: nil)
-        let contentFrame = containerStackView.frame.size
-        backgroundScroll.contentSize = CGSize(width: contentFrame.width,
-                                              height: contentFrame.height + keyboardFrame.height)
+
         offsetBackgroundScrollViewToKeepTextFieldsVisible(keyboardFrame: keyboardFrame)
     }
     @objc private func keyboardWillHide(){
-        backgroundScroll.contentOffset = CGPoint(x: 0, y: 0)
         backgroundScroll.contentSize = containerStackView.frame.size
+        backgroundScroll.contentOffset = CGPoint(x: 0, y: 0)
     }
 
     // MARK: Helper methods
@@ -109,6 +110,9 @@ class ProfileViewController: UIViewController {
         if  difference >= 0 {
             // Keyboard doesn't obscure last visible text view, no need to scroll
         } else {
+            let contentFrame = containerStackView.frame.size
+            backgroundScroll.contentSize = CGSize(width: contentFrame.width,
+                                                  height: contentFrame.height + keyboardFrame.height)
             backgroundScroll.contentOffset = CGPoint(x: 0, y: -difference)
         }
     }
@@ -148,5 +152,23 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
     }
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
+    }
+}
+
+// MARK: UIImagePickerControllerDelegate methods
+extension ProfileViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return Gender.allValues().count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        let values = Gender.allValues()
+        return values[row]
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let values = Gender.allValues()
+        gender.text = values[row]
     }
 }

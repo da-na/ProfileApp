@@ -12,14 +12,14 @@ class Profile {
     let uid: Int
     let ref: FIRDatabaseReference?
     var name: String
-    var gender: String
+    var gender: Gender
     var age: Int
     var backgroundColor: UIColor?
     var profileImage: UIImage?
     var hobbies: [String]
 
     // MARK: Initializers
-    init(name: String, gender: String, age: Int, backgroundColor: UIColor?, profileImage: UIImage?, hobbies: [String]) {
+    init(name: String, gender: Gender, age: Int, backgroundColor: UIColor?, profileImage: UIImage?, hobbies: [String]) {
         self.uid = UUID().uuidString.hashValue
         self.name = name
         self.gender = gender
@@ -35,7 +35,7 @@ class Profile {
         let snapshotValue = snapshot.value as! [String: AnyObject]
         uid = snapshotValue["uid"] as! Int
         name = snapshotValue["name"] as! String
-        gender = snapshotValue["gender"] as! String
+        gender = Gender(rawValue: snapshotValue["gender"] as! String)!
         age = snapshotValue["age"] as! Int
         backgroundColor = (snapshotValue["backgroundColor"] as! [String: Float]).toUIColor()
         let imgData = Data(base64Encoded: snapshotValue["profileImage"] as! String, options: Data.Base64DecodingOptions.ignoreUnknownCharacters)!
@@ -50,7 +50,7 @@ class Profile {
         return [
             "uid": uid,
             "name": name,
-            "gender": gender,
+            "gender": gender.description,
             "age": age,
             "backgroundColor": backgroundColor?.toDictionary(),
             "profileImage":  encodedImage,

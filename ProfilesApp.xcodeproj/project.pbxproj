@@ -20,6 +20,7 @@
 		59D8C513357A34131E0DE2A6 /* Pods_ProfilesAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E205278D078FD53647C681C /* Pods_ProfilesAppUITests.framework */; };
 		5F5DA2022836BD6A575DFFA4 /* Pods_ProfilesApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDB7CC575C68A08042C79737 /* Pods_ProfilesApp.framework */; };
 		BDAF71BCE2C34514A5A69974 /* Pods_ProfilesAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45FFAB7AE3C23FDF2F7D448C /* Pods_ProfilesAppTests.framework */; };
+		F9510BFB1DE0F586008A46DE /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9510BFA1DE0F586008A46DE /* Gender.swift */; };
 		F9C90DCE1DDE270100CFE074 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C90DCD1DDE270100CFE074 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		D3ABBCECD74B3124712C99D6 /* Pods-ProfilesApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProfilesApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProfilesApp/Pods-ProfilesApp.release.xcconfig"; sourceTree = "<group>"; };
 		D56ED8B1E4115F54D663E237 /* Pods-ProfilesAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProfilesAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProfilesAppUITests/Pods-ProfilesAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DDB7CC575C68A08042C79737 /* Pods_ProfilesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProfilesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9510BFA1DE0F586008A46DE /* Gender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Gender.swift; path = Models/Gender.swift; sourceTree = "<group>"; };
 		F9C90DCD1DDE270100CFE074 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Controllers/ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				31F68E631DD12B2600FEBEAD /* Profile.swift */,
+				F9510BFA1DE0F586008A46DE /* Gender.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -486,6 +489,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9510BFB1DE0F586008A46DE /* Gender.swift in Sources */,
 				31F68E671DD1394700FEBEAD /* Extensions.swift in Sources */,
 				31F68E611DD119FD00FEBEAD /* ListViewController.swift in Sources */,
 				F9C90DCE1DDE270100CFE074 /* ProfileViewController.swift in Sources */,
