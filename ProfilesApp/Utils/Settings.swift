@@ -16,4 +16,8 @@ class Settings {
 
     // MARK: Offset settings
     static let standardOffset = CGFloat(20.0)
+
+    // MARK: Colors
+    static let green = UIColor(colorLiteralRed: 0.43, green: 0.81, blue: 0.02, alpha: 1)
+    static let blue = UIColor(colorLiteralRed: 0.20, green: 0.50, blue: 0.87, alpha: 1)
 }

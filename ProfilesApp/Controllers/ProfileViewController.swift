@@ -96,7 +96,7 @@ class ProfileViewController: UIViewController {
         let name = self.name.text!.capitalized
         let gender = Gender(rawValue: self.gender.text!)!
         let age = Int(self.age.text!)!
-        let backgroundColor = (gender == .Female ? UIColor.green : UIColor.blue)
+        let backgroundColor = (gender == .Female ? Settings.green : Settings.blue)
         let hobbies: [String] = self.hobbies.text!.characters.split(separator: ",").map(String.init).map{ $0.trimmingCharacters(in: .whitespaces) }
 
         let newProfile = Profile(name: name, gender: gender, age: age, backgroundColor: backgroundColor, profileImage: profileImage.image, hobbies: hobbies)

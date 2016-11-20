@@ -45,7 +45,13 @@ class ListViewController: UITableViewController {
         return profiles.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell", for: indexPath) as! ProfileCell
+        cell.profileImage.image = profiles[indexPath.row].profileImage
+        cell.name.text = profiles[indexPath.row].name
+        cell.age.text = String(profiles[indexPath.row].age)
+        cell.gender.text = profiles[indexPath.row].gender.description
+        cell.hobbies.text = profiles[indexPath.row].hobbies.joined(separator: ", ")
+        cell.backgroundColor = profiles[indexPath.row].backgroundColor
         return cell
     }
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
