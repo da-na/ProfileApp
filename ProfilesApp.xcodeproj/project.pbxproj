@@ -11,8 +11,6 @@
 		31F68E341DD0D68700FEBEAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31F68E321DD0D68700FEBEAD /* Main.storyboard */; };
 		31F68E361DD0D68700FEBEAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31F68E351DD0D68700FEBEAD /* Assets.xcassets */; };
 		31F68E391DD0D68700FEBEAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31F68E371DD0D68700FEBEAD /* LaunchScreen.storyboard */; };
-		31F68E441DD0D68800FEBEAD /* ProfilesAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F68E431DD0D68800FEBEAD /* ProfilesAppTests.swift */; };
-		31F68E4F1DD0D68800FEBEAD /* ProfilesAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F68E4E1DD0D68800FEBEAD /* ProfilesAppUITests.swift */; };
 		31F68E5D1DD0D80F00FEBEAD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 31F68E5C1DD0D80F00FEBEAD /* GoogleService-Info.plist */; };
 		31F68E611DD119FD00FEBEAD /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F68E601DD119FD00FEBEAD /* ListViewController.swift */; };
 		31F68E641DD12B2600FEBEAD /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F68E631DD12B2600FEBEAD /* Profile.swift */; };
@@ -20,6 +18,9 @@
 		59D8C513357A34131E0DE2A6 /* Pods_ProfilesAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E205278D078FD53647C681C /* Pods_ProfilesAppUITests.framework */; };
 		5F5DA2022836BD6A575DFFA4 /* Pods_ProfilesApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDB7CC575C68A08042C79737 /* Pods_ProfilesApp.framework */; };
 		BDAF71BCE2C34514A5A69974 /* Pods_ProfilesAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45FFAB7AE3C23FDF2F7D448C /* Pods_ProfilesAppTests.framework */; };
+		F91C82311DE11F4500A8595D /* ProfileViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91C82301DE11F4500A8595D /* ProfileViewControllerUITests.swift */; };
+		F91C82331DE11FC000A8595D /* ProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91C82321DE11FC000A8595D /* ProfileTests.swift */; };
+		F91C82351DE12DC800A8595D /* GenderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91C82341DE12DC800A8595D /* GenderTests.swift */; };
 		F9510BFB1DE0F586008A46DE /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9510BFA1DE0F586008A46DE /* Gender.swift */; };
 		F9C90DCE1DDE270100CFE074 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C90DCD1DDE270100CFE074 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
@@ -51,10 +52,8 @@
 		31F68E381DD0D68700FEBEAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31F68E3A1DD0D68800FEBEAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31F68E3F1DD0D68800FEBEAD /* ProfilesAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProfilesAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		31F68E431DD0D68800FEBEAD /* ProfilesAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesAppTests.swift; sourceTree = "<group>"; };
 		31F68E451DD0D68800FEBEAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31F68E4A1DD0D68800FEBEAD /* ProfilesAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProfilesAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		31F68E4E1DD0D68800FEBEAD /* ProfilesAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesAppUITests.swift; sourceTree = "<group>"; };
 		31F68E501DD0D68800FEBEAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31F68E5C1DD0D80F00FEBEAD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		31F68E601DD119FD00FEBEAD /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListViewController.swift; path = Controllers/ListViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +66,9 @@
 		D3ABBCECD74B3124712C99D6 /* Pods-ProfilesApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProfilesApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProfilesApp/Pods-ProfilesApp.release.xcconfig"; sourceTree = "<group>"; };
 		D56ED8B1E4115F54D663E237 /* Pods-ProfilesAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProfilesAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProfilesAppUITests/Pods-ProfilesAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DDB7CC575C68A08042C79737 /* Pods_ProfilesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProfilesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F91C82301DE11F4500A8595D /* ProfileViewControllerUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewControllerUITests.swift; sourceTree = "<group>"; };
+		F91C82321DE11FC000A8595D /* ProfileTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTests.swift; sourceTree = "<group>"; };
+		F91C82341DE12DC800A8595D /* GenderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenderTests.swift; sourceTree = "<group>"; };
 		F9510BFA1DE0F586008A46DE /* Gender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Gender.swift; path = Models/Gender.swift; sourceTree = "<group>"; };
 		F9C90DCD1DDE270100CFE074 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Controllers/ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,7 +142,8 @@
 		31F68E421DD0D68800FEBEAD /* ProfilesAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				31F68E431DD0D68800FEBEAD /* ProfilesAppTests.swift */,
+				F91C82321DE11FC000A8595D /* ProfileTests.swift */,
+				F91C82341DE12DC800A8595D /* GenderTests.swift */,
 				31F68E451DD0D68800FEBEAD /* Info.plist */,
 			);
 			path = ProfilesAppTests;
@@ -149,7 +152,7 @@
 		31F68E4D1DD0D68800FEBEAD /* ProfilesAppUITests */ = {
 			isa = PBXGroup;
 			children = (
-				31F68E4E1DD0D68800FEBEAD /* ProfilesAppUITests.swift */,
+				F91C82301DE11F4500A8595D /* ProfileViewControllerUITests.swift */,
 				31F68E501DD0D68800FEBEAD /* Info.plist */,
 			);
 			path = ProfilesAppUITests;
@@ -502,7 +505,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31F68E441DD0D68800FEBEAD /* ProfilesAppTests.swift in Sources */,
+				F91C82351DE12DC800A8595D /* GenderTests.swift in Sources */,
+				F91C82331DE11FC000A8595D /* ProfileTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,7 +514,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31F68E4F1DD0D68800FEBEAD /* ProfilesAppUITests.swift in Sources */,
+				F91C82311DE11F4500A8595D /* ProfileViewControllerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,6 +593,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Pods/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -633,6 +638,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Pods/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;

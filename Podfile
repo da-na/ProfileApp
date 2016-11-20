@@ -12,6 +12,8 @@ target 'ProfilesApp' do
   target 'ProfilesAppTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'Firebase/Core'
+    pod 'Firebase/Database'
   end
 
   target 'ProfilesAppUITests' do

@@ -29,7 +29,7 @@ class Profile {
         self.hobbies = hobbies
         self.ref = nil
     }
-    init(snapshot: FIRDataSnapshot) {
+    init(snapshot: DataSnapshotProtocol) {
         ref = snapshot.ref
 
         let snapshotValue = snapshot.value as! [String: AnyObject]
@@ -45,8 +45,12 @@ class Profile {
 
     // MARK: 
     func toAnyObject() -> Any {
-        let imageData: Data? = UIImagePNGRepresentation(profileImage!)
-        let encodedImage: String = imageData!.base64EncodedString()
+        var encodedImage = ""
+
+        if profileImage != nil {
+            let imageData: Data? = UIImagePNGRepresentation(profileImage!)
+            encodedImage = imageData!.base64EncodedString()
+        }
         return [
             "uid": uid,
             "name": name,
@@ -58,3 +62,11 @@ class Profile {
         ]
     }
 }
+
+// MARK: DataSnapshotProtocol for test purposes (Mocking FIRDataSnapshot)
+protocol DataSnapshotProtocol {
+    var value: Any? { get }
+    var ref: FIRDatabaseReference { get }
+}
+
+extension FIRDataSnapshot: DataSnapshotProtocol { }
