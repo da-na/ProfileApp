@@ -38,9 +38,14 @@ class ProfileViewController: UIViewController {
             addProfileButton.layer.cornerRadius = Settings.cornerRadius
             addProfileButton.layer.borderWidth = Settings.borderWidth
             addProfileButton.layer.borderColor = UIColor.lightGray.cgColor
+            if mode == .Edit {
+                addProfileButton.setTitle("Submit Changes", for: .normal)
+            }
         }
     }
     let dbRef = FIRDatabase.database().reference(withPath: "profiles")
+    var profile: Profile?
+    var mode: ProfileViewMode!
     var imagePicker = UIImagePickerController()
     var genderPicker = UIPickerView()
 
@@ -50,6 +55,8 @@ class ProfileViewController: UIViewController {
         setProfileImage()
         setImagePicker()
         setGenderPicker()
+        setTextFieldsValuesAndProfileImage()
+        setDisabledFields()
     }
     override func viewWillAppear(_ animated: Bool) {
         setNotifications()
@@ -76,6 +83,25 @@ class ProfileViewController: UIViewController {
         genderPicker.delegate = self
         gender.inputView = genderPicker
     }
+    func setTextFieldsValuesAndProfileImage() {
+        if let profile = self.profile {
+            profileImage.image = profile.profileImage
+            name.text = profile.name
+            age.text = String(profile.age)
+            gender.text = profile.gender.description
+            hobbies.text = profile.hobbies.joined(separator: ", ")
+        }
+    }
+    func setDisabledFields(){
+        if mode == .Edit {
+            name.isUserInteractionEnabled = false
+            name.textColor = Settings.gray
+            age.isUserInteractionEnabled = false
+            age.textColor = Settings.gray
+            gender.isUserInteractionEnabled = false
+            gender.textColor = Settings.gray
+        }
+    }
 
     // MARK: Button handling methods
     @IBAction func editProfileImage(_ sender: UIButton) {
@@ -89,7 +115,7 @@ class ProfileViewController: UIViewController {
     @IBAction func dismissProfile() {
         self.performSegue(withIdentifier: "dismissMe", sender: self)
     }
-    @IBAction func addProfile() {
+    @IBAction func addOrEditProfile() {
         let textFieldsAreNotEmpty = !highlightEmptyTextFields()
         guard textFieldsAreNotEmpty else { return }
 
@@ -99,11 +125,16 @@ class ProfileViewController: UIViewController {
         let backgroundColor = (gender == .Female ? Settings.green : Settings.blue)
         let hobbies: [String] = self.hobbies.text!.characters.split(separator: ",").map(String.init).map{ $0.trimmingCharacters(in: .whitespaces) }
 
-        let newProfile = Profile(name: name, gender: gender, age: age, backgroundColor: backgroundColor, profileImage: profileImage.image, hobbies: hobbies)
+        if mode == .Add {
+            let newProfile = Profile(name: name, gender: gender, age: age, backgroundColor: backgroundColor, profileImage: profileImage.image, hobbies: hobbies)
 
-        let newProfileRef = dbRef.child(String(newProfile.uid))
-        newProfileRef.setValue(newProfile.toAnyObject())
+            let newProfileRef = dbRef.child(String(newProfile.uid))
+            newProfileRef.setValue(newProfile.toAnyObject())
 
+        } else if mode == .Edit {
+            profile?.ref?.updateChildValues(["hobbies" : hobbies,
+                                             "backgroundColor" : backgroundColor.toDictionary()])
+        }
         self.performSegue(withIdentifier: "dismissMe", sender: self)
     }
 

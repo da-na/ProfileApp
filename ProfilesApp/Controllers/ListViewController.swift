@@ -39,6 +39,21 @@ class ListViewController: UITableViewController {
         // this function does not need a body, but it needs to be here,
         // so that it's possible to unwind(segue) back here
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AddNewProfile" {
+            if let profileVC = segue.destination as? ProfileViewController{
+                profileVC.mode = .Add
+            }
+        }
+        if segue.identifier == "EditProfile" {
+            if let profileVC = segue.destination as? ProfileViewController,
+               let cell = sender as? ProfileCell {
+                let row = (self.tableView.indexPath(for: cell)?.row)!
+                profileVC.profile = profiles[row]
+                profileVC.mode = .Edit
+            }
+        }
+    }
 
     // MARK: UITableViewDelegate methods
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
