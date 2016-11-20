@@ -41,8 +41,22 @@ class ListViewController: UITableViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "AddNewProfile" {
-            if let profileVC = segue.destination as? ProfileViewController{
+            if let profileVC = segue.destination as? ProfileViewController {
                 profileVC.mode = .Add
+
+                // Animation settings
+                profileVC.modalPresentationStyle = .custom
+                profileVC.transitioningDelegate = profileVC
+
+                let expandedFrame = self.view.frame.insetBy(dx: Settings.standardOffset,
+                                                            dy: 3.0 * Settings.standardOffset)
+                var shrinkedFrame = expandedFrame
+                shrinkedFrame.size.height = 1.0
+
+                profileVC.animationShrinkedFrame = shrinkedFrame
+                profileVC.animationExpandedFrame = expandedFrame
+
+                profileVC.preferredImageWidth = expandedFrame.width
             }
         }
         if segue.identifier == "EditProfile" {

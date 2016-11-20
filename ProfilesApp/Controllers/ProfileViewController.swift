@@ -44,8 +44,14 @@ class ProfileViewController: UIViewController {
         }
     }
     let dbRef = FIRDatabase.database().reference(withPath: "profiles")
-    var profile: Profile?
+
     var mode: ProfileViewMode!
+    var profile: Profile?
+
+    var preferredImageWidth: CGFloat?
+    var animationShrinkedFrame: CGRect?
+    var animationExpandedFrame: CGRect?
+
     var imagePicker = UIImagePickerController()
     var genderPicker = UIPickerView()
 
@@ -74,7 +80,11 @@ class ProfileViewController: UIViewController {
         NotificationCenter.default.removeObserver(self)
     }
     func setProfileImage(){
-        profileImageWidth.constant = view.frame.width
+        if let width = preferredImageWidth {
+            profileImageWidth.constant = width
+        } else {
+            profileImageWidth.constant = self.view.frame.width
+        }
     }
     func setImagePicker(){
         imagePicker.delegate = self
@@ -219,5 +229,25 @@ extension ProfileViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let values = Gender.allValues()
         gender.text = values[row]
+    }
+}
+
+// MARK: UIViewControllerTransitioningDelegate methods
+extension ProfileViewController: UIViewControllerTransitioningDelegate {
+
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        return presented == self ?
+            CustomPresentationController(presentedViewController: presented, presentingViewController: source, startingFrame: animationShrinkedFrame!)
+            : nil
+    }
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return presented == self ?
+            CustomTransition(isPresenting: true, frameToResizeTo: animationExpandedFrame!)
+            : nil
+    }
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return dismissed == self ?
+            CustomTransition(isPresenting: false, frameToResizeTo: animationShrinkedFrame!)
+            : nil
     }
 }
