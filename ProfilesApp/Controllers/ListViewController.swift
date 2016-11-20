@@ -18,8 +18,22 @@ class ListViewController: UITableViewController {
     // MARK: UIViewController Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        addDatabaseObserver()
     }
 
+    // MARK: Helper methods
+    func addDatabaseObserver() {
+        ref.observe(.value, with: { snapshot in
+            var newProfiles: [Profile] = []
+
+            for item in snapshot.children {
+                let profile = Profile(snapshot: item as! FIRDataSnapshot)
+                newProfiles.append(profile)
+            }
+            self.profiles = newProfiles
+            self.tableView.reloadData()
+        })
+    }
     // MARK: Navigation methods
     @IBAction func unwindToListView(_ segue: UIStoryboardSegue){
         // this function does not need a body, but it needs to be here,
