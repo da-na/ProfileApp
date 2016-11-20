@@ -47,19 +47,24 @@ class ProfileViewController: UIViewController {
     // MARK: VCLifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setNotifications()
         setProfileImage()
         setImagePicker()
         setGenderPicker()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        setNotifications()
+    }
     override func viewDidDisappear(_ animated: Bool) {
-        NotificationCenter.default.removeObserver(self)
+        unsetNotifications()
     }
 
     // MARK: Init helper methods
     func setNotifications(){
         NotificationCenter.default.addObserver(self, selector:  #selector(keyboardWillShow), name: .UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector:  #selector(keyboardWillHide), name: .UIKeyboardWillHide, object: nil)
+    }
+    func unsetNotifications() {
+        NotificationCenter.default.removeObserver(self)
     }
     func setProfileImage(){
         profileImageWidth.constant = view.frame.width
@@ -71,6 +76,7 @@ class ProfileViewController: UIViewController {
         genderPicker.delegate = self
         gender.inputView = genderPicker
     }
+
     // MARK: Button handling methods
     @IBAction func editProfileImage(_ sender: UIButton) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.savedPhotosAlbum){
