@@ -21,22 +21,22 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var hobbies: UITextField!
     @IBOutlet weak var editProfileImageButton: UIButton! {
         didSet {
-            editProfileImageButton.layer.cornerRadius = 5
-            editProfileImageButton.layer.borderWidth = 1
+            editProfileImageButton.layer.cornerRadius = Settings.cornerRadius
+            editProfileImageButton.layer.borderWidth = Settings.borderWidth
             editProfileImageButton.layer.borderColor = UIColor.lightGray.cgColor
         }
     }
     @IBOutlet weak var dismissButton: UIButton! {
         didSet {
-            dismissButton.layer.cornerRadius = 5
-            dismissButton.layer.borderWidth = 1
+            dismissButton.layer.cornerRadius = Settings.cornerRadius
+            dismissButton.layer.borderWidth = Settings.borderWidth
             dismissButton.layer.borderColor = UIColor.lightGray.cgColor
         }
     }
     @IBOutlet weak var addProfileButton: UIButton! {
         didSet {
-            addProfileButton.layer.cornerRadius = 5
-            addProfileButton.layer.borderWidth = 1
+            addProfileButton.layer.cornerRadius = Settings.cornerRadius
+            addProfileButton.layer.borderWidth = Settings.borderWidth
             addProfileButton.layer.borderColor = UIColor.lightGray.cgColor
         }
     }
@@ -122,7 +122,7 @@ class ProfileViewController: UIViewController {
     // MARK: Helper methods
     private func offsetBackgroundScrollViewToKeepTextFieldsVisible(keyboardFrame: CGRect){
         let stackViewFrame = view.convert(containerStackView.bounds, from: containerStackView)
-        let margin: CGFloat = 20.0
+        let margin: CGFloat = Settings.standardOffset
 
         let difference = (keyboardFrame.origin.y - margin) - (stackViewFrame.origin.y + stackViewFrame.height)
         if  difference >= 0 {
@@ -139,8 +139,8 @@ class ProfileViewController: UIViewController {
 
         func setRedBorder(_ textField: UITextField) {
             textField.layer.masksToBounds = true
-            textField.layer.cornerRadius = 5
-            textField.layer.borderWidth = 1
+            textField.layer.cornerRadius = Settings.cornerRadius
+            textField.layer.borderWidth = Settings.borderWidth
             textField.layer.borderColor = UIColor.red.cgColor
         }
         func validate(_ textField: UITextField, _ placeholder: String) {
