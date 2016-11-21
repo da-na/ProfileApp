@@ -87,6 +87,10 @@ class ListViewController: UITableViewController {
         return true
     }
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let profile = profiles[indexPath.row]
+            profile.ref?.removeValue()
+        }
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     }
