@@ -52,7 +52,7 @@ class ProfileViewController: UIViewController {
     var animationShrinkedFrame: CGRect?
     var animationExpandedFrame: CGRect?
 
-    var imagePicker = UIImagePickerController()
+    var imagePicker = ImagePickerController()
     var genderPicker = UIPickerView()
 
     // MARK: VCLifecycle
@@ -116,8 +116,15 @@ class ProfileViewController: UIViewController {
     // MARK: Button handling methods
     @IBAction func editProfileImage(_ sender: UIButton) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.savedPhotosAlbum){
+
             imagePicker.sourceType = UIImagePickerControllerSourceType.savedPhotosAlbum
             imagePicker.allowsEditing = true
+
+            imagePicker.animationExpandedFrame = animationExpandedFrame
+            imagePicker.animationShrinkedFrame = animationShrinkedFrame
+
+            imagePicker.modalPresentationStyle = .custom
+            imagePicker.transitioningDelegate = imagePicker
 
             self.present(imagePicker, animated: true, completion: nil)
         }

@@ -26,6 +26,7 @@
 		F91C823D1DE207A900A8595D /* ProfileViewMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91C823C1DE207A900A8595D /* ProfileViewMode.swift */; };
 		F91C82451DE227C800A8595D /* CustomPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91C82431DE227C800A8595D /* CustomPresentationController.swift */; };
 		F91C82461DE227C800A8595D /* CustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91C82441DE227C800A8595D /* CustomTransition.swift */; };
+		F91C824B1DE2723200A8595D /* ImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91C824A1DE2723200A8595D /* ImagePickerController.swift */; };
 		F9510BFB1DE0F586008A46DE /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9510BFA1DE0F586008A46DE /* Gender.swift */; };
 		F9C90DCE1DDE270100CFE074 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C90DCD1DDE270100CFE074 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
@@ -79,6 +80,7 @@
 		F91C823C1DE207A900A8595D /* ProfileViewMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewMode.swift; path = Models/ProfileViewMode.swift; sourceTree = "<group>"; };
 		F91C82431DE227C800A8595D /* CustomPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomPresentationController.swift; path = Utils/CustomPresentation/CustomPresentationController.swift; sourceTree = "<group>"; };
 		F91C82441DE227C800A8595D /* CustomTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomTransition.swift; path = Utils/CustomPresentation/CustomTransition.swift; sourceTree = "<group>"; };
+		F91C824A1DE2723200A8595D /* ImagePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImagePickerController.swift; path = Controllers/ImagePickerController.swift; sourceTree = "<group>"; };
 		F9510BFA1DE0F586008A46DE /* Gender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Gender.swift; path = Models/Gender.swift; sourceTree = "<group>"; };
 		F9C90DCD1DDE270100CFE074 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Controllers/ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -173,6 +175,7 @@
 			children = (
 				31F68E601DD119FD00FEBEAD /* ListViewController.swift */,
 				F9C90DCD1DDE270100CFE074 /* ProfileViewController.swift */,
+				F91C824A1DE2723200A8595D /* ImagePickerController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 				31F68E611DD119FD00FEBEAD /* ListViewController.swift in Sources */,
 				F9C90DCE1DDE270100CFE074 /* ProfileViewController.swift in Sources */,
 				F91C82391DE1F8AA00A8595D /* Settings.swift in Sources */,
+				F91C824B1DE2723200A8595D /* ImagePickerController.swift in Sources */,
 				F91C823B1DE2002900A8595D /* ProfileCell.swift in Sources */,
 				31F68E641DD12B2600FEBEAD /* Profile.swift in Sources */,
 				F91C82451DE227C800A8595D /* CustomPresentationController.swift in Sources */,
