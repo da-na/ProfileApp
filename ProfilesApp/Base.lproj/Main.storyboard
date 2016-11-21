@@ -187,14 +187,30 @@
                                                             <action selector="editProfileImage:" destination="HhT-QK-6w3" eventType="touchUpInside" id="Ve5-Vj-UjJ"/>
                                                         </connections>
                                                     </button>
+                                                    <button autoresizesSubviews="NO" opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqp-ml-O4k" userLabel="Edit Background Color">
+                                                        <rect key="frame" x="236" y="20" width="30" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="eqp-ml-O4k" secondAttribute="height" id="q63-wF-OG9"/>
+                                                            <constraint firstAttribute="width" constant="30" id="uIu-nP-es0"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <state key="normal">
+                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="editBackgroundColor:" destination="HhT-QK-6w3" eventType="touchUpInside" id="hir-OJ-7mq"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="2UI-td-hLp" secondAttribute="trailing" constant="20" symbolic="YES" id="2mk-fe-o48"/>
                                                     <constraint firstItem="tQJ-ux-W6K" firstAttribute="top" secondItem="HRw-U9-Yy2" secondAttribute="top" id="6LJ-CK-h54"/>
+                                                    <constraint firstItem="eqp-ml-O4k" firstAttribute="top" secondItem="HRw-U9-Yy2" secondAttribute="top" constant="20" symbolic="YES" id="Is2-nE-gef"/>
                                                     <constraint firstAttribute="trailing" secondItem="tQJ-ux-W6K" secondAttribute="trailing" id="JWq-wP-a4U"/>
                                                     <constraint firstItem="tQJ-ux-W6K" firstAttribute="leading" secondItem="HRw-U9-Yy2" secondAttribute="leading" id="SRE-eM-8Ul"/>
                                                     <constraint firstAttribute="bottom" secondItem="2UI-td-hLp" secondAttribute="bottom" constant="20" symbolic="YES" id="fiz-AW-D2X"/>
+                                                    <constraint firstAttribute="trailing" secondItem="eqp-ml-O4k" secondAttribute="trailing" constant="20" symbolic="YES" id="trw-is-cbM"/>
                                                     <constraint firstAttribute="bottom" secondItem="tQJ-ux-W6K" secondAttribute="bottom" id="zyA-qb-l9N"/>
                                                 </constraints>
                                             </view>
@@ -358,6 +374,8 @@
                         <outlet property="backgroundScroll" destination="xGY-dM-djs" id="1Z6-w6-pGl"/>
                         <outlet property="containerStackView" destination="do1-69-RP3" id="gFF-az-4CQ"/>
                         <outlet property="dismissButton" destination="3m2-bD-2zl" id="BXM-xT-tBy"/>
+                        <outlet property="editBackgroundColorButton" destination="eqp-ml-O4k" id="jB2-Uu-Nzp"/>
+                        <outlet property="editBackgroundColorButtonWidth" destination="uIu-nP-es0" id="EhT-wR-wVm"/>
                         <outlet property="editProfileImageButton" destination="2UI-td-hLp" id="awU-JK-SGq"/>
                         <outlet property="gender" destination="Ac6-hb-Jaf" id="rGV-95-ooY"/>
                         <outlet property="hobbies" destination="fkB-bh-NpY" id="mAI-hN-msp"/>

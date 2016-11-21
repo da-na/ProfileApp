@@ -14,6 +14,9 @@ class Settings {
     static let cornerRadius = CGFloat(5.0)
     static let borderWidth = CGFloat(1.0)
 
+    // MARK: Menu Buttons settings
+    static let menuButtonDiameter = CGFloat(60.0)
+
     // MARK: Offset settings
     static let standardOffset = CGFloat(20.0)
 

@@ -19,6 +19,14 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var age: UITextField!
     @IBOutlet weak var gender: UITextField!
     @IBOutlet weak var hobbies: UITextField!
+    @IBOutlet weak var editBackgroundColorButtonWidth: NSLayoutConstraint!
+    @IBOutlet weak var editBackgroundColorButton: UIButton! {
+        didSet {
+            editBackgroundColorButton.layer.cornerRadius = 0.5 * Settings.menuButtonDiameter
+            editBackgroundColorButton.layer.borderWidth = Settings.borderWidth
+            editBackgroundColorButton.layer.borderColor = Settings.gray.cgColor
+        }
+    }
     @IBOutlet weak var editProfileImageButton: UIButton! {
         didSet {
             editProfileImageButton.layer.cornerRadius = Settings.cornerRadius
@@ -52,17 +60,18 @@ class ProfileViewController: UIViewController {
     var animationShrinkedFrame: CGRect?
     var animationExpandedFrame: CGRect?
 
+    var colorPicker = ColorPickerController()
     var imagePicker = ImagePickerController()
     var genderPicker = UIPickerView()
 
     // MARK: VCLifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setProfileImage()
-        setImagePicker()
-        setGenderPicker()
-        setTextFieldsValuesAndProfileImage()
-        setDisabledFieldsAndButtons()
+        setPickers()
+        setDisabledFields()
+        setButtons()
+        setProfileImageWidth()
+        setValuesOfTextFieldsProfileImageAndBackground()
     }
     override func viewWillAppear(_ animated: Bool) {
         setNotifications()
@@ -72,37 +81,39 @@ class ProfileViewController: UIViewController {
     }
 
     // MARK: Init helper methods
-    func setNotifications(){
+    private func setNotifications(){
         NotificationCenter.default.addObserver(self, selector:  #selector(keyboardWillShow), name: .UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector:  #selector(keyboardWillHide), name: .UIKeyboardWillHide, object: nil)
     }
-    func unsetNotifications() {
+    private func unsetNotifications() {
         NotificationCenter.default.removeObserver(self)
     }
-    func setProfileImage(){
+    private func setProfileImageWidth(){
         if let width = preferredImageWidth {
             profileImageWidth.constant = width
         } else {
             profileImageWidth.constant = self.view.frame.width
         }
     }
-    func setImagePicker(){
+    private func setPickers(){
         imagePicker.delegate = self
-    }
-    func setGenderPicker(){
+
         genderPicker.delegate = self
         gender.inputView = genderPicker
+
+        colorPicker.delegate = self
     }
-    func setTextFieldsValuesAndProfileImage() {
+    private func setValuesOfTextFieldsProfileImageAndBackground(){
         if let profile = self.profile {
             profileImage.image = profile.profileImage
             name.text = profile.name
             age.text = String(profile.age)
             gender.text = profile.gender.description
             hobbies.text = profile.hobbies.joined(separator: ", ")
+            editBackgroundColorButton.backgroundColor = profile.backgroundColor
         }
     }
-    func setDisabledFieldsAndButtons(){
+    private func setDisabledFields(){
         if mode == .Edit {
             name.isUserInteractionEnabled = false
             name.textColor = Settings.gray
@@ -110,11 +121,27 @@ class ProfileViewController: UIViewController {
             age.textColor = Settings.gray
             gender.isUserInteractionEnabled = false
             gender.textColor = Settings.gray
+        }
+    }
+    private func setButtons(){
+        if mode == .Edit {
             editProfileImageButton.isHidden = true
+            editBackgroundColorButtonWidth.constant = Settings.menuButtonDiameter
+        } else if mode == .Add {
+            editBackgroundColorButton.isHidden = true
         }
     }
 
     // MARK: Button handling methods
+    @IBAction func editBackgroundColor(_ sender: UIButton) {
+        colorPicker.animationExpandedFrame = view.convert(profileImage.bounds, from: profileImage)
+        colorPicker.animationShrinkedFrame = view.convert(editBackgroundColorButton.bounds, from: editBackgroundColorButton)
+
+        colorPicker.modalPresentationStyle = .custom
+        colorPicker.transitioningDelegate = colorPicker
+
+        self.present(colorPicker, animated: true, completion: nil)
+    }
     @IBAction func editProfileImage(_ sender: UIButton) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.savedPhotosAlbum){
 
@@ -140,16 +167,17 @@ class ProfileViewController: UIViewController {
         let name = self.name.text!.capitalized
         let gender = Gender(rawValue: self.gender.text!)!
         let age = Int(self.age.text!)!
-        let backgroundColor = (gender == .Female ? Settings.green : Settings.blue)
         let hobbies: [String] = self.hobbies.text!.characters.split(separator: ",").map(String.init).map{ $0.trimmingCharacters(in: .whitespaces) }
 
         if mode == .Add {
+            let backgroundColor = (gender == .Female ? Settings.green : Settings.blue)
             let newProfile = Profile(name: name, gender: gender, age: age, backgroundColor: backgroundColor, profileImage: profileImage.image, hobbies: hobbies)
 
             let newProfileRef = dbRef.child(String(newProfile.uid))
             newProfileRef.setValue(newProfile.toAnyObject())
 
         } else if mode == .Edit {
+            let backgroundColor = editBackgroundColorButton.backgroundColor!
             profile?.ref?.updateChildValues(["hobbies" : hobbies,
                                              "backgroundColor" : backgroundColor.toDictionary()])
         }
@@ -237,6 +265,15 @@ extension ProfileViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let values = Gender.allValues()
         gender.text = values[row]
+    }
+}
+
+// MARK: ColorPickerDelegate methods
+extension ProfileViewController: ColorPickerDelegate {
+    func colorPickerTouched(sender: ColorPickerController, color: UIColor, point: CGPoint, state: UIGestureRecognizerState) {
+        editBackgroundColorButton.backgroundColor = color
+        profile?.backgroundColor = color
+        print("SELECTED COLOR ", color)
     }
 }
 
