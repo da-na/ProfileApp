@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 // MARK: Dictionary extension
 // TODO: Uncomment what's below, when upgrading to Swift 3.1 :)
@@ -31,6 +32,48 @@ extension UIColor {
         self.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
         return ["red" : Float(red), "blue": Float(blue),
                 "green": Float(green), "alpha": Float(alpha)]
+    }
+}
+
+// MARK: Firebase extension
+// NOTE: At this point Firebase allows only one call of self.queryOrdered(byChild: child)
+// therefore, if ageSort or nameSort are set, then gender filtering must be done on client side
+extension FIRDatabaseQuery {
+    func sortAndFilterQuery() -> FIRDatabaseQuery {
+        // NOTE: Only one of those functions actually calls a query on Firebase - which one depends on SAFSettings
+        return self.uidSort().genderFilter().ageSort().nameSort()
+    }
+    func genderFilter() -> FIRDatabaseQuery {
+        let settings = SAFSettings.sharedInstance
+        let genderFilter = settings.genderFilterSetting
+        let ageSort = settings.ageSortSetting
+        let nameSort = settings.nameSortSetting
+
+        guard genderFilter != .None && ageSort == .None && nameSort == .None else { return self }
+
+        return self.queryOrdered(byChild: "gender").queryEqual(toValue: genderFilter.description)
+    }
+    func ageSort() -> FIRDatabaseQuery {
+        let ageSort = SAFSettings.sharedInstance.ageSortSetting
+        guard ageSort != .None else { return self }
+
+        return self.queryOrdered(byChild: "age")
+    }
+    func nameSort() -> FIRDatabaseQuery {
+        let nameSort = SAFSettings.sharedInstance.nameSortSetting
+        guard nameSort != .None else { return self }
+
+        return self.queryOrdered(byChild: "name")
+    }
+    func uidSort() -> FIRDatabaseQuery {
+        let settings = SAFSettings.sharedInstance
+        let genderFilter = settings.genderFilterSetting
+        let ageSort = settings.ageSortSetting
+        let nameSort = settings.nameSortSetting
+
+        guard genderFilter == .None && ageSort == .None && nameSort == .None else { return self }
+
+        return self.queryOrdered(byChild: "uid")
     }
 }
 

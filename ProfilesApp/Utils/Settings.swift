@@ -27,6 +27,6 @@ class Settings {
 
     // MARK: Filter settings
     static let genderFilterLabel: [GenderFilterMode: String] = [.None: "\u{1F46B}", .Female: "\u{1F469}", .Male: "\u{1F466}"]
-    static let nameSortLabel: [SortOrderMode: String] = [.None: "Name", .Ascending: "1-99", .Descending: "99-1"]
-    static let ageSortLabel: [SortOrderMode: String] = [.None: "Age", .Ascending: "A-Z", .Descending: "Z-A"]
+    static let nameSortLabel: [SortOrderMode: String] = [.None: "Name", .Ascending: "A-Z", .Descending: "Z-A"]
+    static let ageSortLabel: [SortOrderMode: String] = [.None: "Age", .Ascending: "1-99", .Descending: "99-1"]
 }

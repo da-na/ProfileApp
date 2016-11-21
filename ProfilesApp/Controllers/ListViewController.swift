@@ -18,23 +18,61 @@ class ListViewController: UITableViewController {
     let ref = FIRDatabase.database().reference(withPath: "profiles")
     var profiles: [Profile] = []
 
+    var genderFilter: GenderFilterMode {
+        get { return SAFSettings.sharedInstance.genderFilterSetting }
+        set { SAFSettings.sharedInstance.genderFilterSetting = newValue }
+    }
+    var ageSort: SortOrderMode {
+        get { return SAFSettings.sharedInstance.ageSortSetting }
+        set { SAFSettings.sharedInstance.ageSortSetting = newValue }
+    }
+    var nameSort: SortOrderMode {
+        get { return SAFSettings.sharedInstance.nameSortSetting }
+        set { SAFSettings.sharedInstance.nameSortSetting = newValue }
+    }
+
     // MARK: UIViewController Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        addDatabaseObserver()
+        setOrUpdateDatabaseObserver()
     }
     @IBAction func setMaleFemaleFilter(_ sender: Any) {
+        if genderFilter == .None { genderFilter = .Male }
+
+        maleFemaleFilterButton.title = Settings.genderFilterLabel[genderFilter]
+        genderFilter.flipValue()
+
+        setOrUpdateDatabaseObserver()
     }
     @IBAction func setAgeSort(_ sender: Any) {
+        if ageSort == .None { ageSort = .Descending }
+
+        ageSortButton.title = Settings.ageSortLabel[ageSort]
+        ageSort.flipValue()
+
+        setOrUpdateDatabaseObserver()
     }
     @IBAction func setNameSort(_ sender: Any) {
+        if nameSort == .None { nameSort = .Descending }
+
+        nameSortButton.title = Settings.nameSortLabel[nameSort]
+        nameSort.flipValue()
+
+        setOrUpdateDatabaseObserver()
     }
     @IBAction func clearSortsAndFilters(_ sender: Any) {
+        genderFilter = .None
+        ageSort = .None
+        nameSort = .None
+
+        setOrUpdateDatabaseObserver()
+        updateButtonLabels()
     }
 
     // MARK: Helper methods
-    func addDatabaseObserver() {
-        ref.observe(.value, with: { snapshot in self.setProfiles(snapshot) })
+    private func setOrUpdateDatabaseObserver() {
+        ref.removeAllObservers()
+        ref.sortAndFilterQuery().observe(.value, with: { snapshot in self.setProfiles(snapshot) })
     }
     private func setProfiles(_ snapshot: FIRDataSnapshot) {
         var newProfiles: [Profile] = []
@@ -43,8 +81,21 @@ class ListViewController: UITableViewController {
             let profile = Profile(snapshot: item as! FIRDataSnapshot)
             newProfiles.append(profile)
         }
-        self.profiles = newProfiles
+        // NOTE: if ageSort or nameSort are set, then gender filtering must be done on client side
+        let filterGenderLocally = (genderFilter != .None && (ageSort != .None || nameSort != .None))
+        if filterGenderLocally {
+            newProfiles = newProfiles.filter{ $0.gender.description == genderFilter.description }
+        }
+
+        if ageSort == .Descending || nameSort == .Descending {
+            self.profiles = Array(newProfiles.reversed())
+        } else {
+            self.profiles = newProfiles
+        }
         self.tableView.reloadData()
+    }
+    private func updateButtonLabels() {
+        // TODO: Implement!
     }
 
     // MARK: Navigation methods
