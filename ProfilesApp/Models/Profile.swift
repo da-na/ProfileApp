@@ -56,7 +56,7 @@ class Profile {
             "name": name,
             "gender": gender.description,
             "age": age,
-            "backgroundColor": backgroundColor?.toDictionary(),
+            "backgroundColor": backgroundColor?.toDictionary() as Any,
             "profileImage":  encodedImage,
             "hobbies": hobbies,
         ]
