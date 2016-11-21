@@ -24,4 +24,9 @@ class Settings {
     static let green = UIColor(colorLiteralRed: 0.43, green: 0.81, blue: 0.02, alpha: 1)
     static let blue = UIColor(colorLiteralRed: 0.20, green: 0.50, blue: 0.87, alpha: 1)
     static let gray = UIColor.lightGray
+
+    // MARK: Filter settings
+    static let genderFilterLabel: [GenderFilterMode: String] = [.None: "\u{1F46B}", .Female: "\u{1F469}", .Male: "\u{1F466}"]
+    static let nameSortLabel: [SortOrderMode: String] = [.None: "Name", .Ascending: "1-99", .Descending: "99-1"]
+    static let ageSortLabel: [SortOrderMode: String] = [.None: "Age", .Ascending: "A-Z", .Descending: "Z-A"]
 }

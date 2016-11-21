@@ -11,29 +11,42 @@ import Firebase
 
 class ListViewController: UITableViewController {
 
-    // MARK: Properties
-    var profiles: [Profile] = []
+    @IBOutlet weak var maleFemaleFilterButton: UIBarButtonItem!
+    @IBOutlet weak var ageSortButton: UIBarButtonItem!
+    @IBOutlet weak var nameSortButton: UIBarButtonItem!
+
     let ref = FIRDatabase.database().reference(withPath: "profiles")
+    var profiles: [Profile] = []
 
     // MARK: UIViewController Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         addDatabaseObserver()
     }
+    @IBAction func setMaleFemaleFilter(_ sender: Any) {
+    }
+    @IBAction func setAgeSort(_ sender: Any) {
+    }
+    @IBAction func setNameSort(_ sender: Any) {
+    }
+    @IBAction func clearSortsAndFilters(_ sender: Any) {
+    }
 
     // MARK: Helper methods
     func addDatabaseObserver() {
-        ref.observe(.value, with: { snapshot in
-            var newProfiles: [Profile] = []
-
-            for item in snapshot.children {
-                let profile = Profile(snapshot: item as! FIRDataSnapshot)
-                newProfiles.append(profile)
-            }
-            self.profiles = newProfiles
-            self.tableView.reloadData()
-        })
+        ref.observe(.value, with: { snapshot in self.setProfiles(snapshot) })
     }
+    private func setProfiles(_ snapshot: FIRDataSnapshot) {
+        var newProfiles: [Profile] = []
+
+        for item in snapshot.children {
+            let profile = Profile(snapshot: item as! FIRDataSnapshot)
+            newProfiles.append(profile)
+        }
+        self.profiles = newProfiles
+        self.tableView.reloadData()
+    }
+
     // MARK: Navigation methods
     @IBAction func unwindToListView(_ segue: UIStoryboardSegue){
         // this function does not need a body, but it needs to be here,

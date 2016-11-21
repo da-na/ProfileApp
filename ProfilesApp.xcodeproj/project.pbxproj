@@ -30,6 +30,8 @@
 		F91C824D1DE2895100A8595D /* ColorPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91C824C1DE2895100A8595D /* ColorPickerController.swift */; };
 		F91C824F1DE2954100A8595D /* PaletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91C824E1DE2954100A8595D /* PaletteView.swift */; };
 		F91C82511DE295B800A8595D /* ColorPickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91C82501DE295B800A8595D /* ColorPickerDelegate.swift */; };
+		F91C82561DE34E1200A8595D /* SortOrderMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91C82551DE34E1200A8595D /* SortOrderMode.swift */; };
+		F91C82581DE34E2F00A8595D /* GenderFilterMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91C82571DE34E2F00A8595D /* GenderFilterMode.swift */; };
 		F9510BFB1DE0F586008A46DE /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9510BFA1DE0F586008A46DE /* Gender.swift */; };
 		F9C90DCE1DDE270100CFE074 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C90DCD1DDE270100CFE074 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
@@ -87,6 +89,8 @@
 		F91C824C1DE2895100A8595D /* ColorPickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorPickerController.swift; path = Controllers/ColorPickerController.swift; sourceTree = "<group>"; };
 		F91C824E1DE2954100A8595D /* PaletteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PaletteView.swift; path = Utils/PaletteView.swift; sourceTree = "<group>"; };
 		F91C82501DE295B800A8595D /* ColorPickerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorPickerDelegate.swift; path = Utils/ColorPickerDelegate.swift; sourceTree = "<group>"; };
+		F91C82551DE34E1200A8595D /* SortOrderMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SortOrderMode.swift; path = Models/SortOrderMode.swift; sourceTree = "<group>"; };
+		F91C82571DE34E2F00A8595D /* GenderFilterMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GenderFilterMode.swift; path = Models/GenderFilterMode.swift; sourceTree = "<group>"; };
 		F9510BFA1DE0F586008A46DE /* Gender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Gender.swift; path = Models/Gender.swift; sourceTree = "<group>"; };
 		F9C90DCD1DDE270100CFE074 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Controllers/ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -191,6 +195,8 @@
 			isa = PBXGroup;
 			children = (
 				31F68E631DD12B2600FEBEAD /* Profile.swift */,
+				F91C82551DE34E1200A8595D /* SortOrderMode.swift */,
+				F91C82571DE34E2F00A8595D /* GenderFilterMode.swift */,
 				F9510BFA1DE0F586008A46DE /* Gender.swift */,
 				F91C823C1DE207A900A8595D /* ProfileViewMode.swift */,
 				F91C823A1DE2002900A8595D /* ProfileCell.swift */,
@@ -540,8 +546,10 @@
 				F91C823D1DE207A900A8595D /* ProfileViewMode.swift in Sources */,
 				F91C82461DE227C800A8595D /* CustomTransition.swift in Sources */,
 				31F68E671DD1394700FEBEAD /* Extensions.swift in Sources */,
+				F91C82581DE34E2F00A8595D /* GenderFilterMode.swift in Sources */,
 				31F68E611DD119FD00FEBEAD /* ListViewController.swift in Sources */,
 				F9C90DCE1DDE270100CFE074 /* ProfileViewController.swift in Sources */,
+				F91C82561DE34E1200A8595D /* SortOrderMode.swift in Sources */,
 				F91C82391DE1F8AA00A8595D /* Settings.swift in Sources */,
 				F91C824D1DE2895100A8595D /* ColorPickerController.swift in Sources */,
 				F91C824B1DE2723200A8595D /* ImagePickerController.swift in Sources */,

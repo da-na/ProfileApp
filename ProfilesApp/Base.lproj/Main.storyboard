@@ -8,6 +8,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -137,12 +138,41 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Profiles" id="3x5-uI-uPV">
-                        <barButtonItem key="rightBarButtonItem" title="+" id="XjX-PU-kE1" userLabel="Add Profile">
-                            <connections>
-                                <segue destination="HhT-QK-6w3" kind="presentation" identifier="AddNewProfile" id="tEx-Nv-eb1"/>
-                            </connections>
-                        </barButtonItem>
+                        <leftBarButtonItems>
+                            <barButtonItem title="M/F" id="OVv-rr-dFu">
+                                <connections>
+                                    <action selector="setMaleFemaleFilter:" destination="ho5-CY-f7Z" id="qdW-yf-GrQ"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="1-99" id="LLq-qH-p0o" userLabel="1-99">
+                                <connections>
+                                    <action selector="setAgeSort:" destination="ho5-CY-f7Z" id="9ts-1o-XVW"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="A-Z" id="NoK-xq-3F3">
+                                <connections>
+                                    <action selector="setNameSort:" destination="ho5-CY-f7Z" id="cb7-Nu-NlL"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <rightBarButtonItems>
+                            <barButtonItem title="+" id="XjX-PU-kE1" userLabel="Add Profile">
+                                <connections>
+                                    <segue destination="HhT-QK-6w3" kind="presentation" identifier="AddNewProfile" id="tEx-Nv-eb1"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="x" id="0de-Te-mph">
+                                <connections>
+                                    <action selector="clearSortsAndFilters:" destination="ho5-CY-f7Z" id="L90-lE-1r2"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="ageSortButton" destination="LLq-qH-p0o" id="GmD-7i-IDm"/>
+                        <outlet property="maleFemaleFilterButton" destination="OVv-rr-dFu" id="xw7-dl-G66"/>
+                        <outlet property="nameSortButton" destination="NoK-xq-3F3" id="DoG-O5-TJ6"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xDt-Eh-sjY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
