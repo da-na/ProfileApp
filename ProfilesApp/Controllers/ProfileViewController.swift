@@ -62,7 +62,7 @@ class ProfileViewController: UIViewController {
         setImagePicker()
         setGenderPicker()
         setTextFieldsValuesAndProfileImage()
-        setDisabledFields()
+        setDisabledFieldsAndButtons()
     }
     override func viewWillAppear(_ animated: Bool) {
         setNotifications()
@@ -102,7 +102,7 @@ class ProfileViewController: UIViewController {
             hobbies.text = profile.hobbies.joined(separator: ", ")
         }
     }
-    func setDisabledFields(){
+    func setDisabledFieldsAndButtons(){
         if mode == .Edit {
             name.isUserInteractionEnabled = false
             name.textColor = Settings.gray
@@ -110,6 +110,7 @@ class ProfileViewController: UIViewController {
             age.textColor = Settings.gray
             gender.isUserInteractionEnabled = false
             gender.textColor = Settings.gray
+            editProfileImageButton.isHidden = true
         }
     }
 
