@@ -23,21 +23,21 @@ class ProfileViewController: UIViewController {
         didSet {
             editProfileImageButton.layer.cornerRadius = Settings.cornerRadius
             editProfileImageButton.layer.borderWidth = Settings.borderWidth
-            editProfileImageButton.layer.borderColor = UIColor.lightGray.cgColor
+            editProfileImageButton.layer.borderColor = Settings.gray.cgColor
         }
     }
     @IBOutlet weak var dismissButton: UIButton! {
         didSet {
             dismissButton.layer.cornerRadius = Settings.cornerRadius
             dismissButton.layer.borderWidth = Settings.borderWidth
-            dismissButton.layer.borderColor = UIColor.lightGray.cgColor
+            dismissButton.layer.borderColor = Settings.gray.cgColor
         }
     }
     @IBOutlet weak var addProfileButton: UIButton! {
         didSet {
             addProfileButton.layer.cornerRadius = Settings.cornerRadius
             addProfileButton.layer.borderWidth = Settings.borderWidth
-            addProfileButton.layer.borderColor = UIColor.lightGray.cgColor
+            addProfileButton.layer.borderColor = Settings.gray.cgColor
             if mode == .Edit {
                 addProfileButton.setTitle("Submit Changes", for: .normal)
             }

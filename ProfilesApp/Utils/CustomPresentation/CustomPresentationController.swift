@@ -36,6 +36,13 @@ class CustomPresentationController: UIPresentationController {
 
     // MARK: Presentation Controller Lifecycle
     override func presentationTransitionWillBegin() {
+
+        // Add round border to the presented view
+        self.presentedView?.clipsToBounds = true
+        self.presentedView!.layer.cornerRadius = Settings.cornerRadius
+        self.presentedView!.layer.borderWidth = Settings.borderWidth
+        self.presentedView!.layer.borderColor = Settings.gray.cgColor
+
         // Add the dimming view and the presented view to the hierarchy
         dimmingView.backgroundColor = dimmingViewBackgroundColor
         dimmingView.frame = self.containerView!.bounds
