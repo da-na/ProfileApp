@@ -17,7 +17,7 @@ class CustomPresentationController: UIPresentationController {
     var startingFrame: CGRect
 
     // MARK: Initializer
-    init(presentedViewController: UIViewController, presentingViewController: UIViewController, startingFrame: CGRect, dimmingColor: UIColor = Settings.gray.withAlphaComponent(0.5)) {
+    init(presentedViewController: UIViewController, presentingViewController: UIViewController, startingFrame: CGRect, dimmingColor: UIColor = UISettings.gray.withAlphaComponent(0.5)) {
 
         self.startingFrame = startingFrame
         self.dimmingViewBackgroundColor = dimmingColor
@@ -39,9 +39,9 @@ class CustomPresentationController: UIPresentationController {
 
         // Add round border to the presented view
         self.presentedView?.clipsToBounds = true
-        self.presentedView!.layer.cornerRadius = Settings.cornerRadius
-        self.presentedView!.layer.borderWidth = Settings.borderWidth
-        self.presentedView!.layer.borderColor = Settings.gray.cgColor
+        self.presentedView!.layer.cornerRadius = UISettings.cornerRadius
+        self.presentedView!.layer.borderWidth = UISettings.borderWidth
+        self.presentedView!.layer.borderColor = UISettings.gray.cgColor
 
         // Add the dimming view and the presented view to the hierarchy
         dimmingView.backgroundColor = dimmingViewBackgroundColor

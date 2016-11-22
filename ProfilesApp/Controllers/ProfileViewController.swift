@@ -22,30 +22,30 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var editBackgroundColorButtonWidth: NSLayoutConstraint!
     @IBOutlet weak var editBackgroundColorButton: UIButton! {
         didSet {
-            editBackgroundColorButton.layer.cornerRadius = 0.5 * Settings.menuButtonDiameter
-            editBackgroundColorButton.layer.borderWidth = Settings.borderWidth
-            editBackgroundColorButton.layer.borderColor = Settings.gray.cgColor
+            editBackgroundColorButton.layer.cornerRadius = 0.5 * UISettings.menuButtonDiameter
+            editBackgroundColorButton.layer.borderWidth = UISettings.borderWidth
+            editBackgroundColorButton.layer.borderColor = UISettings.gray.cgColor
         }
     }
     @IBOutlet weak var editProfileImageButton: UIButton! {
         didSet {
-            editProfileImageButton.layer.cornerRadius = Settings.cornerRadius
-            editProfileImageButton.layer.borderWidth = Settings.borderWidth
-            editProfileImageButton.layer.borderColor = Settings.gray.cgColor
+            editProfileImageButton.layer.cornerRadius = UISettings.cornerRadius
+            editProfileImageButton.layer.borderWidth = UISettings.borderWidth
+            editProfileImageButton.layer.borderColor = UISettings.gray.cgColor
         }
     }
     @IBOutlet weak var dismissButton: UIButton! {
         didSet {
-            dismissButton.layer.cornerRadius = Settings.cornerRadius
-            dismissButton.layer.borderWidth = Settings.borderWidth
-            dismissButton.layer.borderColor = Settings.gray.cgColor
+            dismissButton.layer.cornerRadius = UISettings.cornerRadius
+            dismissButton.layer.borderWidth = UISettings.borderWidth
+            dismissButton.layer.borderColor = UISettings.gray.cgColor
         }
     }
     @IBOutlet weak var addProfileButton: UIButton! {
         didSet {
-            addProfileButton.layer.cornerRadius = Settings.cornerRadius
-            addProfileButton.layer.borderWidth = Settings.borderWidth
-            addProfileButton.layer.borderColor = Settings.gray.cgColor
+            addProfileButton.layer.cornerRadius = UISettings.cornerRadius
+            addProfileButton.layer.borderWidth = UISettings.borderWidth
+            addProfileButton.layer.borderColor = UISettings.gray.cgColor
             if mode == .Edit {
                 addProfileButton.setTitle("Submit Changes", for: .normal)
             }
@@ -116,17 +116,17 @@ class ProfileViewController: UIViewController {
     private func setDisabledFields(){
         if mode == .Edit {
             name.isUserInteractionEnabled = false
-            name.textColor = Settings.gray
+            name.textColor = UISettings.gray
             age.isUserInteractionEnabled = false
-            age.textColor = Settings.gray
+            age.textColor = UISettings.gray
             gender.isUserInteractionEnabled = false
-            gender.textColor = Settings.gray
+            gender.textColor = UISettings.gray
         }
     }
     private func setButtons(){
         if mode == .Edit {
             editProfileImageButton.isHidden = true
-            editBackgroundColorButtonWidth.constant = Settings.menuButtonDiameter
+            editBackgroundColorButtonWidth.constant = UISettings.menuButtonDiameter
         } else if mode == .Add {
             editBackgroundColorButton.isHidden = true
         }
@@ -170,7 +170,7 @@ class ProfileViewController: UIViewController {
         let hobbies: [String] = self.hobbies.text!.characters.split(separator: ",").map(String.init).map{ $0.trimmingCharacters(in: .whitespaces) }
 
         if mode == .Add {
-            let backgroundColor = (gender == .Female ? Settings.green : Settings.blue)
+            let backgroundColor = (gender == .Female ? UISettings.green : UISettings.blue)
             let newProfile = Profile(name: name, gender: gender, age: age, backgroundColor: backgroundColor, profileImage: profileImage.image, hobbies: hobbies)
 
             let newProfileRef = dbRef.child(String(newProfile.uid))
@@ -199,7 +199,7 @@ class ProfileViewController: UIViewController {
     // MARK: Helper methods
     private func offsetBackgroundScrollViewToKeepTextFieldsVisible(keyboardFrame: CGRect){
         let stackViewFrame = view.convert(containerStackView.bounds, from: containerStackView)
-        let margin: CGFloat = Settings.standardOffset
+        let margin: CGFloat = UISettings.standardOffset
 
         let difference = (keyboardFrame.origin.y - margin) - (stackViewFrame.origin.y + stackViewFrame.height)
         if  difference >= 0 {
@@ -216,8 +216,8 @@ class ProfileViewController: UIViewController {
 
         func setRedBorder(_ textField: UITextField) {
             textField.layer.masksToBounds = true
-            textField.layer.cornerRadius = Settings.cornerRadius
-            textField.layer.borderWidth = Settings.borderWidth
+            textField.layer.cornerRadius = UISettings.cornerRadius
+            textField.layer.borderWidth = UISettings.borderWidth
             textField.layer.borderColor = UIColor.red.cgColor
         }
         func validate(_ textField: UITextField, _ placeholder: String) {

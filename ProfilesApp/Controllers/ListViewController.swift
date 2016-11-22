@@ -98,13 +98,13 @@ class ListViewController: UITableViewController {
     private func setButtonLabels() {
         updateButtonLabels()
         resetFiltersButton.title = ""
-        addNewProfileButton.title = Settings.addNewProfile
+        addNewProfileButton.title = UISettings.addNewProfile
     }
     private func updateButtonLabels() {
-        resetFiltersButton.title = Settings.resetFilters
-        genderFilterButton.title = Settings.genderFilterLabel[genderFilter]
-        ageSortButton.title = Settings.ageSortLabel[ageSort]
-        nameSortButton.title = Settings.nameSortLabel[nameSort]
+        resetFiltersButton.title = UISettings.resetFilters
+        genderFilterButton.title = UISettings.genderFilterLabel[genderFilter]
+        ageSortButton.title = UISettings.ageSortLabel[ageSort]
+        nameSortButton.title = UISettings.nameSortLabel[nameSort]
     }
 
     // MARK: Navigation methods
@@ -121,8 +121,8 @@ class ListViewController: UITableViewController {
                 profileVC.modalPresentationStyle = .custom
                 profileVC.transitioningDelegate = profileVC
 
-                let expandedFrame = self.view.frame.insetBy(dx: Settings.standardOffset,
-                                                            dy: 3.0 * Settings.standardOffset)
+                let expandedFrame = self.view.frame.insetBy(dx: UISettings.standardOffset,
+                                                            dy: 3.0 * UISettings.standardOffset)
                 var shrinkedFrame = expandedFrame
                 shrinkedFrame.size.height = 1.0
 

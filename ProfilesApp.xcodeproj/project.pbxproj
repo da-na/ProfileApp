@@ -21,7 +21,6 @@
 		F91C82311DE11F4500A8595D /* ProfileViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91C82301DE11F4500A8595D /* ProfileViewControllerUITests.swift */; };
 		F91C82331DE11FC000A8595D /* ProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91C82321DE11FC000A8595D /* ProfileTests.swift */; };
 		F91C82351DE12DC800A8595D /* GenderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91C82341DE12DC800A8595D /* GenderTests.swift */; };
-		F91C82391DE1F8AA00A8595D /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91C82381DE1F8AA00A8595D /* Settings.swift */; };
 		F91C823B1DE2002900A8595D /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91C823A1DE2002900A8595D /* ProfileCell.swift */; };
 		F91C823D1DE207A900A8595D /* ProfileViewMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91C823C1DE207A900A8595D /* ProfileViewMode.swift */; };
 		F91C82451DE227C800A8595D /* CustomPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91C82431DE227C800A8595D /* CustomPresentationController.swift */; };
@@ -33,6 +32,7 @@
 		F91C82561DE34E1200A8595D /* SortOrderMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91C82551DE34E1200A8595D /* SortOrderMode.swift */; };
 		F91C82581DE34E2F00A8595D /* GenderFilterMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91C82571DE34E2F00A8595D /* GenderFilterMode.swift */; };
 		F91C825C1DE36E9600A8595D /* SAFSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91C825B1DE36E9600A8595D /* SAFSettings.swift */; };
+		F91C82601DE3C94600A8595D /* UISettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91C825F1DE3C94600A8595D /* UISettings.swift */; };
 		F9510BFB1DE0F586008A46DE /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9510BFA1DE0F586008A46DE /* Gender.swift */; };
 		F9C90DCE1DDE270100CFE074 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C90DCD1DDE270100CFE074 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
@@ -81,7 +81,6 @@
 		F91C82301DE11F4500A8595D /* ProfileViewControllerUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewControllerUITests.swift; sourceTree = "<group>"; };
 		F91C82321DE11FC000A8595D /* ProfileTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTests.swift; sourceTree = "<group>"; };
 		F91C82341DE12DC800A8595D /* GenderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenderTests.swift; sourceTree = "<group>"; };
-		F91C82381DE1F8AA00A8595D /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Settings.swift; path = Utils/Settings.swift; sourceTree = "<group>"; };
 		F91C823A1DE2002900A8595D /* ProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileCell.swift; path = Models/ProfileCell.swift; sourceTree = "<group>"; };
 		F91C823C1DE207A900A8595D /* ProfileViewMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewMode.swift; path = Models/ProfileViewMode.swift; sourceTree = "<group>"; };
 		F91C82431DE227C800A8595D /* CustomPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomPresentationController.swift; path = Utils/CustomPresentation/CustomPresentationController.swift; sourceTree = "<group>"; };
@@ -93,6 +92,7 @@
 		F91C82551DE34E1200A8595D /* SortOrderMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SortOrderMode.swift; path = Models/SortOrderMode.swift; sourceTree = "<group>"; };
 		F91C82571DE34E2F00A8595D /* GenderFilterMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GenderFilterMode.swift; path = Models/GenderFilterMode.swift; sourceTree = "<group>"; };
 		F91C825B1DE36E9600A8595D /* SAFSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SAFSettings.swift; path = Utils/SAFSettings.swift; sourceTree = "<group>"; };
+		F91C825F1DE3C94600A8595D /* UISettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UISettings.swift; path = Utils/UISettings.swift; sourceTree = "<group>"; };
 		F9510BFA1DE0F586008A46DE /* Gender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Gender.swift; path = Models/Gender.swift; sourceTree = "<group>"; };
 		F9C90DCD1DDE270100CFE074 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Controllers/ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -211,7 +211,7 @@
 			children = (
 				31F68E661DD1394700FEBEAD /* Extensions.swift */,
 				F91C825B1DE36E9600A8595D /* SAFSettings.swift */,
-				F91C82381DE1F8AA00A8595D /* Settings.swift */,
+				F91C825F1DE3C94600A8595D /* UISettings.swift */,
 				F91C82521DE295F200A8595D /* Color related */,
 				F91C82471DE227CE00A8595D /* CustomModalPresentation */,
 			);
@@ -554,7 +554,7 @@
 				F9C90DCE1DDE270100CFE074 /* ProfileViewController.swift in Sources */,
 				F91C82561DE34E1200A8595D /* SortOrderMode.swift in Sources */,
 				F91C825C1DE36E9600A8595D /* SAFSettings.swift in Sources */,
-				F91C82391DE1F8AA00A8595D /* Settings.swift in Sources */,
+				F91C82601DE3C94600A8595D /* UISettings.swift in Sources */,
 				F91C824D1DE2895100A8595D /* ColorPickerController.swift in Sources */,
 				F91C824B1DE2723200A8595D /* ImagePickerController.swift in Sources */,
 				F91C823B1DE2002900A8595D /* ProfileCell.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  Settings.swift
+//  UISettings.swift
 //  ProfilesApp
 //
 //  Created by Dagna Bieda on 11/20/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Settings {
+class UISettings {
 
     // MARK: Button Layer related settings
     static let cornerRadius = CGFloat(5.0)
@@ -29,6 +29,6 @@ class Settings {
     static let genderFilterLabel: [GenderFilterMode: String] = [.None: "\u{1F469} or \u{1F466}", .Female: "\u{1F469}", .Male: "\u{1F466}"]
     static let nameSortLabel: [SortOrderMode: String] = [.None: "Name\u{2191}\u{2193}", .Ascending: "Name\u{2191}", .Descending: "Name\u{2193}"]
     static let ageSortLabel: [SortOrderMode: String] = [.None: "Age\u{2191}\u{2193}", .Ascending: "Age\u{2191}", .Descending: "Age\u{2193}"]
-    static let resetFilters = "\u{2717}"
+    static let resetFilters = ""
     static let addNewProfile = "+\u{1F464}"
 }
