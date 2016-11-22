@@ -112,6 +112,10 @@ class ListViewController: UITableViewController {
         // this function does not need a body, but it needs to be here,
         // so that it's possible to unwind(segue) back here
     }
+    @IBAction func unwindToListViewAndRefreshData(_ segue: UIStoryboardSegue){
+        setOrUpdateDatabaseObserver()
+        tableView.reloadData()
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "AddNewProfile" {
             if let profileVC = segue.destination as? ProfileViewController {

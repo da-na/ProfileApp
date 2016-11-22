@@ -59,6 +59,7 @@ class CustomTransition: NSObject, UIViewControllerAnimatedTransitioning {
         UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0.0, options: .allowUserInteraction, animations: {
 
             presentedControllerView.frame = self.frameToResizeTo
+            presentedControllerView.subviews.forEach{ $0.isHidden = true }
 
         }, completion: {(completed: Bool) -> Void in
             transitionContext.completeTransition(completed)

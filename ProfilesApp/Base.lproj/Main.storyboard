@@ -395,9 +395,11 @@
                         <outlet property="femaleFilterButton" destination="OyC-R4-b3M" id="wxp-6n-dlC"/>
                         <outlet property="maleFilterButton" destination="3bI-WJ-IlD" id="6fy-ZK-BrT"/>
                         <outlet property="nameSortButton" destination="QqQ-wc-xUN" id="KeD-u9-4Ew"/>
+                        <segue destination="MVT-5N-nVB" kind="unwind" identifier="RefreshTableView" unwindAction="unwindToListViewAndRefreshData:" id="IRD-wY-FVT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MND-Jw-UbJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="MVT-5N-nVB" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1160.625" y="-463.73239436619718"/>
         </scene>
