@@ -8,7 +8,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -149,54 +148,28 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="3x5-uI-uPV">
-                        <leftBarButtonItems>
-                            <barButtonItem title="M/F" id="OVv-rr-dFu">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="9rJ-1y-xds">
+                            <button key="customView" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="DVY-SK-wIe">
+                                <rect key="frame" x="16" y="7" width="130" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="PermanentMarker" family="Permanent Marker" pointSize="17"/>
+                                <state key="normal" title="Profiles App">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="mLE-32-D1P">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BEy-zM-ZbM">
+                                <rect key="frame" x="233" y="3" width="71" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="PermanentMarker" family="Permanent Marker" pointSize="17"/>
+                                <state key="normal" title="Menu ☰"/>
                                 <connections>
-                                    <action selector="setGenderFilter:" destination="ho5-CY-f7Z" id="2yM-c7-nfX"/>
+                                    <segue destination="YIR-oY-Jct" kind="presentation" identifier="DropDownMenu" id="MPJ-jG-Upn"/>
                                 </connections>
-                            </barButtonItem>
-                            <barButtonItem title="Age" id="LLq-qH-p0o" userLabel="Age Filter Button">
-                                <connections>
-                                    <action selector="setAgeSort:" destination="ho5-CY-f7Z" id="37b-36-PkG"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="Name" id="NoK-xq-3F3">
-                                <connections>
-                                    <action selector="setNameSort:" destination="ho5-CY-f7Z" id="rsv-zP-Cvn"/>
-                                </connections>
-                            </barButtonItem>
-                        </leftBarButtonItems>
-                        <rightBarButtonItems>
-                            <barButtonItem style="plain" id="mLE-32-D1P">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BEy-zM-ZbM">
-                                    <rect key="frame" x="233" y="3" width="71" height="37"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" name="PermanentMarker" family="Permanent Marker" pointSize="17"/>
-                                    <state key="normal" title="Menu ☰"/>
-                                    <connections>
-                                        <segue destination="YIR-oY-Jct" kind="presentation" identifier="DropDownMenu" id="MPJ-jG-Upn"/>
-                                    </connections>
-                                </button>
-                            </barButtonItem>
-                            <barButtonItem title="+" id="XjX-PU-kE1" userLabel="Add Profile">
-                                <connections>
-                                    <segue destination="HhT-QK-6w3" kind="presentation" identifier="AddNewProfile" id="tEx-Nv-eb1"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="x" id="0de-Te-mph">
-                                <connections>
-                                    <action selector="clearSortsAndFilters:" destination="ho5-CY-f7Z" id="L90-lE-1r2"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                            </button>
+                        </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="addNewProfileButton" destination="XjX-PU-kE1" id="bUP-bA-OeI"/>
-                        <outlet property="ageSortButton" destination="LLq-qH-p0o" id="GmD-7i-IDm"/>
-                        <outlet property="genderFilterButton" destination="OVv-rr-dFu" id="okL-SD-hNz"/>
-                        <outlet property="nameSortButton" destination="NoK-xq-3F3" id="DoG-O5-TJ6"/>
-                        <outlet property="resetFiltersButton" destination="0de-Te-mph" id="6zq-hg-gj1"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xDt-Eh-sjY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -416,7 +389,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="xGY-dM-djs">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="do1-69-RP3" userLabel="Outermost Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="286" height="528"/>
@@ -682,7 +655,4 @@
     <resources>
         <image name="profile_placeholder" width="500" height="500"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="tEx-Nv-eb1"/>
-    </inferredMetricsTieBreakers>
 </document>

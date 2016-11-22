@@ -11,12 +11,6 @@ import Firebase
 
 class ListViewController: UITableViewController {
 
-    @IBOutlet weak var genderFilterButton: UIBarButtonItem!
-    @IBOutlet weak var ageSortButton: UIBarButtonItem!
-    @IBOutlet weak var nameSortButton: UIBarButtonItem!
-    @IBOutlet weak var resetFiltersButton: UIBarButtonItem!
-    @IBOutlet weak var addNewProfileButton: UIBarButtonItem!
-
     let ref = FIRDatabase.database().reference(withPath: "profiles")
     var profiles: [Profile] = []
 
@@ -36,40 +30,9 @@ class ListViewController: UITableViewController {
     // MARK: UIViewController Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setButtonLabels()
         setOrUpdateDatabaseObserver()
     }
 
-    // MARK: Button handling methods
-    @IBAction func setGenderFilter(_ sender: UIBarButtonItem) {
-        if genderFilter == .None { genderFilter = .Male }
-        genderFilter.flipValue()
-
-        updateButtonLabels()
-        setOrUpdateDatabaseObserver()
-    }
-    @IBAction func setAgeSort(_ sender: UIBarButtonItem) {
-        if ageSort == .None { ageSort = .Descending }
-        ageSort.flipValue()
-
-        updateButtonLabels()
-        setOrUpdateDatabaseObserver()
-    }
-    @IBAction func setNameSort(_ sender: UIBarButtonItem) {
-        if nameSort == .None { nameSort = .Descending }
-        nameSort.flipValue()
-
-        updateButtonLabels()
-        setOrUpdateDatabaseObserver()
-    }
-    @IBAction func clearSortsAndFilters(_ sender: Any) {
-        genderFilter = .None
-        ageSort = .None
-        nameSort = .None
-
-        setOrUpdateDatabaseObserver()
-        updateButtonLabels()
-    }
     // MARK: Helper methods
     private func setOrUpdateDatabaseObserver() {
         ref.removeAllObservers()
@@ -94,17 +57,6 @@ class ListViewController: UITableViewController {
             self.profiles = newProfiles
         }
         self.tableView.reloadData()
-    }
-    private func setButtonLabels() {
-        updateButtonLabels()
-        resetFiltersButton.title = ""
-        addNewProfileButton.title = UISettings.addNewProfile
-    }
-    private func updateButtonLabels() {
-        resetFiltersButton.title = UISettings.resetFilters
-        genderFilterButton.title = UISettings.genderFilterLabel[genderFilter]
-        ageSortButton.title = UISettings.ageSortLabel[ageSort]
-        nameSortButton.title = UISettings.nameSortLabel[nameSort]
     }
 
     // MARK: Navigation methods
@@ -189,8 +141,6 @@ class ListViewController: UITableViewController {
             let profile = profiles[indexPath.row]
             profile.ref?.removeValue()
         }
-    }
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     }
 
 }
