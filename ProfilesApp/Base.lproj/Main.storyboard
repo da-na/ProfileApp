@@ -448,6 +448,7 @@
                         <outlet property="addProfileButton" destination="WjM-hd-smj" id="Bdz-mb-2sk"/>
                         <outlet property="age" destination="4Fy-eL-GGX" id="hqd-M5-kWI"/>
                         <outlet property="backgroundScroll" destination="xGY-dM-djs" id="1Z6-w6-pGl"/>
+                        <outlet property="containerStackBottomView" destination="cid-hA-lCY" id="5OQ-us-n7H"/>
                         <outlet property="containerStackView" destination="do1-69-RP3" id="gFF-az-4CQ"/>
                         <outlet property="dismissButton" destination="3m2-bD-2zl" id="BXM-xT-tBy"/>
                         <outlet property="editBackgroundColorButton" destination="eqp-ml-O4k" id="jB2-Uu-Nzp"/>

@@ -13,6 +13,7 @@ class ProfileViewController: UIViewController {
 
     @IBOutlet weak var backgroundScroll: UIScrollView!
     @IBOutlet weak var containerStackView: UIStackView!
+    @IBOutlet weak var containerStackBottomView: UIView!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var profileImageWidth: NSLayoutConstraint!
     @IBOutlet weak var name: UITextField!
@@ -198,17 +199,18 @@ class ProfileViewController: UIViewController {
 
     // MARK: Helper methods
     private func offsetBackgroundScrollViewToKeepTextFieldsVisible(keyboardFrame: CGRect){
-        let stackViewFrame = view.convert(containerStackView.bounds, from: containerStackView)
-        let margin: CGFloat = UISettings.standardOffset
+        let bottomStackViewFrame = view.convert(containerStackBottomView.bounds, from: containerStackBottomView)
+        let difference = keyboardFrame.origin.y - bottomStackViewFrame.origin.y
 
-        let difference = (keyboardFrame.origin.y - margin) - (stackViewFrame.origin.y + stackViewFrame.height)
         if  difference >= 0 {
             // Keyboard doesn't obscure last visible text view, no need to scroll
         } else {
+            let margin: CGFloat = CGFloat(3.0) * UISettings.standardOffset
             let contentFrame = containerStackView.frame.size
             backgroundScroll.contentSize = CGSize(width: contentFrame.width,
-                                                  height: contentFrame.height + keyboardFrame.height)
-            backgroundScroll.contentOffset = CGPoint(x: 0, y: -difference)
+                                                  height: contentFrame.height + keyboardFrame.height - margin)
+            let bottomOffset = CGPoint(x: 0, y: backgroundScroll.contentSize.height - backgroundScroll.bounds.size.height)
+            backgroundScroll.setContentOffset(bottomOffset, animated: true)
         }
     }
     private func highlightEmptyTextFields() -> Bool {
