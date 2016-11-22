@@ -122,7 +122,7 @@ class ListViewController: UITableViewController {
                 profileVC.transitioningDelegate = profileVC
 
                 let expandedFrame = self.view.frame.insetBy(dx: UISettings.standardOffset,
-                                                            dy: 3.0 * UISettings.standardOffset)
+                                                            dy: 2.5 * UISettings.standardOffset)
                 var shrinkedFrame = expandedFrame
                 shrinkedFrame.size.height = 1.0
 
@@ -138,6 +138,27 @@ class ListViewController: UITableViewController {
                 let row = (self.tableView.indexPath(for: cell)?.row)!
                 profileVC.profile = profiles[row]
                 profileVC.mode = .Edit
+            }
+        }
+        if segue.identifier == "DropDownMenu" {
+            if let menuVC = segue.destination as? MenuViewController {
+                // Animation settings
+                menuVC.modalPresentationStyle = .custom
+                menuVC.transitioningDelegate = menuVC
+
+                let menuWidth = UISettings.menuWidth
+                let menuHeight = UISettings.menuHeight
+
+                let screenFrame = self.view.frame
+                let xOrigin = screenFrame.width - menuWidth - UISettings.standardOffset
+                let yOrigin = 3.0 * UISettings.standardOffset
+
+                let expandedFrame = CGRect(x: xOrigin, y: yOrigin, width: menuWidth, height: menuHeight)
+                var shrinkedFrame = expandedFrame
+                shrinkedFrame.size.height = 1.0
+
+                menuVC.animationShrinkedFrame = shrinkedFrame
+                menuVC.animationExpandedFrame = expandedFrame
             }
         }
     }

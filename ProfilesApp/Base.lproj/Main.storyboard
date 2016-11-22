@@ -167,6 +167,17 @@
                             </barButtonItem>
                         </leftBarButtonItems>
                         <rightBarButtonItems>
+                            <barButtonItem style="plain" id="mLE-32-D1P">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BEy-zM-ZbM">
+                                    <rect key="frame" x="233" y="3" width="71" height="37"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="PermanentMarker" family="Permanent Marker" pointSize="17"/>
+                                    <state key="normal" title="Menu ☰"/>
+                                    <connections>
+                                        <segue destination="YIR-oY-Jct" kind="presentation" identifier="DropDownMenu" id="MPJ-jG-Upn"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
                             <barButtonItem title="+" id="XjX-PU-kE1" userLabel="Add Profile">
                                 <connections>
                                     <segue destination="HhT-QK-6w3" kind="presentation" identifier="AddNewProfile" id="tEx-Nv-eb1"/>
@@ -190,6 +201,147 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xDt-Eh-sjY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="249.375" y="-32.74647887323944"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="mpr-T1-w2D">
+            <objects>
+                <viewController id="YIR-oY-Jct" customClass="MenuViewController" customModule="ProfilesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HhV-Yd-Wgd"/>
+                        <viewControllerLayoutGuide type="bottom" id="PZ7-eR-Zzm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mjv-dT-KQn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="K8w-gd-rTd">
+                                <rect key="frame" x="129" y="20" width="175" height="199"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9aI-IQ-Qry">
+                                        <rect key="frame" x="0.0" y="0.0" width="175" height="37"/>
+                                        <fontDescription key="fontDescription" name="PermanentMarker" family="Permanent Marker" pointSize="17"/>
+                                        <state key="normal" title="Add new profile"/>
+                                        <connections>
+                                            <action selector="addNewProfile:" destination="YIR-oY-Jct" eventType="touchUpInside" id="x05-rs-5QY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Trg-9w-ZCl">
+                                        <rect key="frame" x="0.0" y="37" width="175" height="34"/>
+                                        <fontDescription key="fontDescription" name="PermanentMarker" family="Permanent Marker" pointSize="15"/>
+                                        <state key="normal" title="Clear ⚤ or ⬆︎⬇︎"/>
+                                        <connections>
+                                            <action selector="clearFiltersOrSorts:" destination="YIR-oY-Jct" eventType="touchUpInside" id="FnR-AV-uEU"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wbw-Rc-m31">
+                                        <rect key="frame" x="0.0" y="71" width="175" height="64"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Gender Filter ⚤" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YjK-jk-daY">
+                                                <rect key="frame" x="0.0" y="0.0" width="122" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="PermanentMarker" family="Permanent Marker" pointSize="12"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="lAJ-XU-NgO">
+                                                <rect key="frame" x="8" y="20" width="159" height="44"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bI-WJ-IlD">
+                                                        <rect key="frame" x="0.0" y="0.0" width="73.5" height="44"/>
+                                                        <fontDescription key="fontDescription" name="PermanentMarker" family="Permanent Marker" pointSize="17"/>
+                                                        <state key="normal" title="Male"/>
+                                                        <connections>
+                                                            <action selector="setUnsetMaleFilter:" destination="YIR-oY-Jct" eventType="touchUpInside" id="FR7-pg-ePB"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OyC-R4-b3M">
+                                                        <rect key="frame" x="85.5" y="0.0" width="73.5" height="44"/>
+                                                        <fontDescription key="fontDescription" name="PermanentMarker" family="Permanent Marker" pointSize="17"/>
+                                                        <state key="normal" title="Female"/>
+                                                        <connections>
+                                                            <action selector="setUnsetFemaleFilter:" destination="YIR-oY-Jct" eventType="touchUpInside" id="clH-DA-DGy"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="lAJ-XU-NgO" firstAttribute="top" secondItem="Wbw-Rc-m31" secondAttribute="top" constant="20" symbolic="YES" id="1tv-Y8-yIn"/>
+                                            <constraint firstItem="lAJ-XU-NgO" firstAttribute="leading" secondItem="Wbw-Rc-m31" secondAttribute="leading" constant="8" id="1xB-Wy-tI4"/>
+                                            <constraint firstItem="YjK-jk-daY" firstAttribute="top" secondItem="Wbw-Rc-m31" secondAttribute="top" id="6eZ-sB-f2A"/>
+                                            <constraint firstAttribute="trailing" secondItem="lAJ-XU-NgO" secondAttribute="trailing" constant="8" id="Bbs-EF-pMf"/>
+                                            <constraint firstItem="YjK-jk-daY" firstAttribute="leading" secondItem="Wbw-Rc-m31" secondAttribute="leading" id="Opd-hh-Wy7"/>
+                                            <constraint firstAttribute="bottom" secondItem="lAJ-XU-NgO" secondAttribute="bottom" id="sm8-pO-0tl"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d9v-hy-oKB">
+                                        <rect key="frame" x="0.0" y="135" width="175" height="64"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Sorts (⬇︎ or ⬆︎)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CnN-r2-et2">
+                                                <rect key="frame" x="0.0" y="0.0" width="115.5" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="PermanentMarker" family="Permanent Marker" pointSize="12"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="8um-Tl-7mT">
+                                                <rect key="frame" x="8" y="20" width="159" height="44"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYj-Hk-So9">
+                                                        <rect key="frame" x="0.0" y="0.0" width="73.5" height="44"/>
+                                                        <fontDescription key="fontDescription" name="PermanentMarker" family="Permanent Marker" pointSize="17"/>
+                                                        <state key="normal" title="Age ⬆︎"/>
+                                                        <connections>
+                                                            <action selector="setUnsetAgeSort:" destination="YIR-oY-Jct" eventType="touchUpInside" id="O0u-Di-hkx"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QqQ-wc-xUN">
+                                                        <rect key="frame" x="85.5" y="0.0" width="73.5" height="44"/>
+                                                        <fontDescription key="fontDescription" name="PermanentMarker" family="Permanent Marker" pointSize="17"/>
+                                                        <state key="normal" title="Name ⬇︎"/>
+                                                        <connections>
+                                                            <action selector="setUnsetNameSort:" destination="YIR-oY-Jct" eventType="touchUpInside" id="Xf1-aa-5IF"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="CnN-r2-et2" firstAttribute="leading" secondItem="d9v-hy-oKB" secondAttribute="leading" id="8pi-Z6-z5J"/>
+                                            <constraint firstItem="CnN-r2-et2" firstAttribute="top" secondItem="d9v-hy-oKB" secondAttribute="top" id="Cbg-s2-VjN"/>
+                                            <constraint firstItem="8um-Tl-7mT" firstAttribute="top" secondItem="d9v-hy-oKB" secondAttribute="top" constant="20" symbolic="YES" id="OzP-oC-sO6"/>
+                                            <constraint firstItem="8um-Tl-7mT" firstAttribute="leading" secondItem="d9v-hy-oKB" secondAttribute="leading" constant="8" id="dLc-u9-dAV"/>
+                                            <constraint firstAttribute="bottom" secondItem="8um-Tl-7mT" secondAttribute="bottom" id="diI-u2-WxB"/>
+                                            <constraint firstAttribute="trailing" secondItem="8um-Tl-7mT" secondAttribute="trailing" constant="8" id="h0Q-Rm-5eC"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="9aI-IQ-Qry" secondAttribute="trailing" id="Hkt-Gz-ahX"/>
+                                    <constraint firstAttribute="trailing" secondItem="Trg-9w-ZCl" secondAttribute="trailing" id="Ul2-ph-quU"/>
+                                    <constraint firstItem="Trg-9w-ZCl" firstAttribute="leading" secondItem="K8w-gd-rTd" secondAttribute="leading" id="g4K-jX-ste"/>
+                                    <constraint firstItem="9aI-IQ-Qry" firstAttribute="leading" secondItem="K8w-gd-rTd" secondAttribute="leading" id="vPm-Nc-tOH"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="K8w-gd-rTd" firstAttribute="top" secondItem="HhV-Yd-Wgd" secondAttribute="bottom" id="8nP-VQ-WiB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="K8w-gd-rTd" secondAttribute="trailing" id="hh7-cn-aCr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addNewProfileButton" destination="9aI-IQ-Qry" id="9pz-WC-C3e"/>
+                        <outlet property="ageSortButton" destination="rYj-Hk-So9" id="pr5-hO-w73"/>
+                        <outlet property="clearFiltersOrSortsButton" destination="Trg-9w-ZCl" id="olW-Pw-qXV"/>
+                        <outlet property="femaleFilterButton" destination="OyC-R4-b3M" id="wxp-6n-dlC"/>
+                        <outlet property="maleFilterButton" destination="3bI-WJ-IlD" id="6fy-ZK-BrT"/>
+                        <outlet property="nameSortButton" destination="QqQ-wc-xUN" id="KeD-u9-4Ew"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MND-Jw-UbJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1160.625" y="-463.73239436619718"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="dfZ-gz-fbH">
@@ -431,7 +583,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k5j-9R-hB0" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="eAB-w8-76I" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1160.625" y="-33.802816901408448"/>
+            <point key="canvasLocation" x="1161" y="214"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ENs-xI-pay">

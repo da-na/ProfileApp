@@ -28,8 +28,12 @@ class UISettings {
 
     // MARK: Filter settings
     static let genderFilterLabel: [GenderFilterMode: String] = [.None: "\u{1F469} or \u{1F466}", .Female: "\u{1F469}", .Male: "\u{1F466}"]
-    static let nameSortLabel: [SortOrderMode: String] = [.None: "Name\u{2191}\u{2193}", .Ascending: "Name\u{2191}", .Descending: "Name\u{2193}"]
-    static let ageSortLabel: [SortOrderMode: String] = [.None: "Age\u{2191}\u{2193}", .Ascending: "Age\u{2191}", .Descending: "Age\u{2193}"]
-    static let resetFilters = ""
+    static let nameSortLabel: [SortOrderMode: String] = [.None: "Name", .Ascending: "Name ⬆︎", .Descending: "Name ⬇︎"]
+    static let ageSortLabel: [SortOrderMode: String] = [.None: "Age", .Ascending: "Age ⬆︎", .Descending: "Age ⬇︎"]
+    static let resetFilters = "reset"
     static let addNewProfile = "+\u{1F464}"
+
+    // MARK: MENU settings
+    static let menuWidth = CGFloat(200.0)
+    static let menuHeight = CGFloat(200.0)
 }

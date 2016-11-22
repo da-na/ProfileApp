@@ -37,6 +37,7 @@
 		F91C82691DE3CFA100A8595D /* PoetsenOne-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F91C82651DE3CFA100A8595D /* PoetsenOne-Regular.otf */; };
 		F91C826A1DE3CFA100A8595D /* SF_Cartoonist_Hand_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F91C82661DE3CFA100A8595D /* SF_Cartoonist_Hand_Bold.ttf */; };
 		F91C826B1DE3CFA100A8595D /* SF_Cartoonist_Hand.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F91C82671DE3CFA100A8595D /* SF_Cartoonist_Hand.ttf */; };
+		F91C826D1DE48BE000A8595D /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91C826C1DE48BE000A8595D /* MenuViewController.swift */; };
 		F9510BFB1DE0F586008A46DE /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9510BFA1DE0F586008A46DE /* Gender.swift */; };
 		F9C90DCE1DDE270100CFE074 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C90DCD1DDE270100CFE074 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
@@ -101,6 +102,7 @@
 		F91C82651DE3CFA100A8595D /* PoetsenOne-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PoetsenOne-Regular.otf"; path = "Fonts/PoetsenOne-Regular.otf"; sourceTree = "<group>"; };
 		F91C82661DE3CFA100A8595D /* SF_Cartoonist_Hand_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = SF_Cartoonist_Hand_Bold.ttf; path = Fonts/SF_Cartoonist_Hand_Bold.ttf; sourceTree = "<group>"; };
 		F91C82671DE3CFA100A8595D /* SF_Cartoonist_Hand.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = SF_Cartoonist_Hand.ttf; path = Fonts/SF_Cartoonist_Hand.ttf; sourceTree = "<group>"; };
+		F91C826C1DE48BE000A8595D /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = Controllers/MenuViewController.swift; sourceTree = "<group>"; };
 		F9510BFA1DE0F586008A46DE /* Gender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Gender.swift; path = Models/Gender.swift; sourceTree = "<group>"; };
 		F9C90DCD1DDE270100CFE074 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Controllers/ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -194,6 +196,7 @@
 		31F68E621DD11A2600FEBEAD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F91C826C1DE48BE000A8595D /* MenuViewController.swift */,
 				31F68E601DD119FD00FEBEAD /* ListViewController.swift */,
 				F9C90DCD1DDE270100CFE074 /* ProfileViewController.swift */,
 				F91C824A1DE2723200A8595D /* ImagePickerController.swift */,
@@ -582,6 +585,7 @@
 				F91C824D1DE2895100A8595D /* ColorPickerController.swift in Sources */,
 				F91C824B1DE2723200A8595D /* ImagePickerController.swift in Sources */,
 				F91C823B1DE2002900A8595D /* ProfileCell.swift in Sources */,
+				F91C826D1DE48BE000A8595D /* MenuViewController.swift in Sources */,
 				31F68E641DD12B2600FEBEAD /* Profile.swift in Sources */,
 				F91C82451DE227C800A8595D /* CustomPresentationController.swift in Sources */,
 				F91C824F1DE2954100A8595D /* PaletteView.swift in Sources */,
