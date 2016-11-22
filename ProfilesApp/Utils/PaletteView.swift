@@ -11,12 +11,14 @@ import UIKit
 
 class PaletteView: UIView {
     let saturationExponentTop: Float = 2.0
-    let saturationExponentBottom: Float = 1.3
-    var elementSize: CGFloat = 10.0 {
+    let saturationExponentBottom: Float = 0.8
+    var numberOfElements: CGFloat = 7.0 {
         didSet { setNeedsDisplay() }
     }
+    var elementSize: CGFloat = 0.0
 
     override func draw(_ rect: CGRect) {
+        elementSize = rect.height / numberOfElements
         let context = UIGraphicsGetCurrentContext()
 
         for y in stride(from: CGFloat(0.0), to: rect.height, by: elementSize) {
