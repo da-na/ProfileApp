@@ -10,6 +10,9 @@ import UIKit
 
 class UISettings {
 
+    // MARK: App Name related
+    static let appName = "Profiles App"
+
     // MARK: Button Layer related settings
     static let cornerRadius = CGFloat(5.0)
     static let borderWidth = CGFloat(1.0)

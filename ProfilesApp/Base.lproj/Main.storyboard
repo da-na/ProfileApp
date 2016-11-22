@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="emO-Mu-15l">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LZe-JC-F7w">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -22,159 +22,6 @@
         </array>
     </customFonts>
     <scenes>
-        <!--List View Controller-->
-        <scene sceneID="hwr-PD-wZq">
-            <objects>
-                <tableViewController id="ho5-CY-f7Z" userLabel="List View Controller" customClass="ListViewController" customModule="ProfilesApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="126" sectionHeaderHeight="28" sectionFooterHeight="28" id="aiV-d3-ikf">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfileCell" rowHeight="126" id="E9p-lM-cHY" customClass="ProfileCell" customModule="ProfilesApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="320" height="126"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="E9p-lM-cHY" id="Mnc-aB-yKS">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="125"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <stackView opaque="NO" contentMode="left" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PNc-yh-LSB">
-                                            <rect key="frame" x="8" y="8" width="304" height="109.5"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="lUa-VF-aeY">
-                                                    <rect key="frame" x="0.0" y="0.0" width="110" height="109.5"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="lUa-VF-aeY" secondAttribute="height" multiplier="1:1" id="8mY-Fa-C4l"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ivq-4V-cFC" userLabel="Label Stack View">
-                                                    <rect key="frame" x="118" y="0.0" width="70" height="109.5"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1m-e3-8P7">
-                                                            <rect key="frame" x="0.0" y="0.0" width="70" height="18"/>
-                                                            <fontDescription key="fontDescription" name="PoetsenOne-Regular" family="PoetsenOne" pointSize="15"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfe-Mk-SHS">
-                                                            <rect key="frame" x="0.0" y="30.5" width="70" height="18"/>
-                                                            <fontDescription key="fontDescription" name="PoetsenOne-Regular" family="PoetsenOne" pointSize="15"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wf6-QO-prt">
-                                                            <rect key="frame" x="0.0" y="61" width="70" height="18"/>
-                                                            <fontDescription key="fontDescription" name="PoetsenOne-Regular" family="PoetsenOne" pointSize="15"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="760" text="Hobbies:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dnf-ZE-YLN">
-                                                            <rect key="frame" x="0.0" y="91.5" width="70" height="18"/>
-                                                            <fontDescription key="fontDescription" name="PoetsenOne-Regular" family="PoetsenOne" pointSize="15"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="c1m-e3-8P7" secondAttribute="trailing" id="ZBu-qG-ESN"/>
-                                                        <constraint firstAttribute="trailing" secondItem="wf6-QO-prt" secondAttribute="trailing" id="f8s-oN-QKC"/>
-                                                        <constraint firstAttribute="width" constant="70" id="jbS-ah-DfF"/>
-                                                        <constraint firstAttribute="trailing" secondItem="tfe-Mk-SHS" secondAttribute="trailing" id="wU1-jP-fHj"/>
-                                                        <constraint firstAttribute="trailing" secondItem="Dnf-ZE-YLN" secondAttribute="trailing" id="xRq-Ae-SlC"/>
-                                                    </constraints>
-                                                </stackView>
-                                                <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="JEg-xi-KnK" userLabel="Info Stack View">
-                                                    <rect key="frame" x="196" y="0.0" width="108" height="109.5"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="740" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4as-cT-Eh5" userLabel="nameLabel">
-                                                            <rect key="frame" x="0.0" y="0.0" width="108" height="22"/>
-                                                            <fontDescription key="fontDescription" name="SFCartoonistHand" family="SF Cartoonist Hand" pointSize="20"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="740" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RzZ-DQ-dz2" userLabel="ageLabel">
-                                                            <rect key="frame" x="0.0" y="29" width="108" height="22"/>
-                                                            <fontDescription key="fontDescription" name="SFCartoonistHand" family="SF Cartoonist Hand" pointSize="20"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="740" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wM8-cJ-wdg" userLabel="genderLabel">
-                                                            <rect key="frame" x="0.0" y="58.5" width="108" height="22"/>
-                                                            <fontDescription key="fontDescription" name="SFCartoonistHand" family="SF Cartoonist Hand" pointSize="20"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="740" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kmx-f5-a4x" userLabel="hobbiesLabel">
-                                                            <rect key="frame" x="0.0" y="87.5" width="108" height="22"/>
-                                                            <fontDescription key="fontDescription" name="SFCartoonistHand" family="SF Cartoonist Hand" pointSize="20"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="4as-cT-Eh5" secondAttribute="trailing" id="EYK-9I-8NQ"/>
-                                                        <constraint firstItem="4as-cT-Eh5" firstAttribute="leading" secondItem="JEg-xi-KnK" secondAttribute="leading" id="HJV-gE-rTH"/>
-                                                        <constraint firstItem="Kmx-f5-a4x" firstAttribute="leading" secondItem="JEg-xi-KnK" secondAttribute="leading" id="Rqa-xZ-EXG"/>
-                                                        <constraint firstItem="wM8-cJ-wdg" firstAttribute="leading" secondItem="JEg-xi-KnK" secondAttribute="leading" id="ilh-1i-ew0"/>
-                                                        <constraint firstAttribute="trailing" secondItem="Kmx-f5-a4x" secondAttribute="trailing" id="mNw-n5-ipK"/>
-                                                        <constraint firstItem="RzZ-DQ-dz2" firstAttribute="leading" secondItem="JEg-xi-KnK" secondAttribute="leading" id="pcw-sm-Ubl"/>
-                                                        <constraint firstAttribute="trailing" secondItem="RzZ-DQ-dz2" secondAttribute="trailing" id="qMW-f1-qNH"/>
-                                                        <constraint firstAttribute="trailing" secondItem="wM8-cJ-wdg" secondAttribute="trailing" id="srk-Tl-TmW"/>
-                                                    </constraints>
-                                                </stackView>
-                                            </subviews>
-                                        </stackView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="trailingMargin" secondItem="PNc-yh-LSB" secondAttribute="trailing" id="7z6-VZ-Pok"/>
-                                        <constraint firstItem="PNc-yh-LSB" firstAttribute="leading" secondItem="Mnc-aB-yKS" secondAttribute="leadingMargin" id="Fdc-qy-WmF"/>
-                                        <constraint firstAttribute="topMargin" secondItem="PNc-yh-LSB" secondAttribute="top" id="T8c-w8-kBt"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="PNc-yh-LSB" secondAttribute="bottom" id="Ych-ZO-Ng6"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="age" destination="RzZ-DQ-dz2" id="eqe-sk-8J3"/>
-                                    <outlet property="gender" destination="wM8-cJ-wdg" id="F2Y-6F-c3S"/>
-                                    <outlet property="hobbies" destination="Kmx-f5-a4x" id="Kyj-kl-FfM"/>
-                                    <outlet property="name" destination="4as-cT-Eh5" id="Oz5-Hp-yiR"/>
-                                    <outlet property="profileImage" destination="lUa-VF-aeY" id="c3k-w5-6Zi"/>
-                                    <segue destination="HhT-QK-6w3" kind="show" identifier="EditProfile" id="2y5-Hn-xNi"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="ho5-CY-f7Z" id="udo-yI-M2h"/>
-                            <outlet property="delegate" destination="ho5-CY-f7Z" id="Cmf-EM-B2A"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="3x5-uI-uPV">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="9rJ-1y-xds">
-                            <button key="customView" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="DVY-SK-wIe">
-                                <rect key="frame" x="16" y="7" width="130" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="PermanentMarker" family="Permanent Marker" pointSize="17"/>
-                                <state key="normal" title="Profiles App">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="mLE-32-D1P">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BEy-zM-ZbM">
-                                <rect key="frame" x="233" y="3" width="71" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="PermanentMarker" family="Permanent Marker" pointSize="17"/>
-                                <state key="normal" title="Menu ☰"/>
-                                <connections>
-                                    <segue destination="YIR-oY-Jct" kind="presentation" identifier="DropDownMenu" id="MPJ-jG-Upn"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xDt-Eh-sjY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="249.375" y="-32.74647887323944"/>
-        </scene>
         <!--Menu View Controller-->
         <scene sceneID="mpr-T1-w2D">
             <objects>
@@ -389,7 +236,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="xGY-dM-djs">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="do1-69-RP3" userLabel="Outermost Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="286" height="528"/>
@@ -618,38 +465,177 @@
             </objects>
             <point key="canvasLocation" x="1161" y="214"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="ENs-xI-pay">
-            <objects>
-                <navigationController id="emO-Mu-15l" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="tbg-4o-P46">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="ho5-CY-f7Z" kind="relationship" relationship="rootViewController" id="8ge-lj-mxW"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YQu-0o-TZ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-668" y="-31"/>
-        </scene>
-        <!--View Controller-->
+        <!--List View Controller-->
         <scene sceneID="IYC-5p-SQb">
             <objects>
-                <viewController id="LZe-JC-F7w" sceneMemberID="viewController">
+                <viewController id="LZe-JC-F7w" customClass="ListViewController" customModule="ProfilesApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="qzF-Vd-FOc"/>
-                        <viewControllerLayoutGuide type="bottom" id="uy5-gr-K6R"/>
+                        <viewControllerLayoutGuide type="top" id="r2B-Dg-nZs"/>
+                        <viewControllerLayoutGuide type="bottom" id="9bt-Yf-RZm"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="bE2-BJ-8Qk">
+                    <stackView key="view" opaque="NO" contentMode="scaleToFill" axis="vertical" id="b9Q-GT-E81">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D7R-TF-DCU">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbd-p7-nzu">
+                                        <rect key="frame" x="233" y="20" width="67" height="37"/>
+                                        <fontDescription key="fontDescription" name="PermanentMarker" family="Permanent Marker" pointSize="17"/>
+                                        <state key="normal" title="Menu ☰"/>
+                                        <connections>
+                                            <segue destination="YIR-oY-Jct" kind="presentation" identifier="DropDownMenu" id="RVH-wx-IWI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3mo-Yg-p8W">
+                                        <rect key="frame" x="20" y="20" width="106" height="37"/>
+                                        <fontDescription key="fontDescription" name="PermanentMarker" family="Permanent Marker" pointSize="17"/>
+                                        <state key="normal" title="Profiles App">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="3mo-Yg-p8W" firstAttribute="leading" secondItem="D7R-TF-DCU" secondAttribute="leading" constant="20" symbolic="YES" id="3mM-ww-Tsb"/>
+                                    <constraint firstItem="3mo-Yg-p8W" firstAttribute="top" secondItem="D7R-TF-DCU" secondAttribute="top" constant="20" symbolic="YES" id="6ie-Jc-yMZ"/>
+                                    <constraint firstItem="lbd-p7-nzu" firstAttribute="top" secondItem="D7R-TF-DCU" secondAttribute="top" constant="20" symbolic="YES" id="WRn-c5-Ffy"/>
+                                    <constraint firstAttribute="trailing" secondItem="lbd-p7-nzu" secondAttribute="trailing" constant="20" symbolic="YES" id="ajq-Ir-F9v"/>
+                                    <constraint firstItem="3mo-Yg-p8W" firstAttribute="baseline" secondItem="lbd-p7-nzu" secondAttribute="baseline" id="e7N-uz-3lc"/>
+                                    <constraint firstAttribute="height" constant="60" id="uu1-ji-DeF"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="126" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nWf-e6-rEP">
+                                <rect key="frame" x="0.0" y="60" width="320" height="508"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfileCell" rowHeight="126" id="ErX-3E-g3q" customClass="ProfileCell" customModule="ProfilesApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="126"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ErX-3E-g3q" id="AII-zt-fe9">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="125"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="left" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3eb-le-rTH">
+                                                    <rect key="frame" x="8" y="8" width="304" height="109.5"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="3va-7u-e5V">
+                                                            <rect key="frame" x="0.0" y="0.0" width="110" height="109.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="3va-7u-e5V" secondAttribute="height" multiplier="1:1" id="4zS-zJ-V6D"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="9OX-3i-daf" userLabel="Label Stack View">
+                                                            <rect key="frame" x="118" y="0.0" width="70" height="109.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qh-Vi-4xF">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="70" height="18"/>
+                                                                    <fontDescription key="fontDescription" name="PoetsenOne-Regular" family="PoetsenOne" pointSize="15"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZZu-EK-yHi">
+                                                                    <rect key="frame" x="0.0" y="30.5" width="70" height="18"/>
+                                                                    <fontDescription key="fontDescription" name="PoetsenOne-Regular" family="PoetsenOne" pointSize="15"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9If-Bq-Fet">
+                                                                    <rect key="frame" x="0.0" y="61" width="70" height="18"/>
+                                                                    <fontDescription key="fontDescription" name="PoetsenOne-Regular" family="PoetsenOne" pointSize="15"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="760" text="Hobbies:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDG-IT-QDD">
+                                                                    <rect key="frame" x="0.0" y="91.5" width="70" height="18"/>
+                                                                    <fontDescription key="fontDescription" name="PoetsenOne-Regular" family="PoetsenOne" pointSize="15"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="4qh-Vi-4xF" secondAttribute="trailing" id="0sK-0a-6HK"/>
+                                                                <constraint firstAttribute="trailing" secondItem="9If-Bq-Fet" secondAttribute="trailing" id="6d9-nH-o2N"/>
+                                                                <constraint firstAttribute="width" constant="70" id="AIO-BP-8r2"/>
+                                                                <constraint firstAttribute="trailing" secondItem="HDG-IT-QDD" secondAttribute="trailing" id="IjA-An-yAD"/>
+                                                                <constraint firstAttribute="trailing" secondItem="ZZu-EK-yHi" secondAttribute="trailing" id="v08-Uz-7go"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="WVp-LM-qQs" userLabel="Info Stack View">
+                                                            <rect key="frame" x="196" y="0.0" width="108" height="109.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="740" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pqe-rF-pZF" userLabel="nameLabel">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="108" height="22"/>
+                                                                    <fontDescription key="fontDescription" name="SFCartoonistHand" family="SF Cartoonist Hand" pointSize="20"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="740" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Coi-B3-beJ" userLabel="ageLabel">
+                                                                    <rect key="frame" x="0.0" y="29" width="108" height="22"/>
+                                                                    <fontDescription key="fontDescription" name="SFCartoonistHand" family="SF Cartoonist Hand" pointSize="20"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="740" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QgP-v7-ioU" userLabel="genderLabel">
+                                                                    <rect key="frame" x="0.0" y="58.5" width="108" height="22"/>
+                                                                    <fontDescription key="fontDescription" name="SFCartoonistHand" family="SF Cartoonist Hand" pointSize="20"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="740" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62x-Dy-vfp" userLabel="hobbiesLabel">
+                                                                    <rect key="frame" x="0.0" y="87.5" width="108" height="22"/>
+                                                                    <fontDescription key="fontDescription" name="SFCartoonistHand" family="SF Cartoonist Hand" pointSize="20"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="Pqe-rF-pZF" secondAttribute="trailing" id="FpI-Vz-RLN"/>
+                                                                <constraint firstAttribute="trailing" secondItem="62x-Dy-vfp" secondAttribute="trailing" id="hun-IA-DwR"/>
+                                                                <constraint firstItem="Pqe-rF-pZF" firstAttribute="leading" secondItem="WVp-LM-qQs" secondAttribute="leading" id="i9C-9e-080"/>
+                                                                <constraint firstItem="62x-Dy-vfp" firstAttribute="leading" secondItem="WVp-LM-qQs" secondAttribute="leading" id="qGg-IF-0D3"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Coi-B3-beJ" secondAttribute="trailing" id="tUr-TV-RVt"/>
+                                                                <constraint firstAttribute="trailing" secondItem="QgP-v7-ioU" secondAttribute="trailing" id="tpF-R9-d7d"/>
+                                                                <constraint firstItem="QgP-v7-ioU" firstAttribute="leading" secondItem="WVp-LM-qQs" secondAttribute="leading" id="wFA-8N-1b4"/>
+                                                                <constraint firstItem="Coi-B3-beJ" firstAttribute="leading" secondItem="WVp-LM-qQs" secondAttribute="leading" id="xeI-Wj-jQ0"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="3eb-le-rTH" firstAttribute="leading" secondItem="AII-zt-fe9" secondAttribute="leadingMargin" id="QZu-NN-j71"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="3eb-le-rTH" secondAttribute="bottom" id="RQh-WB-MgR"/>
+                                                <constraint firstAttribute="topMargin" secondItem="3eb-le-rTH" secondAttribute="top" id="cAm-An-frQ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="3eb-le-rTH" secondAttribute="trailing" id="wTm-3K-oqT"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="age" destination="Coi-B3-beJ" id="vf7-6E-vCj"/>
+                                            <outlet property="gender" destination="QgP-v7-ioU" id="hb1-9H-bis"/>
+                                            <outlet property="hobbies" destination="62x-Dy-vfp" id="fyL-as-ySd"/>
+                                            <outlet property="name" destination="Pqe-rF-pZF" id="cam-JI-ANE"/>
+                                            <outlet property="profileImage" destination="3va-7u-e5V" id="9BG-gG-KM7"/>
+                                            <segue destination="HhT-QK-6w3" kind="show" identifier="EditProfile" id="UYV-y9-KqJ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="LZe-JC-F7w" id="z3N-TR-eoj"/>
+                                    <outlet property="delegate" destination="LZe-JC-F7w" id="xyB-Fu-6H4"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                    </stackView>
+                    <connections>
+                        <outlet property="profilesAppDisplay" destination="3mo-Yg-p8W" id="pqd-H2-B0v"/>
+                        <outlet property="tableView" destination="nWf-e6-rEP" id="D2S-Cq-3oe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fYb-6L-SAe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="302" y="-113"/>
         </scene>
     </scenes>
     <resources>

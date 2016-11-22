@@ -9,8 +9,7 @@
 import UIKit
 import Firebase
 
-class ListViewController: UITableViewController {
-
+class ListViewController: UIViewController {
     let ref = FIRDatabase.database().reference(withPath: "profiles")
     var profiles: [Profile] = []
 
@@ -26,6 +25,9 @@ class ListViewController: UITableViewController {
         get { return SAFSettings.sharedInstance.nameSortSetting }
         set { SAFSettings.sharedInstance.nameSortSetting = newValue }
     }
+
+    @IBOutlet weak var profilesAppDisplay: UIButton!
+    @IBOutlet weak var tableView: UITableView!
 
     // MARK: UIViewController Lifecycle
     override func viewDidLoad() {
@@ -58,13 +60,26 @@ class ListViewController: UITableViewController {
         }
         self.tableView.reloadData()
     }
+    private func updateInfoLabel() {
+        var infoLabels: [String] = []
+        var title = UISettings.appName
+
+        if genderFilter != .None { infoLabels += [UISettings.genderFilterLabel[genderFilter]!] }
+        if ageSort != .None { infoLabels += [UISettings.ageSortLabel[ageSort]!] }
+        if nameSort != .None { infoLabels += [UISettings.nameSortLabel[nameSort]!] }
+
+        if infoLabels != [] { title = infoLabels.joined(separator: " ") }
+
+        profilesAppDisplay.setTitle(title, for: .normal)
+    }
 
     // MARK: Navigation methods
-    @IBAction func unwindToListView(_ segue: UIStoryboardSegue){
+    @IBAction func unwindToListView(_ segue: UIStoryboardSegue) {
         // this function does not need a body, but it needs to be here,
         // so that it's possible to unwind(segue) back here
     }
-    @IBAction func unwindToListViewAndRefreshData(_ segue: UIStoryboardSegue){
+    @IBAction func unwindToListViewAndRefreshData(_ segue: UIStoryboardSegue) {
+        updateInfoLabel()
         setOrUpdateDatabaseObserver()
         tableView.reloadData()
     }
@@ -118,12 +133,15 @@ class ListViewController: UITableViewController {
             }
         }
     }
+}
 
-    // MARK: UITableViewDelegate methods
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+// MARK: UITableViewDelegate and UITableViewDataSource methods
+extension ListViewController: UITableViewDelegate, UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return profiles.count
     }
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell", for: indexPath) as! ProfileCell
         cell.profileImage.image = profiles[indexPath.row].profileImage
         cell.name.text = profiles[indexPath.row].name
@@ -133,14 +151,13 @@ class ListViewController: UITableViewController {
         cell.backgroundColor = profiles[indexPath.row].backgroundColor
         return cell
     }
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let profile = profiles[indexPath.row]
             profile.ref?.removeValue()
         }
     }
-
 }
