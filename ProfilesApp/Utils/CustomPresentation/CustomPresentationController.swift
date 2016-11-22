@@ -10,6 +10,7 @@ import UIKit
 
 class CustomPresentationController: UIPresentationController {
 
+    override var frameOfPresentedViewInContainerView: CGRect { return startingFrame }
     lazy var dimmingView: UIView = {
         return UIView(frame: self.containerView!.bounds)
     }()

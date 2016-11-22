@@ -273,7 +273,6 @@ extension ProfileViewController: ColorPickerDelegate {
     func colorPickerTouched(sender: ColorPickerController, color: UIColor, point: CGPoint, state: UIGestureRecognizerState) {
         editBackgroundColorButton.backgroundColor = color
         profile?.backgroundColor = color
-        print("SELECTED COLOR ", color)
     }
 }
 
