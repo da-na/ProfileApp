@@ -33,6 +33,10 @@
 		F91C82581DE34E2F00A8595D /* GenderFilterMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91C82571DE34E2F00A8595D /* GenderFilterMode.swift */; };
 		F91C825C1DE36E9600A8595D /* SAFSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91C825B1DE36E9600A8595D /* SAFSettings.swift */; };
 		F91C82601DE3C94600A8595D /* UISettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91C825F1DE3C94600A8595D /* UISettings.swift */; };
+		F91C82681DE3CFA100A8595D /* PermanentMarker.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F91C82641DE3CFA100A8595D /* PermanentMarker.ttf */; };
+		F91C82691DE3CFA100A8595D /* PoetsenOne-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F91C82651DE3CFA100A8595D /* PoetsenOne-Regular.otf */; };
+		F91C826A1DE3CFA100A8595D /* SF_Cartoonist_Hand_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F91C82661DE3CFA100A8595D /* SF_Cartoonist_Hand_Bold.ttf */; };
+		F91C826B1DE3CFA100A8595D /* SF_Cartoonist_Hand.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F91C82671DE3CFA100A8595D /* SF_Cartoonist_Hand.ttf */; };
 		F9510BFB1DE0F586008A46DE /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9510BFA1DE0F586008A46DE /* Gender.swift */; };
 		F9C90DCE1DDE270100CFE074 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C90DCD1DDE270100CFE074 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
@@ -93,6 +97,10 @@
 		F91C82571DE34E2F00A8595D /* GenderFilterMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GenderFilterMode.swift; path = Models/GenderFilterMode.swift; sourceTree = "<group>"; };
 		F91C825B1DE36E9600A8595D /* SAFSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SAFSettings.swift; path = Utils/SAFSettings.swift; sourceTree = "<group>"; };
 		F91C825F1DE3C94600A8595D /* UISettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UISettings.swift; path = Utils/UISettings.swift; sourceTree = "<group>"; };
+		F91C82641DE3CFA100A8595D /* PermanentMarker.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = PermanentMarker.ttf; path = Fonts/PermanentMarker.ttf; sourceTree = "<group>"; };
+		F91C82651DE3CFA100A8595D /* PoetsenOne-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PoetsenOne-Regular.otf"; path = "Fonts/PoetsenOne-Regular.otf"; sourceTree = "<group>"; };
+		F91C82661DE3CFA100A8595D /* SF_Cartoonist_Hand_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = SF_Cartoonist_Hand_Bold.ttf; path = Fonts/SF_Cartoonist_Hand_Bold.ttf; sourceTree = "<group>"; };
+		F91C82671DE3CFA100A8595D /* SF_Cartoonist_Hand.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = SF_Cartoonist_Hand.ttf; path = Fonts/SF_Cartoonist_Hand.ttf; sourceTree = "<group>"; };
 		F9510BFA1DE0F586008A46DE /* Gender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Gender.swift; path = Models/Gender.swift; sourceTree = "<group>"; };
 		F9C90DCD1DDE270100CFE074 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Controllers/ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,6 +167,7 @@
 				31F68E371DD0D68700FEBEAD /* LaunchScreen.storyboard */,
 				31F68E3A1DD0D68800FEBEAD /* Info.plist */,
 				31F68E5C1DD0D80F00FEBEAD /* GoogleService-Info.plist */,
+				F91C82611DE3CF7200A8595D /* Fonts */,
 			);
 			path = ProfilesApp;
 			sourceTree = "<group>";
@@ -257,6 +266,17 @@
 				F91C82501DE295B800A8595D /* ColorPickerDelegate.swift */,
 			);
 			name = "Color related";
+			sourceTree = "<group>";
+		};
+		F91C82611DE3CF7200A8595D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F91C82641DE3CFA100A8595D /* PermanentMarker.ttf */,
+				F91C82651DE3CFA100A8595D /* PoetsenOne-Regular.otf */,
+				F91C82661DE3CFA100A8595D /* SF_Cartoonist_Hand_Bold.ttf */,
+				F91C82671DE3CFA100A8595D /* SF_Cartoonist_Hand.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,9 +398,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F91C82691DE3CFA100A8595D /* PoetsenOne-Regular.otf in Resources */,
+				F91C826A1DE3CFA100A8595D /* SF_Cartoonist_Hand_Bold.ttf in Resources */,
+				F91C826B1DE3CFA100A8595D /* SF_Cartoonist_Hand.ttf in Resources */,
 				31F68E391DD0D68700FEBEAD /* LaunchScreen.storyboard in Resources */,
 				31F68E5D1DD0D80F00FEBEAD /* GoogleService-Info.plist in Resources */,
 				31F68E361DD0D68700FEBEAD /* Assets.xcassets in Resources */,
+				F91C82681DE3CFA100A8595D /* PermanentMarker.ttf in Resources */,
 				31F68E341DD0D68700FEBEAD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

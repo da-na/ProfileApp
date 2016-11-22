@@ -11,6 +11,17 @@
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="PermanentMarker.ttf">
+            <string>PermanentMarker</string>
+        </array>
+        <array key="PoetsenOne-Regular.otf">
+            <string>PoetsenOne-Regular</string>
+        </array>
+        <array key="SF_Cartoonist_Hand.ttf">
+            <string>SFCartoonistHand</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--List View Controller-->
         <scene sceneID="hwr-PD-wZq">
@@ -38,29 +49,29 @@
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ivq-4V-cFC" userLabel="Label Stack View">
-                                                    <rect key="frame" x="118" y="0.0" width="80" height="109.5"/>
+                                                    <rect key="frame" x="118" y="0.0" width="70" height="109.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1m-e3-8P7">
-                                                            <rect key="frame" x="0.0" y="0.0" width="80" height="20.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="70" height="18"/>
+                                                            <fontDescription key="fontDescription" name="PoetsenOne-Regular" family="PoetsenOne" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfe-Mk-SHS">
-                                                            <rect key="frame" x="0.0" y="29.5" width="80" height="20.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <rect key="frame" x="0.0" y="30.5" width="70" height="18"/>
+                                                            <fontDescription key="fontDescription" name="PoetsenOne-Regular" family="PoetsenOne" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wf6-QO-prt">
-                                                            <rect key="frame" x="0.0" y="59.5" width="80" height="20.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <rect key="frame" x="0.0" y="61" width="70" height="18"/>
+                                                            <fontDescription key="fontDescription" name="PoetsenOne-Regular" family="PoetsenOne" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="760" text="Hobbies:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dnf-ZE-YLN">
-                                                            <rect key="frame" x="0.0" y="89" width="80" height="20.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <rect key="frame" x="0.0" y="91.5" width="70" height="18"/>
+                                                            <fontDescription key="fontDescription" name="PoetsenOne-Regular" family="PoetsenOne" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -68,35 +79,35 @@
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="c1m-e3-8P7" secondAttribute="trailing" id="ZBu-qG-ESN"/>
                                                         <constraint firstAttribute="trailing" secondItem="wf6-QO-prt" secondAttribute="trailing" id="f8s-oN-QKC"/>
-                                                        <constraint firstAttribute="width" constant="80" id="jbS-ah-DfF"/>
+                                                        <constraint firstAttribute="width" constant="70" id="jbS-ah-DfF"/>
                                                         <constraint firstAttribute="trailing" secondItem="tfe-Mk-SHS" secondAttribute="trailing" id="wU1-jP-fHj"/>
                                                         <constraint firstAttribute="trailing" secondItem="Dnf-ZE-YLN" secondAttribute="trailing" id="xRq-Ae-SlC"/>
                                                     </constraints>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="JEg-xi-KnK" userLabel="Info Stack View">
-                                                    <rect key="frame" x="206" y="0.0" width="98" height="109.5"/>
+                                                    <rect key="frame" x="196" y="0.0" width="108" height="109.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="740" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4as-cT-Eh5" userLabel="nameLabel">
-                                                            <rect key="frame" x="0.0" y="0.0" width="98" height="20.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="108" height="22"/>
+                                                            <fontDescription key="fontDescription" name="SFCartoonistHand" family="SF Cartoonist Hand" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="740" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RzZ-DQ-dz2" userLabel="ageLabel">
-                                                            <rect key="frame" x="0.0" y="29.5" width="98" height="20.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <rect key="frame" x="0.0" y="29" width="108" height="22"/>
+                                                            <fontDescription key="fontDescription" name="SFCartoonistHand" family="SF Cartoonist Hand" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="740" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wM8-cJ-wdg" userLabel="genderLabel">
-                                                            <rect key="frame" x="0.0" y="59.5" width="98" height="20.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <rect key="frame" x="0.0" y="58.5" width="108" height="22"/>
+                                                            <fontDescription key="fontDescription" name="SFCartoonistHand" family="SF Cartoonist Hand" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="740" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kmx-f5-a4x" userLabel="hobbiesLabel">
-                                                            <rect key="frame" x="0.0" y="89" width="98" height="20.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <rect key="frame" x="0.0" y="87.5" width="108" height="22"/>
+                                                            <fontDescription key="fontDescription" name="SFCartoonistHand" family="SF Cartoonist Hand" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -209,8 +220,9 @@
                                                         </constraints>
                                                     </imageView>
                                                     <button opaque="NO" alpha="0.69999999999999996" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2UI-td-hLp">
-                                                        <rect key="frame" x="130" y="236" width="136" height="30"/>
+                                                        <rect key="frame" x="81" y="229" width="185" height="37"/>
                                                         <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="PermanentMarker" family="Permanent Marker" pointSize="17"/>
                                                         <state key="normal" title="  Edit Profile Image  ">
                                                             <color key="titleColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
@@ -224,9 +236,9 @@
                                                             <constraint firstAttribute="width" secondItem="eqp-ml-O4k" secondAttribute="height" id="q63-wF-OG9"/>
                                                             <constraint firstAttribute="width" constant="30" id="uIu-nP-es0"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <state key="normal">
-                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <fontDescription key="fontDescription" name="PermanentMarker" family="Permanent Marker" pointSize="15"/>
+                                                        <state key="normal" title="Select">
+                                                            <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="editBackgroundColor:" destination="HhT-QK-6w3" eventType="touchUpInside" id="hir-OJ-7mq"/>
@@ -254,30 +266,30 @@
                                                             <constraint firstAttribute="width" constant="12" id="Hvt-MU-NC7"/>
                                                         </constraints>
                                                     </view>
-                                                    <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalSpacing" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="5Lo-Hj-5Pw" userLabel="Label Stack View">
+                                                    <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="5Lo-Hj-5Pw" userLabel="Label Stack View">
                                                         <rect key="frame" x="20" y="0.0" width="68.5" height="132"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDh-RY-Szm">
-                                                                <rect key="frame" x="0.0" y="0.0" width="68.5" height="20.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="68.5" height="30"/>
+                                                                <fontDescription key="fontDescription" name="PoetsenOne-Regular" family="PoetsenOne" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWo-Tf-QXA">
-                                                                <rect key="frame" x="0.0" y="37" width="68.5" height="20.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <rect key="frame" x="0.0" y="34" width="68.5" height="30"/>
+                                                                <fontDescription key="fontDescription" name="PoetsenOne-Regular" family="PoetsenOne" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bU-qi-qoh">
-                                                                <rect key="frame" x="0.0" y="74.5" width="68.5" height="20.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <rect key="frame" x="0.0" y="68" width="68.5" height="30"/>
+                                                                <fontDescription key="fontDescription" name="PoetsenOne-Regular" family="PoetsenOne" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="760" text="Hobbies:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0MQ-Jl-NnE">
-                                                                <rect key="frame" x="0.0" y="111.5" width="68.5" height="20.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <rect key="frame" x="0.0" y="102" width="68.5" height="30"/>
+                                                                <fontDescription key="fontDescription" name="PoetsenOne-Regular" family="PoetsenOne" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -289,31 +301,31 @@
                                                             <constraint firstAttribute="trailing" secondItem="0MQ-Jl-NnE" secondAttribute="trailing" id="VTi-vP-kQQ"/>
                                                         </constraints>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalSpacing" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Bjc-em-xgh" userLabel="Info Stack View">
+                                                    <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Bjc-em-xgh" userLabel="Info Stack View">
                                                         <rect key="frame" x="96.5" y="0.0" width="189.5" height="132"/>
                                                         <subviews>
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iil-X4-tU3" userLabel="name">
                                                                 <rect key="frame" x="0.0" y="0.0" width="169.5" height="30"/>
                                                                 <nil key="textColor"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <fontDescription key="fontDescription" name="SFCartoonistHand" family="SF Cartoonist Hand" pointSize="17"/>
                                                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                                             </textField>
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Fy-eL-GGX" userLabel="age">
                                                                 <rect key="frame" x="0.0" y="34" width="169.5" height="30"/>
                                                                 <nil key="textColor"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <fontDescription key="fontDescription" name="SFCartoonistHand" family="SF Cartoonist Hand" pointSize="17"/>
                                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
                                                             </textField>
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ac6-hb-Jaf" userLabel="gender">
                                                                 <rect key="frame" x="0.0" y="68" width="169.5" height="30"/>
                                                                 <nil key="textColor"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <fontDescription key="fontDescription" name="SFCartoonistHand" family="SF Cartoonist Hand" pointSize="17"/>
                                                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                                             </textField>
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fkB-bh-NpY" userLabel="hobbies">
                                                                 <rect key="frame" x="0.0" y="102" width="169.5" height="30"/>
                                                                 <nil key="textColor"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <fontDescription key="fontDescription" name="SFCartoonistHand" family="SF Cartoonist Hand" pointSize="17"/>
                                                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                                             </textField>
                                                         </subviews>
@@ -342,7 +354,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3m2-bD-2zl">
                                                         <rect key="frame" x="20" y="0.0" width="113" height="50"/>
                                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="PermanentMarker" family="Permanent Marker" pointSize="17"/>
                                                         <color key="tintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                         <state key="normal" title="Dismiss">
                                                             <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -354,7 +366,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WjM-hd-smj">
                                                         <rect key="frame" x="153" y="0.0" width="113" height="50"/>
                                                         <color key="backgroundColor" red="0.086274509803921567" green="0.40000000000000002" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="PermanentMarker" family="Permanent Marker" pointSize="17"/>
                                                         <color key="tintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                         <state key="normal" title="Add Profile">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -425,7 +437,7 @@
         <scene sceneID="ENs-xI-pay">
             <objects>
                 <navigationController id="emO-Mu-15l" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tbg-4o-P46">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="tbg-4o-P46">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
