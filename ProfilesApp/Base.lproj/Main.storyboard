@@ -55,17 +55,17 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="Trg-9w-ZCl" secondAttribute="trailing" id="A8M-28-OmP"/>
-                                            <constraint firstItem="Trg-9w-ZCl" firstAttribute="top" secondItem="Jcu-FK-Rf2" secondAttribute="top" constant="8" id="BqF-aE-yxI"/>
-                                            <constraint firstAttribute="bottom" secondItem="Trg-9w-ZCl" secondAttribute="bottom" constant="4" id="MP9-9r-cne"/>
-                                            <constraint firstItem="Trg-9w-ZCl" firstAttribute="leading" secondItem="Jcu-FK-Rf2" secondAttribute="leading" id="eba-gd-iZZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="Trg-9w-ZCl" secondAttribute="trailing" identifier="addNewProfileTrailing" id="A8M-28-OmP"/>
+                                            <constraint firstItem="Trg-9w-ZCl" firstAttribute="top" secondItem="Jcu-FK-Rf2" secondAttribute="top" constant="8" identifier="addNewProfileTop" id="BqF-aE-yxI"/>
+                                            <constraint firstAttribute="bottom" secondItem="Trg-9w-ZCl" secondAttribute="bottom" constant="4" identifier="addNewProfileBottom" id="MP9-9r-cne"/>
+                                            <constraint firstItem="Trg-9w-ZCl" firstAttribute="leading" secondItem="Jcu-FK-Rf2" secondAttribute="leading" identifier="addNewProfileLeading" id="eba-gd-iZZ"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bWh-cx-FzB" userLabel="Spacing View">
                                         <rect key="frame" x="0.0" y="50" width="180" height="1"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="J9A-gA-71W"/>
+                                            <constraint firstAttribute="height" priority="900" constant="1" identifier="spacingViewHeight" id="J9A-gA-71W"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ll9-Al-KuR" userLabel="Clear Sorts and Filters View">
@@ -85,17 +85,17 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="ofs-DF-wtT" firstAttribute="top" secondItem="ll9-Al-KuR" secondAttribute="top" constant="4" id="6B6-g5-okD"/>
-                                            <constraint firstAttribute="trailing" secondItem="ofs-DF-wtT" secondAttribute="trailing" id="AMX-iG-FbS"/>
-                                            <constraint firstItem="ofs-DF-wtT" firstAttribute="leading" secondItem="ll9-Al-KuR" secondAttribute="leading" id="iJ9-w7-nbE"/>
-                                            <constraint firstAttribute="bottom" secondItem="ofs-DF-wtT" secondAttribute="bottom" constant="4" id="rzd-TE-yA4"/>
+                                            <constraint firstItem="ofs-DF-wtT" firstAttribute="top" secondItem="ll9-Al-KuR" secondAttribute="top" constant="4" identifier="clearSortsFiltersTop" id="6B6-g5-okD"/>
+                                            <constraint firstAttribute="trailing" secondItem="ofs-DF-wtT" secondAttribute="trailing" identifier="clearSortsFiltersTrailing" id="AMX-iG-FbS"/>
+                                            <constraint firstItem="ofs-DF-wtT" firstAttribute="leading" secondItem="ll9-Al-KuR" secondAttribute="leading" identifier="clearSortsFiltersLeading" id="iJ9-w7-nbE"/>
+                                            <constraint firstAttribute="bottom" secondItem="ofs-DF-wtT" secondAttribute="bottom" constant="4" identifier="clearSortsFiltersBottom" id="rzd-TE-yA4"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gWB-T1-5VQ" userLabel="Spacing View">
                                         <rect key="frame" x="0.0" y="101" width="180" height="1"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="LLx-rT-L5R"/>
+                                            <constraint firstAttribute="height" priority="900" constant="1" identifier="anotherSpacingViewHeight" id="LLx-rT-L5R"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wbw-Rc-m31" userLabel="Gender Filters View">
@@ -103,9 +103,6 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Gender Filter ⚤" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YjK-jk-daY">
                                                 <rect key="frame" x="0.0" y="0.0" width="122" height="17.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="17.5" id="Jgo-ah-WrH"/>
-                                                </constraints>
                                                 <fontDescription key="fontDescription" name="PermanentMarker" family="Permanent Marker" pointSize="12"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -134,19 +131,19 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="lAJ-XU-NgO" firstAttribute="top" secondItem="Wbw-Rc-m31" secondAttribute="top" constant="20" symbolic="YES" id="1tv-Y8-yIn"/>
-                                            <constraint firstItem="lAJ-XU-NgO" firstAttribute="leading" secondItem="Wbw-Rc-m31" secondAttribute="leading" id="1xB-Wy-tI4"/>
-                                            <constraint firstItem="YjK-jk-daY" firstAttribute="top" secondItem="Wbw-Rc-m31" secondAttribute="top" id="6eZ-sB-f2A"/>
-                                            <constraint firstAttribute="trailing" secondItem="lAJ-XU-NgO" secondAttribute="trailing" id="Bbs-EF-pMf"/>
-                                            <constraint firstItem="YjK-jk-daY" firstAttribute="leading" secondItem="Wbw-Rc-m31" secondAttribute="leading" id="Opd-hh-Wy7"/>
-                                            <constraint firstAttribute="bottom" secondItem="lAJ-XU-NgO" secondAttribute="bottom" constant="8" id="sm8-pO-0tl"/>
+                                            <constraint firstItem="lAJ-XU-NgO" firstAttribute="top" secondItem="Wbw-Rc-m31" secondAttribute="top" priority="900" constant="20" symbolic="YES" identifier="MaleFemaleTop" id="1tv-Y8-yIn"/>
+                                            <constraint firstItem="lAJ-XU-NgO" firstAttribute="leading" secondItem="Wbw-Rc-m31" secondAttribute="leading" identifier="MaleFemaleLeading" id="1xB-Wy-tI4"/>
+                                            <constraint firstItem="YjK-jk-daY" firstAttribute="top" secondItem="Wbw-Rc-m31" secondAttribute="top" identifier="setGenderFilterTitleTop" id="6eZ-sB-f2A"/>
+                                            <constraint firstAttribute="trailing" secondItem="lAJ-XU-NgO" secondAttribute="trailing" identifier="MaleFemaleTrailing" id="Bbs-EF-pMf"/>
+                                            <constraint firstItem="YjK-jk-daY" firstAttribute="leading" secondItem="Wbw-Rc-m31" secondAttribute="leading" identifier="setGenderFilterTitleLeading" id="Opd-hh-Wy7"/>
+                                            <constraint firstAttribute="bottom" secondItem="lAJ-XU-NgO" secondAttribute="bottom" priority="900" constant="8" identifier="MaleFemaleBottom" id="sm8-pO-0tl"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cVA-RY-2ec" userLabel="Spacing View">
                                         <rect key="frame" x="0.0" y="167" width="180" height="1"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="2aj-s7-AjX"/>
+                                            <constraint firstAttribute="height" priority="900" constant="1" identifier="yetAnotherSpacingViewHeight" id="2aj-s7-AjX"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d9v-hy-oKB" userLabel="Age and Name Sorts View">
@@ -182,31 +179,31 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="CnN-r2-et2" firstAttribute="leading" secondItem="d9v-hy-oKB" secondAttribute="leading" id="8pi-Z6-z5J"/>
-                                            <constraint firstItem="CnN-r2-et2" firstAttribute="top" secondItem="d9v-hy-oKB" secondAttribute="top" id="Cbg-s2-VjN"/>
-                                            <constraint firstItem="8um-Tl-7mT" firstAttribute="top" secondItem="d9v-hy-oKB" secondAttribute="top" constant="20" symbolic="YES" id="OzP-oC-sO6"/>
-                                            <constraint firstItem="8um-Tl-7mT" firstAttribute="leading" secondItem="d9v-hy-oKB" secondAttribute="leading" id="dLc-u9-dAV"/>
-                                            <constraint firstAttribute="bottom" secondItem="8um-Tl-7mT" secondAttribute="bottom" constant="8" id="diI-u2-WxB"/>
-                                            <constraint firstAttribute="trailing" secondItem="8um-Tl-7mT" secondAttribute="trailing" id="h0Q-Rm-5eC"/>
+                                            <constraint firstItem="CnN-r2-et2" firstAttribute="leading" secondItem="d9v-hy-oKB" secondAttribute="leading" identifier="setSortsTitleLeading" id="8pi-Z6-z5J"/>
+                                            <constraint firstItem="CnN-r2-et2" firstAttribute="top" secondItem="d9v-hy-oKB" secondAttribute="top" identifier="setSortsTitleTop" id="Cbg-s2-VjN"/>
+                                            <constraint firstItem="8um-Tl-7mT" firstAttribute="top" secondItem="d9v-hy-oKB" secondAttribute="top" priority="900" constant="20" symbolic="YES" identifier="ageNameTop" id="OzP-oC-sO6"/>
+                                            <constraint firstItem="8um-Tl-7mT" firstAttribute="leading" secondItem="d9v-hy-oKB" secondAttribute="leading" identifier="ageNameLeading" id="dLc-u9-dAV"/>
+                                            <constraint firstAttribute="bottom" secondItem="8um-Tl-7mT" secondAttribute="bottom" priority="900" constant="8" identifier="ageNameBottom" id="diI-u2-WxB"/>
+                                            <constraint firstAttribute="trailing" secondItem="8um-Tl-7mT" secondAttribute="trailing" identifier="ageNameTrailing" id="h0Q-Rm-5eC"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uhx-qQ-lZB" userLabel="Spacing View">
                                         <rect key="frame" x="0.0" y="236" width="180" height="1"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="lIM-gi-Chd"/>
+                                            <constraint firstAttribute="height" priority="900" constant="1" identifier="andVeryLastSpacingViewHeight" id="lIM-gi-Chd"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="180" id="UWY-p2-BTp"/>
+                                    <constraint firstAttribute="width" constant="180" identifier="menuWidth" id="UWY-p2-BTp"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="K8w-gd-rTd" firstAttribute="centerX" secondItem="Mjv-dT-KQn" secondAttribute="centerX" id="HbD-kw-vD0"/>
-                            <constraint firstItem="K8w-gd-rTd" firstAttribute="centerY" secondItem="Mjv-dT-KQn" secondAttribute="centerY" id="pTO-kE-l6A"/>
+                            <constraint firstItem="K8w-gd-rTd" firstAttribute="centerX" secondItem="Mjv-dT-KQn" secondAttribute="centerX" identifier="menuXCenteredInSuperView" id="HbD-kw-vD0"/>
+                            <constraint firstItem="K8w-gd-rTd" firstAttribute="centerY" secondItem="Mjv-dT-KQn" secondAttribute="centerY" identifier="menuYCenteredInSuperView" id="pTO-kE-l6A"/>
                         </constraints>
                     </view>
                     <connections>
@@ -249,8 +246,8 @@
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="tQJ-ux-W6K">
                                                         <rect key="frame" x="0.0" y="0.0" width="286" height="286"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="286" id="KQu-lu-zJH"/>
-                                                            <constraint firstAttribute="width" secondItem="tQJ-ux-W6K" secondAttribute="height" multiplier="1:1" id="zCk-ei-YhH"/>
+                                                            <constraint firstAttribute="width" constant="286" identifier="profileImageWidth" id="KQu-lu-zJH"/>
+                                                            <constraint firstAttribute="width" secondItem="tQJ-ux-W6K" secondAttribute="height" multiplier="1:1" identifier="profileImageRatio" id="zCk-ei-YhH"/>
                                                         </constraints>
                                                     </imageView>
                                                     <button opaque="NO" alpha="0.69999999999999996" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2UI-td-hLp">
@@ -265,10 +262,10 @@
                                                         </connections>
                                                     </button>
                                                     <button autoresizesSubviews="NO" opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqp-ml-O4k" userLabel="Edit Background Color">
-                                                        <rect key="frame" x="236" y="20" width="30" height="30"/>
+                                                        <rect key="frame" x="206" y="20" width="60" height="60"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" secondItem="eqp-ml-O4k" secondAttribute="height" id="q63-wF-OG9"/>
-                                                            <constraint firstAttribute="width" constant="30" id="uIu-nP-es0"/>
+                                                            <constraint firstAttribute="width" secondItem="eqp-ml-O4k" secondAttribute="height" identifier="editBackgroundButtonRatio" id="q63-wF-OG9"/>
+                                                            <constraint firstAttribute="width" constant="60" identifier="editBackgroundButtonWidth" id="uIu-nP-es0"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="PermanentMarker" family="Permanent Marker" pointSize="15"/>
                                                         <state key="normal" title="Select">
@@ -281,14 +278,14 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="2UI-td-hLp" secondAttribute="trailing" constant="20" symbolic="YES" id="2mk-fe-o48"/>
-                                                    <constraint firstItem="tQJ-ux-W6K" firstAttribute="top" secondItem="HRw-U9-Yy2" secondAttribute="top" id="6LJ-CK-h54"/>
-                                                    <constraint firstItem="eqp-ml-O4k" firstAttribute="top" secondItem="HRw-U9-Yy2" secondAttribute="top" constant="20" symbolic="YES" id="Is2-nE-gef"/>
-                                                    <constraint firstAttribute="trailing" secondItem="tQJ-ux-W6K" secondAttribute="trailing" id="JWq-wP-a4U"/>
-                                                    <constraint firstItem="tQJ-ux-W6K" firstAttribute="leading" secondItem="HRw-U9-Yy2" secondAttribute="leading" id="SRE-eM-8Ul"/>
-                                                    <constraint firstAttribute="bottom" secondItem="2UI-td-hLp" secondAttribute="bottom" constant="20" symbolic="YES" id="fiz-AW-D2X"/>
-                                                    <constraint firstAttribute="trailing" secondItem="eqp-ml-O4k" secondAttribute="trailing" constant="20" symbolic="YES" id="trw-is-cbM"/>
-                                                    <constraint firstAttribute="bottom" secondItem="tQJ-ux-W6K" secondAttribute="bottom" id="zyA-qb-l9N"/>
+                                                    <constraint firstAttribute="trailing" secondItem="2UI-td-hLp" secondAttribute="trailing" constant="20" symbolic="YES" identifier="editProfileImageButtonTrailing" id="2mk-fe-o48"/>
+                                                    <constraint firstItem="tQJ-ux-W6K" firstAttribute="top" secondItem="HRw-U9-Yy2" secondAttribute="top" identifier="profileImageTop" id="6LJ-CK-h54"/>
+                                                    <constraint firstItem="eqp-ml-O4k" firstAttribute="top" secondItem="HRw-U9-Yy2" secondAttribute="top" constant="20" symbolic="YES" identifier="selectBackgroundButtonTop" id="Is2-nE-gef"/>
+                                                    <constraint firstAttribute="trailing" secondItem="tQJ-ux-W6K" secondAttribute="trailing" identifier="profileImageTrailing" id="JWq-wP-a4U"/>
+                                                    <constraint firstItem="tQJ-ux-W6K" firstAttribute="leading" secondItem="HRw-U9-Yy2" secondAttribute="leading" identifier="profileImageLeading" id="SRE-eM-8Ul"/>
+                                                    <constraint firstAttribute="bottom" secondItem="2UI-td-hLp" secondAttribute="bottom" constant="20" symbolic="YES" identifier="editProfileImageButtonBottom" id="fiz-AW-D2X"/>
+                                                    <constraint firstAttribute="trailing" secondItem="eqp-ml-O4k" secondAttribute="trailing" constant="20" symbolic="YES" identifier="selectBackgroundButtonTrailing" id="trw-is-cbM"/>
+                                                    <constraint firstAttribute="bottom" secondItem="tQJ-ux-W6K" secondAttribute="bottom" identifier="profileImageBottom" id="zyA-qb-l9N"/>
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9Os-dz-d6L">
@@ -297,7 +294,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pdT-Pu-mz3" userLabel="Invisible Spacing View">
                                                         <rect key="frame" x="0.0" y="0.0" width="12" height="136.5"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="12" id="Hvt-MU-NC7"/>
+                                                            <constraint firstAttribute="width" constant="12" identifier="invisibleSpacingViewWidth" id="Hvt-MU-NC7"/>
                                                         </constraints>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5Lo-Hj-5Pw" userLabel="Label Stack View">
@@ -329,10 +326,10 @@
                                                             </label>
                                                         </subviews>
                                                         <constraints>
-                                                            <constraint firstAttribute="trailing" secondItem="VWo-Tf-QXA" secondAttribute="trailing" id="FT3-h8-NS7"/>
-                                                            <constraint firstAttribute="trailing" secondItem="cDh-RY-Szm" secondAttribute="trailing" id="HXV-OT-jVO"/>
-                                                            <constraint firstAttribute="trailing" secondItem="6bU-qi-qoh" secondAttribute="trailing" id="QH7-fR-csW"/>
-                                                            <constraint firstAttribute="trailing" secondItem="0MQ-Jl-NnE" secondAttribute="trailing" id="VTi-vP-kQQ"/>
+                                                            <constraint firstAttribute="trailing" secondItem="VWo-Tf-QXA" secondAttribute="trailing" identifier="ageTitleTrailing" id="FT3-h8-NS7"/>
+                                                            <constraint firstAttribute="trailing" secondItem="cDh-RY-Szm" secondAttribute="trailing" identifier="nameTitleTrailing" id="HXV-OT-jVO"/>
+                                                            <constraint firstAttribute="trailing" secondItem="6bU-qi-qoh" secondAttribute="trailing" identifier="genderTitleTrailing" id="QH7-fR-csW"/>
+                                                            <constraint firstAttribute="trailing" secondItem="0MQ-Jl-NnE" secondAttribute="trailing" identifier="hobbiesTitleTrailing" id="VTi-vP-kQQ"/>
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Bjc-em-xgh" userLabel="Info Stack View">
@@ -364,14 +361,14 @@
                                                             </textField>
                                                         </subviews>
                                                         <constraints>
-                                                            <constraint firstAttribute="trailing" secondItem="Iil-X4-tU3" secondAttribute="trailing" constant="20" symbolic="YES" id="2FH-am-jQW"/>
-                                                            <constraint firstItem="Iil-X4-tU3" firstAttribute="leading" secondItem="Bjc-em-xgh" secondAttribute="leading" id="3ho-d5-Je9"/>
-                                                            <constraint firstItem="fkB-bh-NpY" firstAttribute="leading" secondItem="Bjc-em-xgh" secondAttribute="leading" id="7vk-cA-Ibi"/>
-                                                            <constraint firstItem="4Fy-eL-GGX" firstAttribute="leading" secondItem="Bjc-em-xgh" secondAttribute="leading" id="CqB-KG-TFc"/>
-                                                            <constraint firstAttribute="trailing" secondItem="4Fy-eL-GGX" secondAttribute="trailing" constant="20" symbolic="YES" id="Nuu-UH-Ev6"/>
-                                                            <constraint firstAttribute="trailing" secondItem="Ac6-hb-Jaf" secondAttribute="trailing" constant="20" symbolic="YES" id="Rv2-YF-Dlk"/>
-                                                            <constraint firstItem="Ac6-hb-Jaf" firstAttribute="leading" secondItem="Bjc-em-xgh" secondAttribute="leading" id="fB5-h6-zfy"/>
-                                                            <constraint firstAttribute="trailing" secondItem="fkB-bh-NpY" secondAttribute="trailing" constant="20" symbolic="YES" id="hkL-YF-7Hc"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Iil-X4-tU3" secondAttribute="trailing" constant="20" symbolic="YES" identifier="nameTrailing" id="2FH-am-jQW"/>
+                                                            <constraint firstItem="Iil-X4-tU3" firstAttribute="leading" secondItem="Bjc-em-xgh" secondAttribute="leading" identifier="nameLeading" id="3ho-d5-Je9"/>
+                                                            <constraint firstItem="fkB-bh-NpY" firstAttribute="leading" secondItem="Bjc-em-xgh" secondAttribute="leading" identifier="hobbiesLeading" id="7vk-cA-Ibi"/>
+                                                            <constraint firstItem="4Fy-eL-GGX" firstAttribute="leading" secondItem="Bjc-em-xgh" secondAttribute="leading" identifier="ageLeading" id="CqB-KG-TFc"/>
+                                                            <constraint firstAttribute="trailing" secondItem="4Fy-eL-GGX" secondAttribute="trailing" constant="20" symbolic="YES" identifier="ageTrailing" id="Nuu-UH-Ev6"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Ac6-hb-Jaf" secondAttribute="trailing" constant="20" symbolic="YES" identifier="genderTrailing" id="Rv2-YF-Dlk"/>
+                                                            <constraint firstItem="Ac6-hb-Jaf" firstAttribute="leading" secondItem="Bjc-em-xgh" secondAttribute="leading" identifier="genderLeading" id="fB5-h6-zfy"/>
+                                                            <constraint firstAttribute="trailing" secondItem="fkB-bh-NpY" secondAttribute="trailing" constant="20" symbolic="YES" identifier="hobbiesTrailing" id="hkL-YF-7Hc"/>
                                                         </constraints>
                                                     </stackView>
                                                 </subviews>
@@ -382,7 +379,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="70r-Em-F3v" userLabel="Left Spacing View">
                                                         <rect key="frame" x="0.0" y="0.0" width="0.0" height="45.5"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" id="AJX-kD-Pcd"/>
+                                                            <constraint firstAttribute="width" priority="900" identifier="leftButtonsSpacingView" id="AJX-kD-Pcd"/>
                                                         </constraints>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3m2-bD-2zl">
@@ -412,41 +409,41 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6HS-5G-20F" userLabel="Right Spacing View">
                                                         <rect key="frame" x="286" y="0.0" width="0.0" height="45.5"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" id="uCZ-g0-OLc"/>
+                                                            <constraint firstAttribute="width" priority="900" identifier="rightButtonsSpacingView" id="uCZ-g0-OLc"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="WjM-hd-smj" firstAttribute="width" secondItem="3m2-bD-2zl" secondAttribute="width" id="TgF-jf-h5P"/>
+                                                    <constraint firstItem="WjM-hd-smj" firstAttribute="width" secondItem="3m2-bD-2zl" secondAttribute="width" priority="900" identifier="equalButtonsConstraint" id="TgF-jf-h5P"/>
                                                 </constraints>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cid-hA-lCY" userLabel="Bottom Spacing View">
                                                 <rect key="frame" x="0.0" y="528" width="286" height="0.0"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" id="Qda-F8-deg"/>
+                                                    <constraint firstAttribute="height" priority="900" identifier="bottomSpacingViewHeight" id="Qda-F8-deg"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="528" id="YKY-gZ-sqo"/>
-                                            <constraint firstItem="9Os-dz-d6L" firstAttribute="height" secondItem="2BQ-fx-kkK" secondAttribute="height" multiplier="3" id="dmr-Ha-NZy"/>
+                                            <constraint firstAttribute="height" priority="900" constant="528" identifier="containerStackViewHeight" id="YKY-gZ-sqo"/>
+                                            <constraint firstItem="9Os-dz-d6L" firstAttribute="height" secondItem="2BQ-fx-kkK" secondAttribute="height" multiplier="3" priority="900" identifier="labelsToButtonRatio" id="dmr-Ha-NZy"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="do1-69-RP3" firstAttribute="leading" secondItem="xGY-dM-djs" secondAttribute="leading" id="WmK-ul-OJK"/>
-                                    <constraint firstAttribute="bottom" secondItem="do1-69-RP3" secondAttribute="bottom" id="bx7-Zc-Ok8"/>
-                                    <constraint firstItem="do1-69-RP3" firstAttribute="top" secondItem="xGY-dM-djs" secondAttribute="top" id="gOG-if-Nbg"/>
-                                    <constraint firstAttribute="trailing" secondItem="do1-69-RP3" secondAttribute="trailing" id="pfY-lj-SFI"/>
+                                    <constraint firstItem="do1-69-RP3" firstAttribute="leading" secondItem="xGY-dM-djs" secondAttribute="leading" identifier="outermostStackLeading" id="WmK-ul-OJK"/>
+                                    <constraint firstAttribute="bottom" secondItem="do1-69-RP3" secondAttribute="bottom" identifier="outermostStackBottom" id="bx7-Zc-Ok8"/>
+                                    <constraint firstItem="do1-69-RP3" firstAttribute="top" secondItem="xGY-dM-djs" secondAttribute="top" identifier="outermostStackTop" id="gOG-if-Nbg"/>
+                                    <constraint firstAttribute="trailing" secondItem="do1-69-RP3" secondAttribute="trailing" identifier="outermostStackTrailing" id="pfY-lj-SFI"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xGY-dM-djs" firstAttribute="leading" secondItem="Cmu-GX-equ" secondAttribute="leading" id="JaB-e1-ovv"/>
-                            <constraint firstItem="dNz-Ff-hPC" firstAttribute="top" secondItem="xGY-dM-djs" secondAttribute="bottom" id="O0y-WQ-nch"/>
-                            <constraint firstItem="xGY-dM-djs" firstAttribute="top" secondItem="306-Nt-oZP" secondAttribute="bottom" id="O4E-b1-eZm"/>
-                            <constraint firstAttribute="trailing" secondItem="xGY-dM-djs" secondAttribute="trailing" id="bKo-Gf-oPq"/>
+                            <constraint firstItem="xGY-dM-djs" firstAttribute="leading" secondItem="Cmu-GX-equ" secondAttribute="leading" identifier="backgroundScrollLeading" id="JaB-e1-ovv"/>
+                            <constraint firstItem="dNz-Ff-hPC" firstAttribute="top" secondItem="xGY-dM-djs" secondAttribute="bottom" identifier="backgroundScrollBottom" id="O0y-WQ-nch"/>
+                            <constraint firstItem="xGY-dM-djs" firstAttribute="top" secondItem="306-Nt-oZP" secondAttribute="bottom" identifier="backgroundScrollTop" id="O4E-b1-eZm"/>
+                            <constraint firstAttribute="trailing" secondItem="xGY-dM-djs" secondAttribute="trailing" identifier="backgroundScrollTrailing" id="bKo-Gf-oPq"/>
                         </constraints>
                     </view>
                     <connections>
@@ -485,7 +482,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D7R-TF-DCU">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D7R-TF-DCU" userLabel="Info View">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbd-p7-nzu">
@@ -506,12 +503,12 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="3mo-Yg-p8W" firstAttribute="leading" secondItem="D7R-TF-DCU" secondAttribute="leading" constant="20" symbolic="YES" id="3mM-ww-Tsb"/>
-                                    <constraint firstItem="3mo-Yg-p8W" firstAttribute="top" secondItem="D7R-TF-DCU" secondAttribute="top" constant="20" symbolic="YES" id="6ie-Jc-yMZ"/>
-                                    <constraint firstItem="lbd-p7-nzu" firstAttribute="top" secondItem="D7R-TF-DCU" secondAttribute="top" constant="20" symbolic="YES" id="WRn-c5-Ffy"/>
-                                    <constraint firstAttribute="trailing" secondItem="lbd-p7-nzu" secondAttribute="trailing" constant="20" symbolic="YES" id="ajq-Ir-F9v"/>
-                                    <constraint firstItem="3mo-Yg-p8W" firstAttribute="baseline" secondItem="lbd-p7-nzu" secondAttribute="baseline" id="e7N-uz-3lc"/>
-                                    <constraint firstAttribute="height" constant="60" id="uu1-ji-DeF"/>
+                                    <constraint firstItem="3mo-Yg-p8W" firstAttribute="leading" secondItem="D7R-TF-DCU" secondAttribute="leading" constant="20" symbolic="YES" identifier="ProfilesAppLeading" id="3mM-ww-Tsb"/>
+                                    <constraint firstItem="3mo-Yg-p8W" firstAttribute="top" secondItem="D7R-TF-DCU" secondAttribute="top" constant="20" symbolic="YES" identifier="ProfilesAppTop" id="6ie-Jc-yMZ"/>
+                                    <constraint firstItem="lbd-p7-nzu" firstAttribute="top" secondItem="D7R-TF-DCU" secondAttribute="top" constant="20" symbolic="YES" identifier="MenuTop" id="WRn-c5-Ffy"/>
+                                    <constraint firstAttribute="trailing" secondItem="lbd-p7-nzu" secondAttribute="trailing" constant="20" symbolic="YES" identifier="MenuTrailing" id="ajq-Ir-F9v"/>
+                                    <constraint firstItem="3mo-Yg-p8W" firstAttribute="baseline" secondItem="lbd-p7-nzu" secondAttribute="baseline" identifier="ProfilesAppBaseline" id="e7N-uz-3lc"/>
+                                    <constraint firstAttribute="height" constant="60" identifier="InfoViewHeight" id="uu1-ji-DeF"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="126" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nWf-e6-rEP">
@@ -531,7 +528,7 @@
                                                         <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="3va-7u-e5V">
                                                             <rect key="frame" x="0.0" y="0.0" width="110" height="109.5"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" secondItem="3va-7u-e5V" secondAttribute="height" multiplier="1:1" id="4zS-zJ-V6D"/>
+                                                                <constraint firstAttribute="width" secondItem="3va-7u-e5V" secondAttribute="height" multiplier="1:1" identifier="ProfileImageAspect" id="4zS-zJ-V6D"/>
                                                             </constraints>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="9OX-3i-daf" userLabel="Label Stack View">
@@ -563,11 +560,11 @@
                                                                 </label>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstAttribute="trailing" secondItem="4qh-Vi-4xF" secondAttribute="trailing" id="0sK-0a-6HK"/>
-                                                                <constraint firstAttribute="trailing" secondItem="9If-Bq-Fet" secondAttribute="trailing" id="6d9-nH-o2N"/>
-                                                                <constraint firstAttribute="width" constant="70" id="AIO-BP-8r2"/>
-                                                                <constraint firstAttribute="trailing" secondItem="HDG-IT-QDD" secondAttribute="trailing" id="IjA-An-yAD"/>
-                                                                <constraint firstAttribute="trailing" secondItem="ZZu-EK-yHi" secondAttribute="trailing" id="v08-Uz-7go"/>
+                                                                <constraint firstAttribute="trailing" secondItem="4qh-Vi-4xF" secondAttribute="trailing" identifier="nameTitleTrailing" id="0sK-0a-6HK"/>
+                                                                <constraint firstAttribute="trailing" secondItem="9If-Bq-Fet" secondAttribute="trailing" identifier="genderTitleTrailing" id="6d9-nH-o2N"/>
+                                                                <constraint firstAttribute="width" constant="70" identifier="LabelTitlesWidth" id="AIO-BP-8r2"/>
+                                                                <constraint firstAttribute="trailing" secondItem="HDG-IT-QDD" secondAttribute="trailing" identifier="hobbiesTitleTrailing" id="IjA-An-yAD"/>
+                                                                <constraint firstAttribute="trailing" secondItem="ZZu-EK-yHi" secondAttribute="trailing" identifier="ageTitleTrailing" id="v08-Uz-7go"/>
                                                             </constraints>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="WVp-LM-qQs" userLabel="Info Stack View">
@@ -599,24 +596,24 @@
                                                                 </label>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstAttribute="trailing" secondItem="Pqe-rF-pZF" secondAttribute="trailing" id="FpI-Vz-RLN"/>
-                                                                <constraint firstAttribute="trailing" secondItem="62x-Dy-vfp" secondAttribute="trailing" id="hun-IA-DwR"/>
-                                                                <constraint firstItem="Pqe-rF-pZF" firstAttribute="leading" secondItem="WVp-LM-qQs" secondAttribute="leading" id="i9C-9e-080"/>
-                                                                <constraint firstItem="62x-Dy-vfp" firstAttribute="leading" secondItem="WVp-LM-qQs" secondAttribute="leading" id="qGg-IF-0D3"/>
-                                                                <constraint firstAttribute="trailing" secondItem="Coi-B3-beJ" secondAttribute="trailing" id="tUr-TV-RVt"/>
-                                                                <constraint firstAttribute="trailing" secondItem="QgP-v7-ioU" secondAttribute="trailing" id="tpF-R9-d7d"/>
-                                                                <constraint firstItem="QgP-v7-ioU" firstAttribute="leading" secondItem="WVp-LM-qQs" secondAttribute="leading" id="wFA-8N-1b4"/>
-                                                                <constraint firstItem="Coi-B3-beJ" firstAttribute="leading" secondItem="WVp-LM-qQs" secondAttribute="leading" id="xeI-Wj-jQ0"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Pqe-rF-pZF" secondAttribute="trailing" identifier="nameLabelTrailing" id="FpI-Vz-RLN"/>
+                                                                <constraint firstAttribute="trailing" secondItem="62x-Dy-vfp" secondAttribute="trailing" identifier="hobbiesLabelTrailing" id="hun-IA-DwR"/>
+                                                                <constraint firstItem="Pqe-rF-pZF" firstAttribute="leading" secondItem="WVp-LM-qQs" secondAttribute="leading" identifier="nameLabelLeading" id="i9C-9e-080"/>
+                                                                <constraint firstItem="62x-Dy-vfp" firstAttribute="leading" secondItem="WVp-LM-qQs" secondAttribute="leading" identifier="hobbiesLabelLeading" id="qGg-IF-0D3"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Coi-B3-beJ" secondAttribute="trailing" identifier="ageLabelTrailing" id="tUr-TV-RVt"/>
+                                                                <constraint firstAttribute="trailing" secondItem="QgP-v7-ioU" secondAttribute="trailing" identifier="genderLabelTrailing" id="tpF-R9-d7d"/>
+                                                                <constraint firstItem="QgP-v7-ioU" firstAttribute="leading" secondItem="WVp-LM-qQs" secondAttribute="leading" identifier="genderLabelLeading" id="wFA-8N-1b4"/>
+                                                                <constraint firstItem="Coi-B3-beJ" firstAttribute="leading" secondItem="WVp-LM-qQs" secondAttribute="leading" identifier="ageLabelLeading" id="xeI-Wj-jQ0"/>
                                                             </constraints>
                                                         </stackView>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="3eb-le-rTH" firstAttribute="leading" secondItem="AII-zt-fe9" secondAttribute="leadingMargin" id="QZu-NN-j71"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="3eb-le-rTH" secondAttribute="bottom" id="RQh-WB-MgR"/>
-                                                <constraint firstAttribute="topMargin" secondItem="3eb-le-rTH" secondAttribute="top" id="cAm-An-frQ"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="3eb-le-rTH" secondAttribute="trailing" id="wTm-3K-oqT"/>
+                                                <constraint firstItem="3eb-le-rTH" firstAttribute="leading" secondItem="AII-zt-fe9" secondAttribute="leadingMargin" identifier="cellStackLeading" id="QZu-NN-j71"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="3eb-le-rTH" secondAttribute="bottom" identifier="cellStackBottom" id="RQh-WB-MgR"/>
+                                                <constraint firstAttribute="topMargin" secondItem="3eb-le-rTH" secondAttribute="top" identifier="cellStackTop" id="cAm-An-frQ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="3eb-le-rTH" secondAttribute="trailing" identifier="cellStackTrailing" id="wTm-3K-oqT"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -635,6 +632,12 @@
                                 </connections>
                             </tableView>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="D7R-TF-DCU" firstAttribute="leading" secondItem="b9Q-GT-E81" secondAttribute="leading" priority="900" identifier="infoViewLeading" id="2ov-7K-SSp"/>
+                            <constraint firstItem="nWf-e6-rEP" firstAttribute="leading" secondItem="b9Q-GT-E81" secondAttribute="leading" priority="900" identifier="tableViewLeading" id="3rt-St-bJY"/>
+                            <constraint firstAttribute="trailing" secondItem="D7R-TF-DCU" secondAttribute="trailing" priority="900" identifier="infoViewTrailing" id="YAq-pM-Pre"/>
+                            <constraint firstAttribute="trailing" secondItem="nWf-e6-rEP" secondAttribute="trailing" priority="900" identifier="tableViewTrailing" id="jtM-wS-vG8"/>
+                        </constraints>
                     </stackView>
                     <connections>
                         <outlet property="profilesAppDisplay" destination="3mo-Yg-p8W" id="pqd-H2-B0v"/>
