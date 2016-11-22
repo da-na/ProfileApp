@@ -9,6 +9,11 @@
 import Firebase
 
 class Profile {
+    static var nextUid = UUID().uuidString.hashValue
+    static func generateUid() -> Int {
+        nextUid += 1
+        return nextUid
+    }
     let uid: Int
     let ref: FIRDatabaseReference?
     var name: String
@@ -20,7 +25,7 @@ class Profile {
 
     // MARK: Initializers
     init(name: String, gender: Gender, age: Int, backgroundColor: UIColor?, profileImage: UIImage?, hobbies: [String]) {
-        self.uid = UUID().uuidString.hashValue
+        self.uid = Profile.generateUid()
         self.name = name
         self.gender = gender
         self.age = age
