@@ -86,16 +86,24 @@ class MenuViewController: UIViewController {
     }
     @IBAction func setUnsetAgeSort(_ sender: UIButton) {
         switch ageSort {
-        case .None: ageSort = .Ascending
-        case .Ascending: ageSort = .Descending
+        case .None:
+            ageSort = .Ascending
+            nameSort = .None
+        case .Ascending:
+            ageSort = .Descending
+            nameSort = .None
         case .Descending: ageSort = .None
         }
         dismissMeWithDelay()
     }
     @IBAction func setUnsetNameSort(_ sender: UIButton) {
         switch nameSort {
-        case .None: nameSort = .Ascending
-        case .Ascending: nameSort = .Descending
+        case .None:
+            nameSort = .Ascending
+            ageSort = .None
+        case .Ascending:
+            nameSort = .Descending
+            ageSort = .None
         case .Descending: nameSort = .None
         }
         dismissMeWithDelay()
