@@ -8,6 +8,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -291,37 +292,37 @@
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9Os-dz-d6L">
-                                                <rect key="frame" x="0.0" y="306" width="286" height="132"/>
+                                                <rect key="frame" x="0.0" y="306" width="286" height="136.5"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pdT-Pu-mz3" userLabel="Invisible Spacing View">
-                                                        <rect key="frame" x="0.0" y="0.0" width="12" height="132"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="12" height="136.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="12" id="Hvt-MU-NC7"/>
                                                         </constraints>
                                                     </view>
-                                                    <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="5Lo-Hj-5Pw" userLabel="Label Stack View">
-                                                        <rect key="frame" x="20" y="0.0" width="68.5" height="132"/>
+                                                    <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5Lo-Hj-5Pw" userLabel="Label Stack View">
+                                                        <rect key="frame" x="20" y="0.0" width="68.5" height="136.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDh-RY-Szm">
-                                                                <rect key="frame" x="0.0" y="0.0" width="68.5" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="68.5" height="28"/>
                                                                 <fontDescription key="fontDescription" name="PoetsenOne-Regular" family="PoetsenOne" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWo-Tf-QXA">
-                                                                <rect key="frame" x="0.0" y="34" width="68.5" height="30"/>
+                                                                <rect key="frame" x="0.0" y="36" width="68.5" height="28.5"/>
                                                                 <fontDescription key="fontDescription" name="PoetsenOne-Regular" family="PoetsenOne" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bU-qi-qoh">
-                                                                <rect key="frame" x="0.0" y="68" width="68.5" height="30"/>
+                                                                <rect key="frame" x="0.0" y="72.5" width="68.5" height="28"/>
                                                                 <fontDescription key="fontDescription" name="PoetsenOne-Regular" family="PoetsenOne" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="760" text="Hobbies:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0MQ-Jl-NnE">
-                                                                <rect key="frame" x="0.0" y="102" width="68.5" height="30"/>
+                                                                <rect key="frame" x="0.0" y="108.5" width="68.5" height="28"/>
                                                                 <fontDescription key="fontDescription" name="PoetsenOne-Regular" family="PoetsenOne" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -334,29 +335,29 @@
                                                             <constraint firstAttribute="trailing" secondItem="0MQ-Jl-NnE" secondAttribute="trailing" id="VTi-vP-kQQ"/>
                                                         </constraints>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Bjc-em-xgh" userLabel="Info Stack View">
-                                                        <rect key="frame" x="96.5" y="0.0" width="189.5" height="132"/>
+                                                    <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Bjc-em-xgh" userLabel="Info Stack View">
+                                                        <rect key="frame" x="96.5" y="0.0" width="189.5" height="136.5"/>
                                                         <subviews>
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iil-X4-tU3" userLabel="name">
-                                                                <rect key="frame" x="0.0" y="0.0" width="169.5" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="169.5" height="28"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" name="SFCartoonistHand" family="SF Cartoonist Hand" pointSize="17"/>
                                                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                                             </textField>
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Fy-eL-GGX" userLabel="age">
-                                                                <rect key="frame" x="0.0" y="34" width="169.5" height="30"/>
+                                                                <rect key="frame" x="0.0" y="36" width="169.5" height="28.5"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" name="SFCartoonistHand" family="SF Cartoonist Hand" pointSize="17"/>
                                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
                                                             </textField>
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ac6-hb-Jaf" userLabel="gender">
-                                                                <rect key="frame" x="0.0" y="68" width="169.5" height="30"/>
+                                                                <rect key="frame" x="0.0" y="72.5" width="169.5" height="28"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" name="SFCartoonistHand" family="SF Cartoonist Hand" pointSize="17"/>
                                                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                                             </textField>
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fkB-bh-NpY" userLabel="hobbies">
-                                                                <rect key="frame" x="0.0" y="102" width="169.5" height="30"/>
+                                                                <rect key="frame" x="0.0" y="108.5" width="169.5" height="28"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" name="SFCartoonistHand" family="SF Cartoonist Hand" pointSize="17"/>
                                                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
@@ -375,17 +376,17 @@
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2BQ-fx-kkK">
-                                                <rect key="frame" x="0.0" y="458" width="286" height="50"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="2BQ-fx-kkK">
+                                                <rect key="frame" x="0.0" y="462.5" width="286" height="45.5"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="70r-Em-F3v" userLabel="Left Spacing View">
-                                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="45.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" id="AJX-kD-Pcd"/>
                                                         </constraints>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3m2-bD-2zl">
-                                                        <rect key="frame" x="20" y="0.0" width="113" height="50"/>
+                                                        <rect key="frame" x="12" y="0.0" width="125" height="45.5"/>
                                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <fontDescription key="fontDescription" name="PermanentMarker" family="Permanent Marker" pointSize="17"/>
                                                         <color key="tintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
@@ -397,7 +398,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WjM-hd-smj">
-                                                        <rect key="frame" x="153" y="0.0" width="113" height="50"/>
+                                                        <rect key="frame" x="149" y="0.0" width="125" height="45.5"/>
                                                         <color key="backgroundColor" red="0.086274509803921567" green="0.40000000000000002" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" name="PermanentMarker" family="Permanent Marker" pointSize="17"/>
                                                         <color key="tintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
@@ -409,7 +410,7 @@
                                                         </connections>
                                                     </button>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6HS-5G-20F" userLabel="Right Spacing View">
-                                                        <rect key="frame" x="286" y="0.0" width="0.0" height="50"/>
+                                                        <rect key="frame" x="286" y="0.0" width="0.0" height="45.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" id="uCZ-g0-OLc"/>
                                                         </constraints>
@@ -426,6 +427,10 @@
                                                 </constraints>
                                             </view>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="528" id="YKY-gZ-sqo"/>
+                                            <constraint firstItem="9Os-dz-d6L" firstAttribute="height" secondItem="2BQ-fx-kkK" secondAttribute="height" multiplier="3" id="dmr-Ha-NZy"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -450,6 +455,7 @@
                         <outlet property="backgroundScroll" destination="xGY-dM-djs" id="1Z6-w6-pGl"/>
                         <outlet property="containerStackBottomView" destination="cid-hA-lCY" id="5OQ-us-n7H"/>
                         <outlet property="containerStackView" destination="do1-69-RP3" id="gFF-az-4CQ"/>
+                        <outlet property="containerStackViewHeight" destination="YKY-gZ-sqo" id="jPp-gD-mkL"/>
                         <outlet property="dismissButton" destination="3m2-bD-2zl" id="BXM-xT-tBy"/>
                         <outlet property="editBackgroundColorButton" destination="eqp-ml-O4k" id="jB2-Uu-Nzp"/>
                         <outlet property="editBackgroundColorButtonWidth" destination="uIu-nP-es0" id="EhT-wR-wVm"/>

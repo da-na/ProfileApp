@@ -12,6 +12,7 @@ import Firebase
 class ProfileViewController: UIViewController {
 
     @IBOutlet weak var backgroundScroll: UIScrollView!
+    @IBOutlet weak var containerStackViewHeight: NSLayoutConstraint!
     @IBOutlet weak var containerStackView: UIStackView!
     @IBOutlet weak var containerStackBottomView: UIView!
     @IBOutlet weak var profileImage: UIImageView!
@@ -73,6 +74,7 @@ class ProfileViewController: UIViewController {
         setButtons()
         setProfileImageWidth()
         setValuesOfTextFieldsProfileImageAndBackground()
+        setContainerHeight()
     }
     override func viewWillAppear(_ animated: Bool) {
         setNotifications()
@@ -112,6 +114,13 @@ class ProfileViewController: UIViewController {
             gender.text = profile.gender.description
             hobbies.text = profile.hobbies.joined(separator: ", ")
             editBackgroundColorButton.backgroundColor = profile.backgroundColor
+        }
+    }
+    private func setContainerHeight() {
+        if let overlayHeight = animationExpandedFrame?.height {
+            containerStackViewHeight.constant = overlayHeight
+        } else {
+            containerStackViewHeight.constant = self.view.frame.height - 2.0 * UISettings.standardOffset
         }
     }
     private func setDisabledFields(){
