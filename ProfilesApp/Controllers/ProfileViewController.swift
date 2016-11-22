@@ -24,33 +24,20 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var editBackgroundColorButtonWidth: NSLayoutConstraint!
     @IBOutlet weak var editBackgroundColorButton: UIButton! {
         didSet {
+            setBorders(for: editBackgroundColorButton)
             editBackgroundColorButton.layer.cornerRadius = 0.5 * UISettings.menuButtonDiameter
-            editBackgroundColorButton.layer.borderWidth = UISettings.borderWidth
-            editBackgroundColorButton.layer.borderColor = UISettings.gray.cgColor
         }
     }
     @IBOutlet weak var editProfileImageButton: UIButton! {
-        didSet {
-            editProfileImageButton.layer.cornerRadius = UISettings.cornerRadius
-            editProfileImageButton.layer.borderWidth = UISettings.borderWidth
-            editProfileImageButton.layer.borderColor = UISettings.gray.cgColor
-        }
+        didSet { setBorders(for: editProfileImageButton) }
     }
     @IBOutlet weak var dismissButton: UIButton! {
-        didSet {
-            dismissButton.layer.cornerRadius = UISettings.cornerRadius
-            dismissButton.layer.borderWidth = UISettings.borderWidth
-            dismissButton.layer.borderColor = UISettings.gray.cgColor
-        }
+        didSet { setBorders(for: dismissButton) }
     }
     @IBOutlet weak var addProfileButton: UIButton! {
         didSet {
-            addProfileButton.layer.cornerRadius = UISettings.cornerRadius
-            addProfileButton.layer.borderWidth = UISettings.borderWidth
-            addProfileButton.layer.borderColor = UISettings.gray.cgColor
-            if mode == .Edit {
-                addProfileButton.setTitle("Submit Changes", for: .normal)
-            }
+            setBorders(for: addProfileButton)
+            if mode == .Edit { addProfileButton.setTitle("Submit Changes", for: .normal) }
         }
     }
     let dbRef = FIRDatabase.database().reference(withPath: "profiles")
@@ -114,6 +101,7 @@ class ProfileViewController: UIViewController {
             gender.text = profile.gender.description
             hobbies.text = profile.hobbies.joined(separator: ", ")
             editBackgroundColorButton.backgroundColor = profile.backgroundColor
+            matchEditBackgroundColorButtonTitleColor(to: profile.backgroundColor!)
         }
     }
     private func setContainerHeight() {
@@ -245,6 +233,20 @@ class ProfileViewController: UIViewController {
 
         return errors > 0
     }
+    private func setBorders(for button: UIButton){
+        button.layer.cornerRadius = UISettings.cornerRadius
+        button.layer.borderWidth = UISettings.borderWidth
+        button.layer.borderColor = UISettings.gray.cgColor
+    }
+    fileprivate func matchEditBackgroundColorButtonTitleColor(to color: UIColor) {
+        var hue = CGFloat(0), saturation = CGFloat(0), brightness = CGFloat(0), alpha = CGFloat(0)
+        color.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha)
+        if saturation < CGFloat(0.5) && brightness > CGFloat(0.75) {
+            editBackgroundColorButton.setTitleColor(UISettings.darkGray, for: .normal)
+        } else {
+            editBackgroundColorButton.setTitleColor(UISettings.white, for: .normal)
+        }
+    }
 }
 
 // MARK: UIImagePickerControllerDelegate methods
@@ -261,7 +263,7 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
     }
 }
 
-// MARK: UIImagePickerControllerDelegate methods
+// MARK: UIPickerViewDataSource and UIPickerViewDelegate methods
 extension ProfileViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -284,6 +286,7 @@ extension ProfileViewController: ColorPickerDelegate {
     func colorPickerTouched(sender: ColorPickerController, color: UIColor, point: CGPoint, state: UIGestureRecognizerState) {
         editBackgroundColorButton.backgroundColor = color
         profile?.backgroundColor = color
+        matchEditBackgroundColorButtonTitleColor(to: color)
     }
 }
 
