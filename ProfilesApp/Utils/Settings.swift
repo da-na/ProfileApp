@@ -26,7 +26,9 @@ class Settings {
     static let gray = UIColor.lightGray
 
     // MARK: Filter settings
-    static let genderFilterLabel: [GenderFilterMode: String] = [.None: "\u{1F46B}", .Female: "\u{1F469}", .Male: "\u{1F466}"]
-    static let nameSortLabel: [SortOrderMode: String] = [.None: "Name", .Ascending: "A-Z", .Descending: "Z-A"]
-    static let ageSortLabel: [SortOrderMode: String] = [.None: "Age", .Ascending: "1-99", .Descending: "99-1"]
+    static let genderFilterLabel: [GenderFilterMode: String] = [.None: "\u{1F469} or \u{1F466}", .Female: "\u{1F469}", .Male: "\u{1F466}"]
+    static let nameSortLabel: [SortOrderMode: String] = [.None: "Name\u{2191}\u{2193}", .Ascending: "Name\u{2191}", .Descending: "Name\u{2193}"]
+    static let ageSortLabel: [SortOrderMode: String] = [.None: "Age\u{2191}\u{2193}", .Ascending: "Age\u{2191}", .Descending: "Age\u{2193}"]
+    static let resetFilters = "\u{2717}"
+    static let addNewProfile = "+\u{1F464}"
 }

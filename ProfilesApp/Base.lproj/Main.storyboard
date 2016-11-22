@@ -137,21 +137,21 @@
                             <outlet property="delegate" destination="ho5-CY-f7Z" id="Cmf-EM-B2A"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Profiles" id="3x5-uI-uPV">
+                    <navigationItem key="navigationItem" id="3x5-uI-uPV">
                         <leftBarButtonItems>
                             <barButtonItem title="M/F" id="OVv-rr-dFu">
                                 <connections>
-                                    <action selector="setMaleFemaleFilter:" destination="ho5-CY-f7Z" id="qdW-yf-GrQ"/>
+                                    <action selector="setGenderFilter:" destination="ho5-CY-f7Z" id="2yM-c7-nfX"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="1-99" id="LLq-qH-p0o" userLabel="1-99">
+                            <barButtonItem title="Age" id="LLq-qH-p0o" userLabel="Age Filter Button">
                                 <connections>
-                                    <action selector="setAgeSort:" destination="ho5-CY-f7Z" id="9ts-1o-XVW"/>
+                                    <action selector="setAgeSort:" destination="ho5-CY-f7Z" id="37b-36-PkG"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="A-Z" id="NoK-xq-3F3">
+                            <barButtonItem title="Name" id="NoK-xq-3F3">
                                 <connections>
-                                    <action selector="setNameSort:" destination="ho5-CY-f7Z" id="cb7-Nu-NlL"/>
+                                    <action selector="setNameSort:" destination="ho5-CY-f7Z" id="rsv-zP-Cvn"/>
                                 </connections>
                             </barButtonItem>
                         </leftBarButtonItems>
@@ -169,9 +169,11 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="addNewProfileButton" destination="XjX-PU-kE1" id="bUP-bA-OeI"/>
                         <outlet property="ageSortButton" destination="LLq-qH-p0o" id="GmD-7i-IDm"/>
-                        <outlet property="maleFemaleFilterButton" destination="OVv-rr-dFu" id="xw7-dl-G66"/>
+                        <outlet property="genderFilterButton" destination="OVv-rr-dFu" id="okL-SD-hNz"/>
                         <outlet property="nameSortButton" destination="NoK-xq-3F3" id="DoG-O5-TJ6"/>
+                        <outlet property="resetFiltersButton" destination="0de-Te-mph" id="6zq-hg-gj1"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xDt-Eh-sjY" userLabel="First Responder" sceneMemberID="firstResponder"/>
