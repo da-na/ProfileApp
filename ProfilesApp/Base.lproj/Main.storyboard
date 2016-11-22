@@ -215,47 +215,94 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="K8w-gd-rTd">
-                                <rect key="frame" x="129" y="20" width="175" height="199"/>
+                                <rect key="frame" x="70" y="165.5" width="180" height="237"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9aI-IQ-Qry">
-                                        <rect key="frame" x="0.0" y="0.0" width="175" height="37"/>
-                                        <fontDescription key="fontDescription" name="PermanentMarker" family="Permanent Marker" pointSize="17"/>
-                                        <state key="normal" title="Add new profile"/>
-                                        <connections>
-                                            <action selector="addNewProfile:" destination="YIR-oY-Jct" eventType="touchUpInside" id="x05-rs-5QY"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Trg-9w-ZCl">
-                                        <rect key="frame" x="0.0" y="37" width="175" height="34"/>
-                                        <fontDescription key="fontDescription" name="PermanentMarker" family="Permanent Marker" pointSize="15"/>
-                                        <state key="normal" title="Clear ⚤ or ⬆︎⬇︎"/>
-                                        <connections>
-                                            <action selector="clearFiltersOrSorts:" destination="YIR-oY-Jct" eventType="touchUpInside" id="FnR-AV-uEU"/>
-                                        </connections>
-                                    </button>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wbw-Rc-m31">
-                                        <rect key="frame" x="0.0" y="71" width="175" height="64"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jcu-FK-Rf2" userLabel="Add New Profile View">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Trg-9w-ZCl">
+                                                <rect key="frame" x="0.0" y="8" width="180" height="38"/>
+                                                <fontDescription key="fontDescription" name="PermanentMarker" family="Permanent Marker" pointSize="15"/>
+                                                <state key="normal" title="Add New Profile"/>
+                                                <state key="selected" title="Clear ⚤ or ⬆︎⬇︎">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="addNewProfile:" destination="YIR-oY-Jct" eventType="touchUpInside" id="0W6-30-wAa"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Trg-9w-ZCl" secondAttribute="trailing" id="A8M-28-OmP"/>
+                                            <constraint firstItem="Trg-9w-ZCl" firstAttribute="top" secondItem="Jcu-FK-Rf2" secondAttribute="top" constant="8" id="BqF-aE-yxI"/>
+                                            <constraint firstAttribute="bottom" secondItem="Trg-9w-ZCl" secondAttribute="bottom" constant="4" id="MP9-9r-cne"/>
+                                            <constraint firstItem="Trg-9w-ZCl" firstAttribute="leading" secondItem="Jcu-FK-Rf2" secondAttribute="leading" id="eba-gd-iZZ"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bWh-cx-FzB" userLabel="Spacing View">
+                                        <rect key="frame" x="0.0" y="50" width="180" height="1"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="J9A-gA-71W"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ll9-Al-KuR" userLabel="Clear Sorts and Filters View">
+                                        <rect key="frame" x="0.0" y="51" width="180" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofs-DF-wtT">
+                                                <rect key="frame" x="0.0" y="4" width="180" height="42"/>
+                                                <fontDescription key="fontDescription" name="PermanentMarker" family="Permanent Marker" pointSize="15"/>
+                                                <state key="normal" title="Clear ⚤ or ⬆︎⬇︎"/>
+                                                <state key="selected" title="Clear ⚤ or ⬆︎⬇︎">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="clearFiltersOrSorts:" destination="YIR-oY-Jct" eventType="touchUpInside" id="w71-Ei-AWn"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="ofs-DF-wtT" firstAttribute="top" secondItem="ll9-Al-KuR" secondAttribute="top" constant="4" id="6B6-g5-okD"/>
+                                            <constraint firstAttribute="trailing" secondItem="ofs-DF-wtT" secondAttribute="trailing" id="AMX-iG-FbS"/>
+                                            <constraint firstItem="ofs-DF-wtT" firstAttribute="leading" secondItem="ll9-Al-KuR" secondAttribute="leading" id="iJ9-w7-nbE"/>
+                                            <constraint firstAttribute="bottom" secondItem="ofs-DF-wtT" secondAttribute="bottom" constant="4" id="rzd-TE-yA4"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gWB-T1-5VQ" userLabel="Spacing View">
+                                        <rect key="frame" x="0.0" y="101" width="180" height="1"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="LLx-rT-L5R"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wbw-Rc-m31" userLabel="Gender Filters View">
+                                        <rect key="frame" x="0.0" y="102" width="180" height="65"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Gender Filter ⚤" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YjK-jk-daY">
                                                 <rect key="frame" x="0.0" y="0.0" width="122" height="17.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="17.5" id="Jgo-ah-WrH"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="PermanentMarker" family="Permanent Marker" pointSize="12"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="lAJ-XU-NgO">
-                                                <rect key="frame" x="8" y="20" width="159" height="44"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lAJ-XU-NgO">
+                                                <rect key="frame" x="0.0" y="20" width="180" height="37"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bI-WJ-IlD">
-                                                        <rect key="frame" x="0.0" y="0.0" width="73.5" height="44"/>
-                                                        <fontDescription key="fontDescription" name="PermanentMarker" family="Permanent Marker" pointSize="17"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="86" height="37"/>
+                                                        <fontDescription key="fontDescription" name="PermanentMarker" family="Permanent Marker" pointSize="15"/>
                                                         <state key="normal" title="Male"/>
                                                         <connections>
                                                             <action selector="setUnsetMaleFilter:" destination="YIR-oY-Jct" eventType="touchUpInside" id="FR7-pg-ePB"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OyC-R4-b3M">
-                                                        <rect key="frame" x="85.5" y="0.0" width="73.5" height="44"/>
-                                                        <fontDescription key="fontDescription" name="PermanentMarker" family="Permanent Marker" pointSize="17"/>
+                                                        <rect key="frame" x="94" y="0.0" width="86" height="37"/>
+                                                        <fontDescription key="fontDescription" name="PermanentMarker" family="Permanent Marker" pointSize="15"/>
                                                         <state key="normal" title="Female"/>
                                                         <connections>
                                                             <action selector="setUnsetFemaleFilter:" destination="YIR-oY-Jct" eventType="touchUpInside" id="clH-DA-DGy"/>
@@ -267,15 +314,22 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="lAJ-XU-NgO" firstAttribute="top" secondItem="Wbw-Rc-m31" secondAttribute="top" constant="20" symbolic="YES" id="1tv-Y8-yIn"/>
-                                            <constraint firstItem="lAJ-XU-NgO" firstAttribute="leading" secondItem="Wbw-Rc-m31" secondAttribute="leading" constant="8" id="1xB-Wy-tI4"/>
+                                            <constraint firstItem="lAJ-XU-NgO" firstAttribute="leading" secondItem="Wbw-Rc-m31" secondAttribute="leading" id="1xB-Wy-tI4"/>
                                             <constraint firstItem="YjK-jk-daY" firstAttribute="top" secondItem="Wbw-Rc-m31" secondAttribute="top" id="6eZ-sB-f2A"/>
-                                            <constraint firstAttribute="trailing" secondItem="lAJ-XU-NgO" secondAttribute="trailing" constant="8" id="Bbs-EF-pMf"/>
+                                            <constraint firstAttribute="trailing" secondItem="lAJ-XU-NgO" secondAttribute="trailing" id="Bbs-EF-pMf"/>
                                             <constraint firstItem="YjK-jk-daY" firstAttribute="leading" secondItem="Wbw-Rc-m31" secondAttribute="leading" id="Opd-hh-Wy7"/>
-                                            <constraint firstAttribute="bottom" secondItem="lAJ-XU-NgO" secondAttribute="bottom" id="sm8-pO-0tl"/>
+                                            <constraint firstAttribute="bottom" secondItem="lAJ-XU-NgO" secondAttribute="bottom" constant="8" id="sm8-pO-0tl"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d9v-hy-oKB">
-                                        <rect key="frame" x="0.0" y="135" width="175" height="64"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cVA-RY-2ec" userLabel="Spacing View">
+                                        <rect key="frame" x="0.0" y="167" width="180" height="1"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="2aj-s7-AjX"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d9v-hy-oKB" userLabel="Age and Name Sorts View">
+                                        <rect key="frame" x="0.0" y="168" width="180" height="68"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Sorts (⬇︎ or ⬆︎)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CnN-r2-et2">
                                                 <rect key="frame" x="0.0" y="0.0" width="115.5" height="17.5"/>
@@ -283,20 +337,20 @@
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="8um-Tl-7mT">
-                                                <rect key="frame" x="8" y="20" width="159" height="44"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8um-Tl-7mT">
+                                                <rect key="frame" x="0.0" y="20" width="180" height="40"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYj-Hk-So9">
-                                                        <rect key="frame" x="0.0" y="0.0" width="73.5" height="44"/>
-                                                        <fontDescription key="fontDescription" name="PermanentMarker" family="Permanent Marker" pointSize="17"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="86" height="40"/>
+                                                        <fontDescription key="fontDescription" name="PermanentMarker" family="Permanent Marker" pointSize="15"/>
                                                         <state key="normal" title="Age ⬆︎"/>
                                                         <connections>
                                                             <action selector="setUnsetAgeSort:" destination="YIR-oY-Jct" eventType="touchUpInside" id="O0u-Di-hkx"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QqQ-wc-xUN">
-                                                        <rect key="frame" x="85.5" y="0.0" width="73.5" height="44"/>
-                                                        <fontDescription key="fontDescription" name="PermanentMarker" family="Permanent Marker" pointSize="17"/>
+                                                        <rect key="frame" x="94" y="0.0" width="86" height="40"/>
+                                                        <fontDescription key="fontDescription" name="PermanentMarker" family="Permanent Marker" pointSize="15"/>
                                                         <state key="normal" title="Name ⬇︎"/>
                                                         <connections>
                                                             <action selector="setUnsetNameSort:" destination="YIR-oY-Jct" eventType="touchUpInside" id="Xf1-aa-5IF"/>
@@ -310,30 +364,34 @@
                                             <constraint firstItem="CnN-r2-et2" firstAttribute="leading" secondItem="d9v-hy-oKB" secondAttribute="leading" id="8pi-Z6-z5J"/>
                                             <constraint firstItem="CnN-r2-et2" firstAttribute="top" secondItem="d9v-hy-oKB" secondAttribute="top" id="Cbg-s2-VjN"/>
                                             <constraint firstItem="8um-Tl-7mT" firstAttribute="top" secondItem="d9v-hy-oKB" secondAttribute="top" constant="20" symbolic="YES" id="OzP-oC-sO6"/>
-                                            <constraint firstItem="8um-Tl-7mT" firstAttribute="leading" secondItem="d9v-hy-oKB" secondAttribute="leading" constant="8" id="dLc-u9-dAV"/>
-                                            <constraint firstAttribute="bottom" secondItem="8um-Tl-7mT" secondAttribute="bottom" id="diI-u2-WxB"/>
-                                            <constraint firstAttribute="trailing" secondItem="8um-Tl-7mT" secondAttribute="trailing" constant="8" id="h0Q-Rm-5eC"/>
+                                            <constraint firstItem="8um-Tl-7mT" firstAttribute="leading" secondItem="d9v-hy-oKB" secondAttribute="leading" id="dLc-u9-dAV"/>
+                                            <constraint firstAttribute="bottom" secondItem="8um-Tl-7mT" secondAttribute="bottom" constant="8" id="diI-u2-WxB"/>
+                                            <constraint firstAttribute="trailing" secondItem="8um-Tl-7mT" secondAttribute="trailing" id="h0Q-Rm-5eC"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uhx-qQ-lZB" userLabel="Spacing View">
+                                        <rect key="frame" x="0.0" y="236" width="180" height="1"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="lIM-gi-Chd"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="9aI-IQ-Qry" secondAttribute="trailing" id="Hkt-Gz-ahX"/>
-                                    <constraint firstAttribute="trailing" secondItem="Trg-9w-ZCl" secondAttribute="trailing" id="Ul2-ph-quU"/>
-                                    <constraint firstItem="Trg-9w-ZCl" firstAttribute="leading" secondItem="K8w-gd-rTd" secondAttribute="leading" id="g4K-jX-ste"/>
-                                    <constraint firstItem="9aI-IQ-Qry" firstAttribute="leading" secondItem="K8w-gd-rTd" secondAttribute="leading" id="vPm-Nc-tOH"/>
+                                    <constraint firstAttribute="width" constant="180" id="UWY-p2-BTp"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="K8w-gd-rTd" firstAttribute="top" secondItem="HhV-Yd-Wgd" secondAttribute="bottom" id="8nP-VQ-WiB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="K8w-gd-rTd" secondAttribute="trailing" id="hh7-cn-aCr"/>
+                            <constraint firstItem="K8w-gd-rTd" firstAttribute="centerX" secondItem="Mjv-dT-KQn" secondAttribute="centerX" id="HbD-kw-vD0"/>
+                            <constraint firstItem="K8w-gd-rTd" firstAttribute="centerY" secondItem="Mjv-dT-KQn" secondAttribute="centerY" id="pTO-kE-l6A"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="addNewProfileButton" destination="9aI-IQ-Qry" id="9pz-WC-C3e"/>
+                        <outlet property="addNewProfileButton" destination="Trg-9w-ZCl" id="5go-fK-wFl"/>
                         <outlet property="ageSortButton" destination="rYj-Hk-So9" id="pr5-hO-w73"/>
-                        <outlet property="clearFiltersOrSortsButton" destination="Trg-9w-ZCl" id="olW-Pw-qXV"/>
+                        <outlet property="clearFiltersOrSortsButton" destination="ofs-DF-wtT" id="dZE-ET-luS"/>
                         <outlet property="femaleFilterButton" destination="OyC-R4-b3M" id="wxp-6n-dlC"/>
                         <outlet property="maleFilterButton" destination="3bI-WJ-IlD" id="6fy-ZK-BrT"/>
                         <outlet property="nameSortButton" destination="QqQ-wc-xUN" id="KeD-u9-4Ew"/>
@@ -600,6 +658,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YQu-0o-TZ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-668" y="-31"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="IYC-5p-SQb">
+            <objects>
+                <viewController id="LZe-JC-F7w" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qzF-Vd-FOc"/>
+                        <viewControllerLayoutGuide type="bottom" id="uy5-gr-K6R"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bE2-BJ-8Qk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fYb-6L-SAe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>
