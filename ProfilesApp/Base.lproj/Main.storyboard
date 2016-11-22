@@ -216,6 +216,7 @@
                         <outlet property="maleFilterButton" destination="3bI-WJ-IlD" id="6fy-ZK-BrT"/>
                         <outlet property="nameSortButton" destination="QqQ-wc-xUN" id="KeD-u9-4Ew"/>
                         <segue destination="MVT-5N-nVB" kind="unwind" identifier="RefreshTableView" unwindAction="unwindToListViewAndRefreshData:" id="IRD-wY-FVT"/>
+                        <segue destination="MVT-5N-nVB" kind="unwind" identifier="AddNewProfile" unwindAction="unwindToListViewToAddNewProfile:" id="ocw-Gn-rKC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MND-Jw-UbJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -631,6 +632,7 @@
                     <connections>
                         <outlet property="profilesAppDisplay" destination="3mo-Yg-p8W" id="pqd-H2-B0v"/>
                         <outlet property="tableView" destination="nWf-e6-rEP" id="D2S-Cq-3oe"/>
+                        <segue destination="HhT-QK-6w3" kind="presentation" identifier="AddNewProfile" id="qsk-oB-lp0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fYb-6L-SAe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -641,4 +643,7 @@
     <resources>
         <image name="profile_placeholder" width="500" height="500"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="UYV-y9-KqJ"/>
+    </inferredMetricsTieBreakers>
 </document>

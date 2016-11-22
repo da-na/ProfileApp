@@ -62,7 +62,7 @@ class MenuViewController: UIViewController {
     var animationExpandedFrame: CGRect?
 
     @IBAction func addNewProfile(_ sender: UIButton) {
-        // TODO: Implement!
+        self.performSegue(withIdentifier: "AddNewProfile", sender: self)
     }
     @IBAction func clearFiltersOrSorts(_ sender: UIButton) {
         genderFilter = .None

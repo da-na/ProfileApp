@@ -72,6 +72,9 @@ class ListViewController: UIViewController {
 
         profilesAppDisplay.setTitle(title, for: .normal)
     }
+    func addNewProfile() {
+        self.performSegue(withIdentifier: "AddNewProfile", sender: self)
+    }
 
     // MARK: Navigation methods
     @IBAction func unwindToListView(_ segue: UIStoryboardSegue) {
@@ -83,6 +86,9 @@ class ListViewController: UIViewController {
         setOrUpdateDatabaseObserver()
         tableView.reloadData()
     }
+    @IBAction func unwindToListViewToAddNewProfile(_ segue: UIStoryboardSegue) {
+        self.perform(#selector(addNewProfile), with: nil, afterDelay: 0.8)
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "AddNewProfile" {
             if let profileVC = segue.destination as? ProfileViewController {
@@ -92,7 +98,7 @@ class ListViewController: UIViewController {
                 profileVC.modalPresentationStyle = .custom
                 profileVC.transitioningDelegate = profileVC
 
-                let expandedFrame = self.view.frame.insetBy(dx: UISettings.standardOffset,
+                let expandedFrame = self.view.frame.insetBy(dx: 1.5 * UISettings.standardOffset,
                                                             dy: 2.5 * UISettings.standardOffset)
                 var shrinkedFrame = expandedFrame
                 shrinkedFrame.size.height = 1.0
@@ -159,5 +165,8 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
             let profile = profiles[indexPath.row]
             profile.ref?.removeValue()
         }
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
