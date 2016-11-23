@@ -17,19 +17,17 @@ class ProfileViewControllerUITests: XCTestCase {
         XCUIApplication().launch()
 
         // Start at ListViewController
-        XCTAssert(app.navigationBars["Profiles"].exists)
+        XCTAssert(app.otherElements["InfoView"].exists)
+        XCTAssert(app.buttons["Profiles App"].exists)
+        XCTAssert(app.buttons["Menu ☰"].exists)
 
         // Go to ProfileViewController
-        app.navigationBars["Profiles"].buttons["+"].tap()
-    }
-
-    override func tearDown() {
-        super.tearDown()
+        app.buttons["Menu ☰"].tap()
+        app.buttons["Add New Profile"].tap()
     }
 
     func testThatProfileViewPopsUpAfterPressingPlusButton() {
-        XCTAssert(!app.navigationBars["Profiles"].exists)
-        XCTAssert(app.scrollViews.count == 1)
+        waitForElementToAppear(element: app.otherElements["ProfileView"])
 
         let elements = app.scrollViews.otherElements
         XCTAssert(elements.images["profile_placeholder"].exists)
@@ -47,7 +45,7 @@ class ProfileViewControllerUITests: XCTestCase {
         dismissButton.tap()
 
         // Making sure that the ProfileVC was dismissed
-        XCTAssert(app.navigationBars["Profiles"].exists)
+        XCTAssert(!app.otherElements["ProfileView"].exists)
         XCTAssert(!dismissButton.exists)
     }
 
@@ -56,11 +54,11 @@ class ProfileViewControllerUITests: XCTestCase {
         addButton.tap()
 
         // Making sure that the ProfileVC was not dismissed
-        XCTAssert(!app.navigationBars["Profiles"].exists)
+        XCTAssert(app.otherElements["ProfileView"].exists)
         XCTAssert(addButton.exists)
     }
 
-    func testAddProfileButtonWithData() {
+    func testAddProfileButtonWithDataAndEditHobbies() {
         let addButton = app.scrollViews.otherElements.buttons["Add Profile"]
         let textFields = app.scrollViews.otherElements.textFields
 
@@ -78,12 +76,29 @@ class ProfileViewControllerUITests: XCTestCase {
         app.pickerWheels["Male"].tap()
 
         let hobbiesTextField = textFields.element(boundBy: 3)
+        let hobbies = "cooking, ironing, washing dishes"
         hobbiesTextField.tap()
-        hobbiesTextField.typeText("cooking, ironing, washing dishes")
+        hobbiesTextField.typeText(hobbies)
 
         addButton.tap()
+
         // Making sure that the ProfileVC was dismissed
-        XCTAssert(app.navigationBars["Profiles"].exists)
-        XCTAssert(!addButton.exists)
+        XCTAssert(!app.otherElements["ProfileView"].exists)
+    }
+
+    // MARK: Test helper method(s)
+    func waitForElementToAppear(element: XCUIElement, timeout: TimeInterval = 5,  file: String = #file, line: UInt = #line) {
+        let existsPredicate = NSPredicate(format: "exists == true")
+
+        expectation(for: existsPredicate, evaluatedWith: element, handler: nil)
+
+        waitForExpectations(timeout: timeout) { (error) -> Void in
+            if (error != nil) {
+                let message = "Failed to find \(element) after \(timeout) seconds."
+                self.recordFailure(withDescription: message, inFile: file, atLine: line, expected: true)
+            }
+        }
     }
 }
+
+

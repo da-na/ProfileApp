@@ -38,6 +38,9 @@
 		F91C826A1DE3CFA100A8595D /* SF_Cartoonist_Hand_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F91C82661DE3CFA100A8595D /* SF_Cartoonist_Hand_Bold.ttf */; };
 		F91C826B1DE3CFA100A8595D /* SF_Cartoonist_Hand.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F91C82671DE3CFA100A8595D /* SF_Cartoonist_Hand.ttf */; };
 		F91C826D1DE48BE000A8595D /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91C826C1DE48BE000A8595D /* MenuViewController.swift */; };
+		F91C82701DE520F300A8595D /* SAFSettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91C826F1DE520F300A8595D /* SAFSettingsTests.swift */; };
+		F91C82721DE5274C00A8595D /* MenuViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91C82711DE5274C00A8595D /* MenuViewControllerUITests.swift */; };
+		F91C82741DE5319900A8595D /* ListViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91C82731DE5319900A8595D /* ListViewControllerUITests.swift */; };
 		F9510BFB1DE0F586008A46DE /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9510BFA1DE0F586008A46DE /* Gender.swift */; };
 		F9C90DCE1DDE270100CFE074 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C90DCD1DDE270100CFE074 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
@@ -103,6 +106,9 @@
 		F91C82661DE3CFA100A8595D /* SF_Cartoonist_Hand_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = SF_Cartoonist_Hand_Bold.ttf; path = Fonts/SF_Cartoonist_Hand_Bold.ttf; sourceTree = "<group>"; };
 		F91C82671DE3CFA100A8595D /* SF_Cartoonist_Hand.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = SF_Cartoonist_Hand.ttf; path = Fonts/SF_Cartoonist_Hand.ttf; sourceTree = "<group>"; };
 		F91C826C1DE48BE000A8595D /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = Controllers/MenuViewController.swift; sourceTree = "<group>"; };
+		F91C826F1DE520F300A8595D /* SAFSettingsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAFSettingsTests.swift; sourceTree = "<group>"; };
+		F91C82711DE5274C00A8595D /* MenuViewControllerUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewControllerUITests.swift; sourceTree = "<group>"; };
+		F91C82731DE5319900A8595D /* ListViewControllerUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewControllerUITests.swift; sourceTree = "<group>"; };
 		F9510BFA1DE0F586008A46DE /* Gender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Gender.swift; path = Models/Gender.swift; sourceTree = "<group>"; };
 		F9C90DCD1DDE270100CFE074 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Controllers/ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -180,6 +186,7 @@
 				F91C82321DE11FC000A8595D /* ProfileTests.swift */,
 				F91C82341DE12DC800A8595D /* GenderTests.swift */,
 				31F68E451DD0D68800FEBEAD /* Info.plist */,
+				F91C826F1DE520F300A8595D /* SAFSettingsTests.swift */,
 			);
 			path = ProfilesAppTests;
 			sourceTree = "<group>";
@@ -188,6 +195,8 @@
 			isa = PBXGroup;
 			children = (
 				F91C82301DE11F4500A8595D /* ProfileViewControllerUITests.swift */,
+				F91C82731DE5319900A8595D /* ListViewControllerUITests.swift */,
+				F91C82711DE5274C00A8595D /* MenuViewControllerUITests.swift */,
 				31F68E501DD0D68800FEBEAD /* Info.plist */,
 			);
 			path = ProfilesAppUITests;
@@ -606,6 +615,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F91C82351DE12DC800A8595D /* GenderTests.swift in Sources */,
+				F91C82701DE520F300A8595D /* SAFSettingsTests.swift in Sources */,
 				F91C82331DE11FC000A8595D /* ProfileTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -615,6 +625,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F91C82311DE11F4500A8595D /* ProfileViewControllerUITests.swift in Sources */,
+				F91C82721DE5274C00A8595D /* MenuViewControllerUITests.swift in Sources */,
+				F91C82741DE5319900A8595D /* ListViewControllerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

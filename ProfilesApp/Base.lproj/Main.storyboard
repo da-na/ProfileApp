@@ -160,6 +160,7 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYj-Hk-So9">
                                                         <rect key="frame" x="0.0" y="0.0" width="86" height="40"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="AgeSort"/>
                                                         <fontDescription key="fontDescription" name="PermanentMarker" family="Permanent Marker" pointSize="15"/>
                                                         <state key="normal" title="Age ⬆︎"/>
                                                         <connections>
@@ -168,6 +169,7 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QqQ-wc-xUN">
                                                         <rect key="frame" x="94" y="0.0" width="86" height="40"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="NameSort"/>
                                                         <fontDescription key="fontDescription" name="PermanentMarker" family="Permanent Marker" pointSize="15"/>
                                                         <state key="normal" title="Name ⬇︎"/>
                                                         <connections>

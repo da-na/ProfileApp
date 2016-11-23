@@ -25,7 +25,7 @@ class UISettings {
 
     // MARK: Colors
     static let green = UIColor(colorLiteralRed: 0.43, green: 0.81, blue: 0.02, alpha: 1)
-    static let blue = UIColor(colorLiteralRed: 0.20, green: 0.50, blue: 0.87, alpha: 1)
+    static let blue = UIColor(colorLiteralRed: 0.0, green: 0.47, blue: 1.0, alpha: 1)
     static let gray = UIColor.lightGray
     static let darkGray = UIColor.darkGray
     static let white = UIColor.white
