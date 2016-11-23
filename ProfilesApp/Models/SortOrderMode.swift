@@ -8,12 +8,4 @@
 
 enum SortOrderMode {
     case Ascending, Descending, None
-
-    mutating func flipValue() {
-        switch self {
-        case .Ascending : self = .Descending
-        case .Descending : self = .Ascending
-        default: break // Do nothing
-        }
-    }
 }

@@ -208,12 +208,10 @@
 		31F68E651DD12B2A00FEBEAD /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F91C825B1DE36E9600A8595D /* SAFSettings.swift */,
 				31F68E631DD12B2600FEBEAD /* Profile.swift */,
-				F91C82551DE34E1200A8595D /* SortOrderMode.swift */,
-				F91C82571DE34E2F00A8595D /* GenderFilterMode.swift */,
-				F9510BFA1DE0F586008A46DE /* Gender.swift */,
-				F91C823C1DE207A900A8595D /* ProfileViewMode.swift */,
 				F91C823A1DE2002900A8595D /* ProfileCell.swift */,
+				F91C826E1DE51FF100A8595D /* Enums */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -222,7 +220,6 @@
 			isa = PBXGroup;
 			children = (
 				31F68E661DD1394700FEBEAD /* Extensions.swift */,
-				F91C825B1DE36E9600A8595D /* SAFSettings.swift */,
 				F91C825F1DE3C94600A8595D /* UISettings.swift */,
 				F91C82521DE295F200A8595D /* Color related */,
 				F91C82471DE227CE00A8595D /* CustomModalPresentation */,
@@ -280,6 +277,17 @@
 				F91C82671DE3CFA100A8595D /* SF_Cartoonist_Hand.ttf */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		F91C826E1DE51FF100A8595D /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				F9510BFA1DE0F586008A46DE /* Gender.swift */,
+				F91C82571DE34E2F00A8595D /* GenderFilterMode.swift */,
+				F91C82551DE34E1200A8595D /* SortOrderMode.swift */,
+				F91C823C1DE207A900A8595D /* ProfileViewMode.swift */,
+			);
+			name = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

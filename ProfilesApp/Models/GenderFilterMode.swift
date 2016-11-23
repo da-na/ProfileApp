@@ -16,13 +16,5 @@ enum GenderFilterMode {
         default: return ""
         }
     }
-
-    mutating func flipValue() {
-        switch self {
-        case .Male : self = .Female
-        case .Female : self = .Male
-        default: break // Do nothing
-        }
-    }
 }
 

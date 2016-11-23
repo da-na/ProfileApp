@@ -201,6 +201,7 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <accessibility key="accessibilityConfiguration" identifier="MenuView"/>
                         <constraints>
                             <constraint firstItem="K8w-gd-rTd" firstAttribute="centerX" secondItem="Mjv-dT-KQn" secondAttribute="centerX" identifier="menuXCenteredInSuperView" id="HbD-kw-vD0"/>
                             <constraint firstItem="K8w-gd-rTd" firstAttribute="centerY" secondItem="Mjv-dT-KQn" secondAttribute="centerY" identifier="menuYCenteredInSuperView" id="pTO-kE-l6A"/>
@@ -439,6 +440,7 @@
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <accessibility key="accessibilityConfiguration" identifier="ProfileView"/>
                         <constraints>
                             <constraint firstItem="xGY-dM-djs" firstAttribute="leading" secondItem="Cmu-GX-equ" secondAttribute="leading" identifier="backgroundScrollLeading" id="JaB-e1-ovv"/>
                             <constraint firstItem="dNz-Ff-hPC" firstAttribute="top" secondItem="xGY-dM-djs" secondAttribute="bottom" identifier="backgroundScrollBottom" id="O0y-WQ-nch"/>
@@ -502,6 +504,7 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration" identifier="InfoView"/>
                                 <constraints>
                                     <constraint firstItem="3mo-Yg-p8W" firstAttribute="leading" secondItem="D7R-TF-DCU" secondAttribute="leading" constant="20" symbolic="YES" identifier="ProfilesAppLeading" id="3mM-ww-Tsb"/>
                                     <constraint firstItem="3mo-Yg-p8W" firstAttribute="top" secondItem="D7R-TF-DCU" secondAttribute="top" constant="20" symbolic="YES" identifier="ProfilesAppTop" id="6ie-Jc-yMZ"/>
