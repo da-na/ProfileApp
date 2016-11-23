@@ -202,7 +202,7 @@ class ProfileViewController: UIViewController {
         if  difference >= 0 {
             // Keyboard doesn't obscure last visible text view, no need to scroll
         } else {
-            let margin: CGFloat = CGFloat(3.0) * UISettings.standardOffset
+            let margin = (mode == .Add ? CGFloat(3.0) * UISettings.standardOffset : CGFloat(0.0) )
             let contentFrame = containerStackView.frame.size
             backgroundScroll.contentSize = CGSize(width: contentFrame.width,
                                                   height: contentFrame.height + keyboardFrame.height - margin)
